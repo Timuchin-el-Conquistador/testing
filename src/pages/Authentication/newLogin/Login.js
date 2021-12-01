@@ -1,12 +1,6 @@
 import React from "react";
 
-
-
 import { withRouter, Link } from "react-router-dom";
-
-
-
-
 
 //import assets
 import Google from "./google.svg";
@@ -29,16 +23,11 @@ class Login extends React.Component {
       email: "",
       password: "",
       toggle: false,
-      emailFocused: false,
-      emailIsBlured: false,
-      passwordFocused: false,
     };
 
     // handleValidSubmit
     this.handleValidSubmit = this.handleValidSubmit.bind(this);
     this.toggle = this.toggle.bind(this);
-    this.focus = this.focus.bind(this);
-    this.blur = this.blur.bind(this);
   }
   handleInputChange = (event) => {
     const name = event.target.name;
@@ -58,26 +47,6 @@ class Login extends React.Component {
   toggle() {
     this.setState({ ...this.state, toggle: !this.state.toggle });
   }
-  focus(event) {
-    const name = event.target.name;
-    if (name === "email") this.setState({ ...this.state, emailFocused: true });
-    else
-      this.setState({
-        ...this.state,
-        passwordFocused: true,
-      });
-  }
-  blur(event) {
-    const name = event.target.name;
-    if (name === "email")
-      this.setState({
-        ...this.state,
-        emailFocused: false,
-        emailIsBlured: true,
-      });
-    else this.setState({ ...this.state, passwordFocused: false });
-  }
-
 
   render() {
     return (
@@ -148,64 +117,49 @@ class Login extends React.Component {
             onSubmit={this.handleValidSubmit}
             //onValidSubmit={this.handleLogin}
           >
-            <div
-              className="input-group input-group-lg"
-              style={{ marginBottom: "38px" }}
-            >
-              {!this.state.emailFocused && this.state.email.length === 0 && (
-                <div className="input-group-prepend border border-0">
-                  <img
-                    className="input-group-text border border-0"
-                    id="inputGroup-sizing-lg"
-                    src={SMS}
-                  />
-                </div>
-              )}
+            <div className="input-group" style={{ marginBottom: "38px" }}>
+              <div className="input-group-prepend border border-0">
+                <img
+                  className="input-group-text border border-0 pr-0"
+                  src={SMS}
+                />
+              </div>
+
               <input
                 className="form-control bg-light border border-0"
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "normal",
+                  fontSize: "14px",
+                  color:'#8F9BB3'
+                }}
                 name="email"
                 placeholder="E-mail"
                 value={this.state.email}
                 type="email"
-                onFocus={this.focus}
-                onBlur={this.blur}
                 required
                 onChange={(event) => this.handleInputChange(event)}
               />
-              {!/@/.test(this.state.email) && this.state.emailIsBlured && (
-                <div
-            
-                  style={{
-                    position:'absolute',
-                    top:'45px',
-                    color: "#FBBD66",
-                    fontFamily: "Mont",
-                    fontWeight: "600",
-                    fontSize: "14px",
-                  }}
-                >
-                  Please enter a valid email!{" "}
-                </div>
-              )}
             </div>
-            <div className="input-group input-group-lg mb-4">
-              {!this.state.passwordFocused && this.state.password.length === 0 && (
-                <div className="input-group-prepend ">
-                  <img
-                    className="input-group-text border border-0"
-                    id="inputGroup-sizing-lg"
-                    src={Lock}
-                  />
-                </div>
-              )}
+            <div className="input-group  mb-4">
+              <div className="input-group-prepend ">
+                <img
+                  className="input-group-text border border-0 pr-0"
+                  src={Lock}
+                />
+              </div>
 
               <input
-                className={`form-control bg-light border border-0 `}
+                className="form-control bg-light border border-0"
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "normal",
+                  fontSize: "14px",
+                  color:'#8F9BB3'
+                }}
                 name="password"
                 placeholder="Password"
                 type={this.state.toggle ? "text" : "password"}
-                onFocus={this.focus}
-                onBlur={this.blur}
                 required
                 onChange={(event) => this.handleInputChange(event)}
               />
@@ -224,7 +178,7 @@ class Login extends React.Component {
               >
                 <input
                   type="checkbox"
-                  className='custom-control-input'
+                  className="custom-control-input"
                   id="customControlInline"
                 />
                 <label
@@ -236,11 +190,7 @@ class Login extends React.Component {
               </div>
               <div className={classes.forgetpassword__container}>
                 <Link
-                  style={{
-                    width: "117px",
-                    height: "20px",
-                  }}
-                  className="text-primary"
+                
                   to="/forgot-password"
                 >
                   Forgot password?
@@ -252,17 +202,13 @@ class Login extends React.Component {
           </form>
 
           <fieldset className={classes.fieldset}>
-            <div className={classes.legend__container}>
+            <span className={classes.legend__container}>
               <legend className={classes.legend} align="center">
                 or
               </legend>
-            </div>
+            </span>
           </fieldset>
-          <button
-            id="GoogleLogin"
-            className={classes.google__button}
-        
-          >
+          <button id="GoogleLogin" className={classes.google__button}>
             <img src={Google} className={classes.google__logo} />
             <span className={classes.button__text}>Log in with Google</span>
           </button>
@@ -281,7 +227,4 @@ class Login extends React.Component {
   }
 }
 
-
-
 export default withRouter(Login);
-

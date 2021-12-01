@@ -37,16 +37,13 @@ class Register extends React.Component {
       phoneNumber: "",
       fullName: "",
       toggle: false,
-      emailFocused: false,
-      emailIsBlured: false,
-      passwordFocused: false,
+
     };
 
     // handleValidSubmit
     this.handleValidSubmit = this.handleValidSubmit.bind(this);
     this.toggle = this.toggle.bind(this);
-    this.focus = this.focus.bind(this);
-    this.blur = this.blur.bind(this);
+
   }
 
 
@@ -62,25 +59,8 @@ class Register extends React.Component {
   toggle() {
     this.setState({ ...this.state, toggle: !this.state.toggle });
   }
-  focus(event) {
-    const name = event.target.name;
-    if (name === "email") this.setState({ ...this.state, emailFocused: true });
-    else
-      this.setState({
-        ...this.state,
-        passwordFocused: true,
-      });
-  }
-  blur(event) {
-    const name = event.target.name;
-    if (name === "email")
-      this.setState({
-        ...this.state,
-        emailFocused: false,
-        emailIsBlured: true,
-      });
-    else this.setState({ ...this.state, passwordFocused: false });
-  }
+
+
   componentDidMount() {
   
   }
@@ -162,7 +142,7 @@ class Register extends React.Component {
               className="input-group input-group-lg"
               style={{ marginBottom: "20px" }}
             >
-              {!this.state.emailFocused && this.state.email.length === 0 && (
+      
                 <div className="input-group-prepend border border-0">
                   <img
                     className="input-group-text border border-0"
@@ -170,7 +150,7 @@ class Register extends React.Component {
                     src={Company}
                   />
                 </div>
-              )}
+        
               <input
                 className="form-control bg-light border border-0"
                 name="name"
@@ -187,7 +167,7 @@ class Register extends React.Component {
               className="input-group input-group-lg"
               style={{ marginBottom: "20px" }}
             >
-              {!this.state.emailFocused && this.state.email.length === 0 && (
+ 
                 <div className="input-group-prepend border border-0">
                   <img
                     className="input-group-text border border-0"
@@ -195,7 +175,7 @@ class Register extends React.Component {
                     src={Name}
                   />
                 </div>
-              )}
+
               <input
                 className="form-control bg-light border border-0"
                 name="company-name"
@@ -211,7 +191,7 @@ class Register extends React.Component {
               className="input-group input-group-lg"
               style={{ marginBottom: "20px" }}
             >
-              {!this.state.emailFocused && this.state.email.length === 0 && (
+   
                 <div className="input-group-prepend border border-0">
                   <img
                     className="input-group-text border border-0"
@@ -219,7 +199,7 @@ class Register extends React.Component {
                     src={Phone}
                   />
                 </div>
-              )}
+     
               <input
                 className="form-control bg-light border border-0"
                 name="phone"
@@ -234,7 +214,7 @@ class Register extends React.Component {
               className="input-group input-group-lg"
               style={{ marginBottom: "20px" }}
             >
-              {!this.state.emailFocused && this.state.email.length === 0 && (
+
                 <div className="input-group-prepend border border-0">
                   <img
                     className="input-group-text border border-0"
@@ -242,23 +222,17 @@ class Register extends React.Component {
                     src={SMS}
                   />
                 </div>
-              )}
+       
               <input
                 className="form-control bg-light border border-0"
                 name="email"
                 placeholder="E-mail"
                 value={this.state.email}
                 type="email"
-                onFocus={this.focus}
-                onBlur={this.blur}
                 required
                 onChange={(event) => this.handleInputChange(event)}
               />
-              {!/@/.test(this.state.email) && this.state.emailIsBlured && (
-                <div className={classes.errorEmail}>
-                  Please enter a valid email!{" "}
-                </div>
-              )}
+       
             </div>
             <div className="input-group input-group-lg mb-4">
               {!this.state.passwordFocused && this.state.password.length === 0 && (
@@ -276,8 +250,6 @@ class Register extends React.Component {
                 name="password"
                 placeholder="Password"
                 type={this.state.toggle ? "text" : "password"}
-                onFocus={this.focus}
-                onBlur={this.blur}
                 required
                 onChange={(event) => this.handleInputChange(event)}
               />

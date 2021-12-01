@@ -15,15 +15,12 @@
   width:50%;
   height:100%;
   position: absolute;
-  left: -12px;
-  top: -16px;
 
 }
 .logo__container {
   color: white;
   font-size: 41px;
   font-weight: bold;
-  font-family: "Montserrat";
   line-height: 50px;
   width: 25%;
   height: 6%;
@@ -50,41 +47,33 @@
 
 .leftContainer__main {
   color: white;
-  height: 11%;
+  height: 90px;
   position: absolute;
   left: 10%;
-  top: 78%;
-  bottom: 10%;
-  width: 488px;
+  right:138px;
+  top: 596px;
+  bottom: 82px;
+  width: 389px;
   margin: 0;
   padding: 0;
 }
 
 .main__head {
-  color: #ffffff;
-  height: 22%;
-  width: 488px;
-  font-weight: 500;
-  font-size:14px;
+  height: 20px;
+  width: 100%;
   position: absolute;
   top: 0;
-  bottom: 77%;
-  font-family: "Montserrat";
+  bottom: 64px;
+  color: #FFFFFF;
+
 }
 
 .main__paragraph {
-  height: 71%;
-  width: 488px;
-  font-size: 12px;
-  font-family: "Montserrat";
-  line-height: 16px;
-  letter-spacing: 0.0015em;
-  font-weight: 100;
-  opacity:0.8;
-  color: #ffffff;
+  height: 64px;
+  width: 100%;
   position: absolute;
-  top: 29%;
- 
+  top: 20px;
+  opacity:0.8;
 }
 
 .ellipses {
@@ -160,6 +149,7 @@
   font-weight: normal;
   font-style: normal;
   font-family: "Montserrat";
+  opacity:0.8;
 }
 .copyright__right {
   position: absolute;
@@ -197,13 +187,14 @@
   bottom: 94%;
   left: 25%;
   right: 25%;
+  font-family: 'Arimo';
 }
 
 .head {
   position: absolute;
   width: 191px;
   height: 32px;
-  font-family: "Montserrat";
+  font-family: 'Arimo';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -219,65 +210,8 @@
   bottom: 31%;
 }
 
-.emailContainer {
-  width: 100%;
-  height: 48px;
-  position: absolute;
-}
-.email {
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  right: 307px;
-  left: 17px;
-  top: 14px;
-  bottom: 14px;
-}
-.email__placeholder {
-  height: 20px;
-  width: 45px;
-  position: absolute;
-  top: 14px;
-  bottom: 14px;
-  right: 168px;
-  left: 52px;
-}
-.email__inside {
-  width: 100%;
-  background-color: #f7f9fc;
-  border: 1px solid #edf1f7;
-}
-.passwordContainer {
-  width: 100%;
-  height: 48px;
-  position: absolute;
 
-  top: 84px;
-  bottom: 128px;
-}
-.password {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 307px;
-  left: 17px;
-  top: 14px;
-  bottom: 14px;
-}
-.password__placeholder {
-  height: 20px;
-  width: 45px;
-  position: absolute;
-  top: 14px;
-  bottom: 14px;
-  right: 168px;
-  left: 52px;
-}
-.password__inside {
-  width: 100%;
-  background-color: #f7f9fc;
-  border: 1px solid #edf1f7;
-}
+
 
 .passwordToggle {
   width: 20px;
@@ -293,15 +227,18 @@
   width: 100%;
   top: 61%;
   bottom: 31%;
+  color: #2E3A59;
 }
 
 .checkbox__input {
   width: 20px;
   height: 20px;
   border-radius: 3px;
+
 }
 .checkbox__input label {
   font-size: 14px;
+  color:#2E3A59
 }
 .forgetpassword__container {
   position: absolute;
@@ -309,12 +246,11 @@
   height: 20px;
   right: 8px;
   font-size: 14px;
-  font-family: Arimo;
-  font-style: normal;
+  line-height: 20px;
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-
+  font-family: 'Arimo';
   color: #2f80ed;
 }
 
@@ -324,16 +260,22 @@
   justify-content: center;
   align-items: center;
   padding: 14px 24px;
-  border-radius: 4px;
+  border-radius: 6px;
   width: 100%;
   height: 48px;
+  font-weight: 500;
+  font-family: 'Arimo';
   position: absolute;
-  top: 82%;
+  top: 80%;
   bottom: 0;
   font-size: 16px;
-  font-weight: 500;
   color: #ffffff;
-  background-color: #3f2b89;
+  background-color: #3F2B89;
+  border:transparent
+}
+
+.form__button:hover {
+  outline: #7356C0 solid 2px;
 }
 
 .fieldset {
@@ -344,22 +286,26 @@
   height: 1px;
   background-color: #edf1f7;
 }
+.legend__container{
 
+  position: absolute;
+  left:45%;
+  width: 32px;
+  height: 9px;
+  background-color: #ffffff;
+  z-index: 3;
+}
 .legend {
   position: absolute;
-  top: -11px;
+  top:-12px;
+  left:25%;
   width: 15px;
   height: 20px;
   font-size: 14px;
   color: #8f9bb3;
 }
-.legend__container {
-  width: 32px;
-  height: 9px;
-  position: absolute;
-  left: 49%;
-  right: 51%;
-}
+
+
 
 
 .google__button {
@@ -367,6 +313,7 @@
   height: 54px;
   border: 2px solid #e4e9f2;
   box-sizing: border-box;
+  font-family: 'Arimo';
   border-radius: 10px;
   background-color: #ffffff;
   position: absolute;
@@ -383,20 +330,19 @@
 }
 
 .button__text {
-  font-family: "Montserrat";
   width: 155px;
   height: 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   position: absolute;
-
+  font-family: 'Arimo';
+  letter-spacing: 0.0015em;
   right: 25%;
   top: 15px;
   bottom: 15px;
-  color: #2e3a59;
+  color:#2E3A59
 }
-
 .signup__container {
 
   width: 243px;
@@ -409,1507 +355,11 @@
 
 
 
-/*@media (min-width: 1000px) and (max-width:1430px) {
-
-  .leftContainer__main {
-    color: white;
-    height: 90px;
-    width:600px;
-    position: absolute;
-    left: 10%;
-    top: 75%;
-    margin: 0;
-    padding: 0;
-  }
-  .main__paragraph {
-    height: 71%;
-    width: 488px;
-    font-size: 16px;
-    font-family: "Montserrat";
-    line-height: 17px;
-    letter-spacing: 0.0015em;
-    color: #ffffff;
-    font-weight: 100;
-    opacity:0.7;
-  }
-  .ellipses {
-    width: 32px;
-    height: 8px;
-    position: absolute;
-
-    top: 89%;
-    left: 10%;
-
-  }
-  .footer {
-    position: absolute;
-    width: 144px;
-    height: 20px;
-    left: 10%;
-    top: 93%;
-    bottom: 20px;
-    color: #ffffff;
-  }
-  .copyright__right {
-    position: absolute;
-    color: #200b47;
-    left: 75vw;
-    font-size: 12px;
-    width: 189px;
-  }
-
-  .footer :nth-child(3) {
-    position: absolute;
-    color: #200b47;
-    left: 84vw;
-    font-size: 12px;
-    width: 82px;
-  }
-  .formContainer {
-    width: 344px;
-    height: 523px;
-    position: absolute;
-    top: 19%;
-    right: 16%;
-    background-image: #fafbfd;
-  }
-  .checkbox__container {
-    position: absolute;
-    width: 100%;
-    top: 145px;
-    
-  }
-  .form__button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 24px;
-    border-radius: 4px;
-    width: 100%;
-    height: 48px;
-    position: absolute;
-    top: 190px;
-    bottom: 0;
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffffff;
-    background-color: #3f2b89;
-  }
-  
-  .fieldset {
-    position: absolute;
-    top: 370px;
-    width: 100%;
-    height: 1px;
-    background-color: #edf1f7;
-  }
-  .google__button {
-    width: 100%;
-    height: 54px;
-    border: 2px solid #e4e9f2;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 400px;
-    bottom: 51px;
-  }
-
-  .signup__container {
-    width: 243px;
-    height: 20.25px;
-    position: absolute;
-    top: 480px;
-    left: 51px;
-    right: 50px;
-  }
-
-}
-
-*/
-
-/*@media (min-width: 1440px) {
-
-
-
-  
-  .logo__container {
-    color: white;
-    font-size: 41px;
-    font-weight: bold;
-    font-family: "Montserrat";
-    line-height: 50px;
-    width: 25%;
-    height: 6%;
-    position: absolute;
-    left: 10%;
-    top: 7%;
-  }
-
-  .logo {
-    position: absolute;
-    width: 42.4px;
-    height: 39px;
-    top: 25px;
-  }
-
-  .logo__span {
-    position: absolute;
-    top: 25px;
-    left: 42px;
-    font-weight: 700;
-    font-family: "Montserrat";
-  }
-
-
-  .leftContainer__main {
-    color: white;
-    height: 90px;
-    width:600px;
-    position: absolute;
-    left: 10%;
-    top: 75%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .main__head {
-    color: #ffffff;
-    height: 22%;
-    width: 488px;
-    font-weight: 500;
-    font-size:18px;
-    position: absolute;
-    top: 0;
-    bottom: 77%;
-    font-family: "Montserrat";
-  }
-  
-  .main__paragraph {
-    height: 71%;
-    width: 488px;
-    font-size: 16px;
-    font-family: "Montserrat";
-    line-height: 17px;
-    letter-spacing: 0.0015em;
-
-    color: #ffffff;
-    position: absolute;
-    top: 25%;
-    font-weight: 100;
-    opacity:0.7;
-  }
-
-  .ellipses {
-    width: 32px;
-    height: 8px;
-    position: absolute;
-
-    top: 86%;
-    left: 10%;
-  }
-  .ellipse1 {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-  }
-  .ellipse2 {
-    position: absolute;
-    left: 12px;
-    width: 8px;
-    height: 8px;
-  }
-  .ellipse3 {
-    position: absolute;
-    left: 26px;
-    width: 8px;
-    height: 8px;
-  }
-
-
-  .footer {
-    position: absolute;
-    width: 144px;
-    height: 20px;
-    left: 10%;
-    top: 89%;
-    color: #ffffff;
-  }
-
-  .footer__copyright__icon {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    background-image: url("./circle.svg");
-  }
-  .footer__icon {
-    position: absolute;
-    width: 6px;
-    height: 7px;
-    left: 34.33%;
-    right: 38%;
-    top: 33.33%;
-    bottom: 33.33%;
-  }
-  .footer__copyright {
-    position: absolute;
-    left: 36px;
-    right: 0;
-    width: 108px;
-    height: 20px;
-  }
-  .footer__copyright p {
-    height: 16px;
-    line-height: 16px;
-    font-size: 12px;
-    position: absolute;
-    top: 2px;
-    bottom: 2px;
-  }
-  .companyName {
-    letter-spacing: 0.0015em;
-    font-size: 12px;
-    font-weight: 10;
-    font-weight: normal;
-    font-style: normal;
-    font-family: "Montserrat";
-  }
-  .copyright__right {
-    position: absolute;
-    color: #200b47;
-    left: 74vw;
-    font-size: 12px;
-    width: 189px;
-  }
-
-  .footer :nth-child(3) {
-    position: absolute;
-    color: #200b47;
-    left: 83vw;
-    font-size: 12px;
-    width: 82px;
-  }
-
-
-
-  .formContainer {
-
-    height: 523px;
-    position: absolute;
-    top: 16%;
-    right: 28%;
-    left: 61%;
-    background-image: #fafbfd;
-  }
-
-  .form__header {
-    width: 186px;
-    height: 32px;
-    position: absolute;
-    top: 0;
-    bottom: 491px;
-    left: 72px;
-    right: 86px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .head {
-    font-size: 24px;
-    font-family: "Montserrat";
-    text-align: left;
-    color: #2a1b6e;
-    font-weight: bolder;
-  }
-
-  .form {
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    top: 15%;
-    bottom: 35%;
-  }
-
-  .emailContainer {
-    width: 343px;
-    height: 48px;
-    position: absolute;
-  }
-  .email {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    right: 307px;
-    left: 17px;
-    top: 14px;
-    bottom: 14px;
-  }
-  .email__placeholder {
-    height: 20px;
-    width: 45px;
-    position: absolute;
-    top: 14px;
-    bottom: 14px;
-    right: 168px;
-    left: 52px;
-  }
-  .email__inside {
-    width: 343px;
-    height: 48px;
-    background-color: #f7f9fc;
-    border: 1px solid #edf1f7;
-  }
-  .passwordContainer {
-    width: 343px;
-    height: 48px;
-    position: absolute;
-
-    top: 84px;
-    bottom: 128px;
-    background-color: #f7f9fc;
-  }
-  .password {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 307px;
-    left: 17px;
-    top: 14px;
-    bottom: 14px;
-  }
-  .password__placeholder {
-    height: 20px;
-    width: 45px;
-    position: absolute;
-    top: 14px;
-    bottom: 14px;
-    right: 168px;
-    left: 52px;
-  }
-  .password__inside {
-    width: 343px;
-    height: 48px;
-    background-color: #f7f9fc;
-    border: 1px solid #edf1f7;
-  }
-
-  .passwordToggle {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 14px;
-    bottom: 14px;
-    left: 307px;
-    right: 17px;
-  }
-
-  .checkbox__container {
-    position: absolute;
-    width: 100%;
-    top: 150px;
-    
-  }
-
-  .checkbox__input {
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
-  }
-
-  .forgetpassword__container {
-    position: absolute;
-    left: 219px;
-    right: 8px;
-  }
-
-  .form__button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 24px;
-    border-radius: 4px;
-    width: 100%;
-    height: 48px;
-    position: absolute;
-    top: 200px;
-    bottom: 0;
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffffff;
-    background-color: #3f2b89;
-  }
-
-  .fieldset {
-    position: absolute;
-    top: 370px;
-    width: 100%;
-    height: 1px;
-    background-color: #edf1f7;
-  }
-
-  .legend {
-    position: absolute;
-    top: -11px;
-    width: 15px;
-    height: 20px;
-    font-size: 14px;
-    color: #8f9bb3;
-  }
-  .legend__container {
-    width: 32px;
-    height: 9px;
-    position: absolute;
-    left: 165px;
-   
-  }
-
-  .google__button {
-    width: 100%;
-    height: 54px;
-    border: 2px solid #e4e9f2;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 411px;
-    bottom: 51px;
-  }
-
-
-  .google__logo {
-    position: absolute;
-    right: 244.5px;
-    left: 80px;
-    top: 15px;
-    bottom: 15px;
-  }
-
-  .button__text {
-    font-family: "Montserrat";
-    width: 155px;
-    height: 24px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    position: absolute;
-    left: 110px;
-    right: 75px;
-    top: 15px;
-    bottom: 15px;
-    color: #2e3a59;
-  }
-
-  .signup__container {
-    width: 243px;
-    height: 20.25px;
-    position: absolute;
-    top: 500px;
-    left: 51px;
-    right: 50px;
-  }
-}
-
-
-@media  (min-width:1600px) {
-
-
-  
-
-  .logo__header {
-    height: 70%;
-  }
-  .leftSideContainer {
-    position: absolute;
-    left: -12px;
-    top: -16px;
-  }
-  .logo__container {
-    color: white;
-    font-size: 41px;
-    font-weight: bold;
-    font-family: "Montserrat";
-    line-height: 50px;
-    width: 25%;
-    height: 6%;
-    position: absolute;
-    left: 10%;
-    top: 8%;
-  }
-
-  .logo {
-    position: absolute;
-    width: 42.4px;
-    height: 39px;
-    top: 25px;
-  }
-
-  .logo__span {
-    position: absolute;
-    top: 25px;
-    left: 42px;
-    font-weight: 700;
-    font-family: "Montserrat";
-  }
-
-
-  .leftContainer__main {
-    color: white;
-    width:600px;
-    position: absolute;
-    left: 10%;
-    top: 64%;
-    bottom: 10%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .main__head {
-    color: #ffffff;
-    height: 20px;
-    width: 100%;
-    font-size: 22px;
-    font-weight: 500;
-    position: absolute;
-    top: 0;
-    bottom: 90px;
-  }
-
-  .main__paragraph {
-    height: 64px;
-    width: 100%;
-    font-size: 23px;
-    line-height: 18px;
-    letter-spacing: 0.0015em;
-    font-weight: 100;
-    opacity:0.7;
-    color: #ffffff;
-    position: absolute;
-    top: 32px;
-  }
-
-  .ellipses {
-    width: 32px;
-    height: 8px;
-    position: absolute;
-
-    top: 77%;
-    left: 10%;
-  }
-  .ellipse1 {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-  }
-  .ellipse2 {
-    position: absolute;
-    left: 12px;
-    width: 8px;
-    height: 8px;
-  }
-  .ellipse3 {
-    position: absolute;
-    left: 26px;
-    width: 8px;
-    height: 8px;
-  }
-
-
-  .footer {
-    position: absolute;
-    width: 144px;
-    height: 20px;
-    left: 10%;
-    top: 81%;
-    color: #ffffff;
-  }
-
-  .footer__copyright__icon {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    background-image: url("./circle.svg");
-  }
-  .footer__icon {
-    position: absolute;
-    width: 6px;
-    height: 7px;
-    left: 34.33%;
-    right: 38%;
-    top: 33.33%;
-    bottom: 33.33%;
-  }
-  .footer__copyright {
-    position: absolute;
-    left: 36px;
-    right: 0;
-    width: 108px;
-    height: 20px;
-  }
-  .footer__copyright p {
-    height: 16px;
-    line-height: 16px;
-    font-size: 12px;
-    position: absolute;
-    top: 2px;
-    bottom: 2px;
-  }
-  .companyName {
-    letter-spacing: 0.0015em;
-    font-size: 12px;
-    font-weight: 10;
-    font-weight: normal;
-    font-style: normal;
-    font-family: "Montserrat";
-  }
-  .copyright__right {
-    position: absolute;
-    color: #200b47;
-    left: 76vw;
-    font-size: 12px;
-    top:2px;
-    width: 189px;
-  }
-
-  .footer :nth-child(3) {
-    position: absolute;
-    color: #200b47;
-    left: 84vw;
-    font-size: 12px;
-    top:2px;
-    width: 82px;
-  }
-
-
-
-  .formContainer {
-    width: 400px;
-    height: 523px;
-    position: absolute;
-    top: 15%;
-    right: 25%;
-    left: 64%;
-    background-image: #fafbfd;
-  }
-
-  .form__header {
-    width: 186px;
-    height: 32px;
-    position: absolute;
-    top: 0;
-    bottom: 491px;
-    left: 100px;
-    right: 86px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .head {
-    font-size: 24px;
-    font-family: "Montserrat";
-    text-align: left;
-    color: #2a1b6e;
-    font-weight: bolder;
-  }
-
-  .form {
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    top: 19%;
-    bottom: 31%;
-  }
-
-  .emailContainer {
-    width: 343px;
-    height: 48px;
-    position: absolute;
-  }
-  .email {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    right: 307px;
-    left: 17px;
-    top: 14px;
-    bottom: 14px;
-  }
-  .email__placeholder {
-    height: 20px;
-    width: 45px;
-    position: absolute;
-    top: 14px;
-    bottom: 14px;
-    right: 168px;
-    left: 52px;
-  }
-  .email__inside {
-    width: 343px;
-    height: 48px;
-    background-color: #f7f9fc;
-    border: 1px solid #edf1f7;
-  }
-  .passwordContainer {
-    width: 343px;
-    height: 48px;
-    position: absolute;
-
-    top: 84px;
-    bottom: 128px;
-    background-color: #f7f9fc;
-  }
-  .password {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 307px;
-    left: 17px;
-    top: 14px;
-    bottom: 14px;
-  }
-  .password__placeholder {
-    height: 20px;
-    width: 45px;
-    position: absolute;
-    top: 14px;
-    bottom: 14px;
-    right: 168px;
-    left: 52px;
-  }
-  .password__inside {
-    width: 343px;
-    height: 48px;
-    background-color: #f7f9fc;
-    border: 1px solid #edf1f7;
-  }
-
-  .passwordToggle {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 14px;
-    bottom: 14px;
-    left: 307px;
-    right: 17px;
-  }
-
-  .checkbox__container {
-    position: absolute;
-    width: 100%;
-    top: 160px;
-    bottom: 80px;
-  }
-
-  .checkbox__input {
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
-  }
-
-  .forgetpassword__container {
-    position: absolute;
-    left: 278px;
-    right: 8px;
-  }
-
-  .form__button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 24px;
-    border-radius: 4px;
-    width: 100%;
-    height: 48px;
-    position: absolute;
-    top: 212px;
-    bottom: 0;
-    font-size: 18px;
-    font-weight: 500;
-    color: #ffffff;
-    background-color: #3f2b89;
-  }
-
-  .fieldset {
-    position: absolute;
-    top: 395px;
-    bottom: 127px;
-    width: 100%;
-    height: 1px;
-    background-color: #edf1f7;
-  }
-
-  .legend {
-    position: absolute;
-    top: -11px;
-    width: 15px;
-    height: 20px;
-    font-size: 14px;
-    color: #8f9bb3;
-  }
-  .legend__container {
-    width: 32px;
-    height: 9px;
-    position: absolute;
-    left: 47%;
-  }
-
-  .google__button {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 54px;
-    border: 2px solid #e4e9f2;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 428px;
-    bottom: 41px;
-  }
-
-  .google__logo {
-    position: absolute;
-    left: 112px;
-    top: 15px;
-    bottom: 15px;
-  }
-
-  .button__text {
-    font-family: "Montserrat";
-    width: 155px;
-    height: 24px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    position: absolute;
-    right: 63px;
-    left:130px;
-    top: 15px;
-    bottom: 15px;
-    color: #2e3a59;
-  }
-
-  .signup__container {
-    width: 243px;
-    height: 20.25px;
-    position: absolute;
-    top: 513px;
-    left: 67px;
-    right: 50px;
-  }
-}
-*/
-
-/*@media (min-width:1380px) and (max-width:1440px)  and (max-height:850px){
-  .logo__container {
-    color: white;
-    font-size: 41px;
-    font-weight: bold;
-    font-family: "Montserrat";
-    line-height: 50px;
-    width: 25%;
-    height: 6%;
-    position: absolute;
-    left: 10%;
-    top: 2%;
-  }
-
-  .leftContainer__main {
-    color: white;
-    height: 11%;
-    position: absolute;
-    left: 10%;
-    top: 77%;
-    width: 488px;
-    margin: 0;
-    padding: 0;
-  }
-  .main__head {
-    color: #ffffff;
-    height: 20px;
-    width: 488px;
-    font-size: 18px;
-    font-weight: 500;
-    position: absolute;
-    top: 0;
-    bottom: 90px;
-  }
-
-  .main__paragraph {
-    height: 64px;
-    width: 488px;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 0.0015em;
-    font-weight: 100;
-    opacity:0.7;
-    color: #ffffff;
-    position: absolute;
-    top: 26px;
-  }
-  .ellipses {
-    width: 32px;
-    height: 8px;
-    position: absolute;
-    top: 90%;
-    left: 10%;
-  }
-  .footer {
-    position: absolute;
-    width: 144px;
-    height: 20px;
-    left: 10%;
-    top: 94%;
-    color: #ffffff;
-  }
-  .formContainer {
-    width: 344px;
-    height: 523px;
-    position: absolute;
-    top: 19%;
-    left: 62%;
-    background-image: #fafbfd;
-  }
-}*/
-/*@media (min-width:1380px) and (max-width:1440px){
-  .logo__container {
-    color: white;
-    font-size: 41px;
-    font-weight: bold;
-    font-family: "Montserrat";
-    line-height: 50px;
-    width: 25%;
-    height: 6%;
-    position: absolute;
-    left: 10%;
-    top: 9%;
-  }
-  .leftContainer__main {
-    color: white;
-    height: 11%;
-    position: absolute;
-    left: 10%;
-    top: 75%;
-    width: 488px;
-    margin: 0;
-    padding: 0;
-  }
-  .main__head {
-    color: #ffffff;
-    height: 20px;
-    width: 488px;
-    font-size: 18px;
-    font-weight: 500;
-    position: absolute;
-    top: 0;
-    bottom: 90px;
-  }
-
-  .main__paragraph {
-    height: 64px;
-    width: 488px;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 0.0015em;
-    font-weight: 100;
-    opacity:0.7;
-    color: #ffffff;
-    position: absolute;
-    top: 24px;
-  }
-  .ellipses {
-    width: 32px;
-    height: 8px;
-    position: absolute;
-    top: 86%;
-    left: 10%;
-  }
-  .footer {
-    position: absolute;
-    width: 144px;
-    height: 20px;
-    left: 10%;
-    top: 89%;
-    color: #ffffff;
-  }
-  .copyright__right {
-    position: absolute;
-    color: #200b47;
-    left: 75vw;
-    font-size: 12px;
-    width: 189px;
-  }
-
-  .footer :nth-child(3) {
-    position: absolute;
-    color: #200b47;
-    left: 84vw;
-    font-size: 12px;
-    width: 82px;
-  }
-
-  .formContainer {
-    width: 344px;
-    height: 523px;
-    position: absolute;
-    top: 20%;
-    left: 61%;
-    background-image: #fafbfd;
-  }
-  .legend__container {
-    width: 32px;
-    height: 9px;
-    position: absolute;
-    left: 49%;
-  }
-}*/
-
-/*@media (min-width:1000px) and (max-width:12000px){
-  .logo__container {
-    color: white;
-    font-size: 41px;
-    font-weight: bold;
-    font-family: "Montserrat";
-    line-height: 50px;
-    width: 25%;
-    height: 6%;
-    position: absolute;
-    left: 10%;
-    top: 4%;
-  }
-
-  .leftContainer__main {
-    color: white;
-    height: 11%;
-    position: absolute;
-    left: 10%;
-    top: 73%;
-    width: 488px;
-    margin: 0;
-    padding: 0;
-  }
-  .main__head {
-    color: #ffffff;
-    height: 20px;
-    width: 488px;
-    font-size: 18px;
-    font-weight: 500;
-    position: absolute;
-    top: 0;
-    bottom: 90px;
-  }
-
-  .main__paragraph {
-    height: 64px;
-    width: 488px;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 0.0015em;
-    font-weight: 100;
-    opacity:0.7;
-    color: #ffffff;
-    position: absolute;
-    top: 26px;
-  }
-  .ellipses {
-    width: 32px;
-    height: 8px;
-    position: absolute;
-    top: 86%;
-    left: 10%;
-  }
-  .footer {
-    position: absolute;
-    width: 144px;
-    height: 20px;
-    left: 10%;
-    top: 91%;
-    color: #ffffff;
-  }
-  .copyright__right {
-    position: absolute;
-    color: #200b47;
-    left: 76vw;
-    font-size: 12px;
-    width: 189px;
-  }
-
-  .footer :nth-child(3) {
-    position: absolute;
-    color: #200b47;
-    left: 85vw;
-    font-size: 12px;
-    width: 82px;
-  }
-  .formContainer {
-    width: 344px;
-    height: 523px;
-    position: absolute;
-    top: 15%;
-    background-image: #fafbfd;
-  }
-
-  .form {
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    top: 100px;
-    bottom: 268px;
-  }
-  .fieldset {
-    position: absolute;
-    top: 375px;
-    bottom: 147px;
-    width: 100%;
-    height: 1px;
-    background-color: #edf1f7;
-  }
-  .legend__container {
-    width: 32px;
-    height: 9px;
-    position: absolute;
-    left: 48%;
-  }
-  .google__button {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 54px;
-    border: 2px solid #e4e9f2;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 410px;
-    bottom: 51px;
-  }
-  .google__logo {
-    position: absolute;
-    left: 100px;
-    top: 15px;
-    bottom: 15px;
-  }
-
-  .button__text {
-    font-family: "Montserrat";
-    width: 155px;
-    height: 24px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    position: absolute;
-    right: 74px;
-    left:113px;
-    top: 15px;
-    bottom: 15px;
-    color: #2e3a59;
-  }
-  .signup__container {
-    width: 243px;
-    height: 20.25px;
-    position: absolute;
-    top: 487px;
-    left: 60px;
-    right: 50px;
-  }
-
-}*/
-
-
-
-/*@media (min-height:900px){
-  .ellipses {
-    width: 32px;
-    height: 8px;
-    position: absolute;
-    top: 73%;
-    left: 10%;
-  }
-  .footer {
-    position: absolute;
-    width: 144px;
-    height: 20px;
-    left: 10%;
-    top: 79%;
-    color: #ffffff;
-  }
-  .copyright__right {
-    position: absolute;
-    color: #200b47;
-    left: 76vw;
-    font-size: 12px;
-    width: 189px;
-  }
-  .footer :nth-child(3) {
-    position: absolute;
-    color: #200b47;
-    left: 87vw;
-    font-size: 12px;
-    width: 82px;
-  }
-  .legend__container {
-    width: 32px;
-    height: 9px;
-    position: absolute;
-    left: 49%;
-  }
-}
-
-*/
-
-
-/*@media (max-width:1370px)  {
-
-  .leftContainer__main {
-    color: white;
-    height: 11%;
-    position: absolute;
-    left: 10%;
-    top: 75%;
-    width: 488px;
-    margin: 0;
-    padding: 0;
-  }
-  .main__paragraph {
-    height: 64px;
-    width: 488px;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 0.0015em;
-    font-weight: 100;
-    opacity:0.7;
-    color: #ffffff;
-    position: absolute;
-    top: 20px;
-  }
-  .ellipses {
-    width: 32px;
-    height: 8px;
-    position: absolute;
-    top: 87%;
-    left: 10%;
-  }
-  .footer {
-    position: absolute;
-    width: 144px;
-    height: 20px;
-    left: 10%;
-    top: 91%;
-    color: #ffffff;
-  }
-  .copyright__right {
-    position: absolute;
-    color: #200b47;
-    left: 74vw;
-    font-size: 12px;
-    width: 189px;
-  }
-  .footer :nth-child(3) {
-    position: absolute;
-    color: #200b47;
-    left: 83vw;
-    font-size: 12px;
-    width: 82px;
-  }
-
-
-
-
-  .formContainer {
-    width: 344px;
-    height: 523px;
-    position: absolute;
-    top: 14%;
-    background-image: #fafbfd;
-  }
-  .legend__container {
-    width: 32px;
-    height: 9px;
-    position: absolute;
-    left: 49%;
-  }
-  .google__logo {
-    position: absolute;
-    left: 100px;
-    top: 15px;
-    bottom: 15px;
-  }
-}*/
-/*@media (max-width:1370px)  {
-
-  .leftContainer__main {
-    color: white;
-    height: 11%;
-    position: absolute;
-    left: 10%;
-    top: 82%;
-    width: 488px;
-    margin: 0;
-    padding: 0;
-  }
-  .main__paragraph {
-    height: 64px;
-    width: 488px;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 0.0015em;
-    font-weight: 100;
-    opacity:0.7;
-    color: #ffffff;
-    position: absolute;
-    top: 20px;
-  }
-  .ellipses {
-    width: 32px;
-    height: 8px;
-    position: absolute;
-    top: 93%;
-    left: 10%;
-  }
-  .footer {
-    position: absolute;
-    width: 144px;
-    height: 20px;
-    left: 10%;
-    top: 95%;
-    color: #ffffff;
-  }
-  .copyright__right {
-    position: absolute;
-    color: #200b47;
-    left: 77vw;
-    font-size: 12px;
-    width: 189px;
-  }
-  .footer :nth-child(3) {
-    position: absolute;
-    color: #200b47;
-    left: 87vw;
-    font-size: 12px;
-    width: 82px;
-  }
-
-
-
-
-  .formContainer {
-    height: 523px;
-    position: absolute;
-    top: 11%;
-    left: 64%;
-    background-image: #fafbfd;
-  }
-  .form__header {
-    width: 186px;
-    height: 32px;
-    position: absolute;
-    top: 0;
-    bottom: 491px;
-    left: 71px;
-    right: 85px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .head {
-    font-size: 24px;
-    font-family: "Montserrat";
-    text-align: left;
-    color: #2a1b6e;
-    font-weight: bolder;
-  }
-
-  .form {
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    top: 23%;
-    bottom: 35%;
-  }
-  .checkbox__container {
-    position: absolute;
-    width: 100%;
-    top: 160px;
-    
-  }
-
-  .checkbox__input {
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
-  }
-
-  .forgetpassword__container {
-    position: absolute;
-    left: 219px;
-    right: 8px;
-  }
-  .form__button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 24px;
-    border-radius: 4px;
-    width: 100%;
-    height: 48px;
-    position: absolute;
-    top: 215px;
-    bottom: 0;
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffffff;
-    background-color: #3f2b89;
-  }
-  .fieldset {
-    position: absolute;
-    top: 425px;
-    width: 100%;
-    height: 1px;
-    background-color: #edf1f7;
-  }
-  .legend__container {
-    width: 32px;
-    height: 9px;
-    position: absolute;
-    left: 49%;
-  }
-
-
-
-  .google__button {
-    display: flex;
-    justify-content: center;
-    height: 54px;
-    border: 2px solid #e4e9f2;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 468px;
-    width:100%;
-  }
-  .google__logo {
-    position: absolute;
-    left: 100px;
-    top: 15px;
-    bottom: 15px;
-  }
-  .signup__container {
-    width: 243px;
-    height: 20.25px;
-    position: absolute;
-    top: 550px;
-    left: 51px;
-    right: 50px;
-  }
-}*/
 
 @media (max-height:784px){
+
   .main__container {
-    position:relative;
+    position:absolute;
     background-color: #ffffff !important;
     width:100vw;
     height:784px;
@@ -1918,11 +368,10 @@
   
   
   .leftSideContainer {
-    width:50%;
-    height:100%;
+    width:715px;
+    height:784px;
     position: absolute;
-    left: -12px;
-    top: -16px;
+    top:0;
   
   }
   .logo__container {
@@ -1959,18 +408,17 @@
   height: 90px;
   position: absolute;
   left: 75px;
-  top: 612px;
+  right:138px;
+  top: 596px;
   bottom: 82px;
-  width: 488px;
+  width: 478px;
   margin: 0;
   padding: 0;
 }
 
 .main__head {
-  color: #ffffff;
   height: 20px;
-  width: 488px;
-  font-weight: 500;
+  width: 100%;
   position: absolute;
   top: 0;
   bottom: 64px;
@@ -1978,12 +426,7 @@
 
 .main__paragraph {
   height: 64px;
-  width: 488px;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.0015em;
-  font-weight: 10;
-  color: #ffffff;
+  width: 100%;
   position: absolute;
   top: 20px;
 }
@@ -1992,9 +435,8 @@
   width: 32px;
   height: 8px;
   position: absolute;
-  top: 697px;
+  top: 700px;
   left: 75px;
-  bottom: 65px;
 }
 .ellipse1 {
   position: absolute;
@@ -2020,9 +462,7 @@
   width: 144px;
   height: 20px;
   left: 75px;
-  top: 730px;
-  bottom: 22px;
-  color: #ffffff;
+  top: 740px;
 }
 
 .footer__copyright__icon {
@@ -2065,15 +505,15 @@
 }
 .copyright__right {
   position: absolute;
-  color: #200b47;
-  left: 1013px;
+
+  left: 900px;
   font-size: 12px;
   width: 189px;
 }
 
 .footer :nth-child(3) {
   position: absolute;
-  color: #200b47;
+
   left: 1134px;
   font-size: 12px;
   width: 82px;
@@ -2085,8 +525,7 @@
   width: 344px;
   height: 523px;
   position: absolute;
-  top: 124px;
-  bottom: 121px;
+  top: 134px;
   right: 183px;
   left: 839px;
   background-image: #fafbfd;
@@ -2100,17 +539,10 @@
   bottom: 491px;
   left: 72px;
   right: 86px;
-  margin: 0;
-  padding: 0;
+
 }
 
-.head {
-  font-size: 24px;
-  font-family: "Montserrat";
-  text-align: left;
-  color: #2a1b6e;
-  font-weight: bolder;
-}
+
 
 .form {
   height: 260px;
@@ -2120,68 +552,8 @@
   bottom: 163px;
 }
 
-.emailContainer {
-  width: 343px;
-  height: 48px;
-  position: absolute;
-}
-.email {
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  right: 307px;
-  left: 17px;
-  top: 14px;
-  bottom: 14px;
-}
-.email__placeholder {
-  height: 20px;
-  width: 45px;
-  position: absolute;
-  top: 14px;
-  bottom: 14px;
-  right: 168px;
-  left: 52px;
-}
-.email__inside {
-  width: 343px;
-  height: 48px;
-  background-color: #f7f9fc;
-  border: 1px solid #edf1f7;
-}
-.passwordContainer {
-  width: 343px;
-  height: 48px;
-  position: absolute;
 
-  top: 84px;
-  bottom: 128px;
-  background-color: #f7f9fc;
-}
-.password {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 307px;
-  left: 17px;
-  top: 14px;
-  bottom: 14px;
-}
-.password__placeholder {
-  height: 20px;
-  width: 45px;
-  position: absolute;
-  top: 14px;
-  bottom: 14px;
-  right: 168px;
-  left: 52px;
-}
-.password__inside {
-  width: 343px;
-  height: 48px;
-  background-color: #f7f9fc;
-  border: 1px solid #edf1f7;
-}
+
 
 .passwordToggle {
   width: 20px;
@@ -2196,7 +568,7 @@
 .checkbox__container {
   position: absolute;
   width: 100%;
-  top: 160px;
+  top: 145px;
   bottom: 80px;
 }
 
@@ -2210,6 +582,7 @@
   position: absolute;
   left: 219px;
   right: 8px;
+
 }
 
 .form__button {
@@ -2222,48 +595,22 @@
   width: 343px;
   height: 48px;
   position: absolute;
-  top: 212px;
+  top: 192px;
   bottom: 0;
-  font-size: 16px;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: #3f2b89;
+
 }
 
-.fieldset {
+.fieldset{
   position: absolute;
-  top: 395px;
-  bottom: 127px;
-  width: 100%;
-  height: 1px;
-  background-color: #edf1f7;
-}
-
-.legend {
-  position: absolute;
-  top: -11px;
-  width: 15px;
-  height: 20px;
-  font-size: 14px;
-  color: #8f9bb3;
-}
-.legend__container {
-  width: 32px;
-  height: 9px;
-  position: absolute;
-
+  top:72%;
 }
 
 .google__button {
   width: 343px;
   height: 54px;
-  border: 2px solid #e4e9f2;
-  box-sizing: border-box;
-  border-radius: 10px;
-  background-color: #ffffff;
   position: absolute;
-  top: 428px;
-  bottom: 41px;
+  top: 410px;
+
 }
 
 .google__logo {
@@ -2274,7 +621,6 @@
 }
 
 .button__text {
-  font-family: "Montserrat";
   width: 155px;
   height: 24px;
   font-weight: 500;
@@ -2291,7 +637,7 @@
   width: 243px;
   height: 20.25px;
   position: absolute;
-  top: 503px;
+  top: 493px;
   left: 51px;
   right: 50px;
 }
@@ -2301,7 +647,7 @@
 }
 
 
-@media (min-height:800px){
+@media (min-height:790px){
   body{
     overflow: hidden;
   }
@@ -2330,24 +676,29 @@
 
     position: absolute;
     top: 24px;
+    width:478px;
   }
   .ellipses {
 
     position: absolute;
-    top: 84%;
+    top: 89%;
 
   }
   .footer {
     position: absolute;
  
-    top: 88%;
+    top: 93%;
 
   }
   .formContainer {
 
     position: absolute;
-    top: 16%;
+    top: 18%;
 
+  }
+  .checkbox__container {
+    position: absolute;
+    top: 145px;
   }
   .fieldset {
     position: absolute;
@@ -2384,28 +735,56 @@
   
   }
   .main__head {
-    font-size:18px;
+
     position: absolute;
     top: 0;
     bottom: 90px;
   }
 
   .main__paragraph {
-    font-size:16px;
-    line-height: 18px;
+
     position: absolute; 
     top: 24px;
   }
   .ellipses {
 
     position: absolute;
-    top: 87%;
+    top: 84%;
 
   }
   .footer {
     position: absolute;
 
     top: 91%;
+
+  }
+
+  .checkbox__container {
+    position: absolute;
+    top: 145px;
+  }
+  .form__button {
+
+    position: absolute;
+    top: 198px;
+    bottom: 0;
+  
+  }
+  .fieldset {
+    position: absolute;
+    top: 74%;
+ 
+  }
+
+  .google__button {
+
+    position: absolute;
+    top: 82%;
+
+  }
+  .signup__container {
+    position:absolute;
+    top:99%;
 
   }
 
@@ -2434,14 +813,14 @@
   .ellipses{
     position: absolute;
   
-    top: 81%;
+    top: 82%;
 
   }
 
   .footer{
     position: absolute;
   
-    top: 84%;
+    top: 86%;
 
   }
   .checkbox__container {
@@ -2486,21 +865,12 @@
 
     position: absolute;
   
-    top: 65%;
+    top: 68%;
   
   }
  
-  .main__head{
-    font-size:20px;
 
-  }
-  .main__paragraph {
 
-    font-size:18px;
-    line-height: 20px;
-    position:  absolute;
-    top:27px;
-  }
   .ellipses{
     position: absolute;
   
@@ -2516,26 +886,37 @@
   }
 
 
-  .signup__container {
-    position:absolute;
-    top:87%;
-
+  .checkbox__container {
+    position: absolute;
+    width: 100%;
+    top: 51%;
   }
-  
+  .fieldset{
+    position: absolute;
+    top:69%
+  }
+  .google__button{
+    position: absolute;
+    top:76%
+  }
+  .signup__container{
+    position: absolute;
+    top:89%
+  }
 }
 
 @media (min-height:1000px) {
   .ellipses{
     position: absolute;
   
-    top: 78%;
+    top: 79%;
 
   }
 
   .footer{
     position: absolute;
   
-    top: 81%;
+    top: 84%;
 
   }
   .checkbox__container {
@@ -2548,7 +929,7 @@
   }
   .fieldset {
     position: absolute;
-    top: 415px;
+    top: 68%;
  
   }
   .google__button {
@@ -2602,34 +983,11 @@
 }
 
 @media (min-width:1100px){
-  /*.leftContainer__main {
 
-    position: absolute;
-  
-    top: 70%;
-  
-  }
-  .main__paragraph{
-    position: absolute;
-    top:20px
-  }
-  .ellipses{
-    position: absolute;
-  
-    top: 78%;
-
-  }
-
-  .footer{
-    position: absolute;
-  
-    top: 84%;
-
-  }*/
   .copyright__right {
     position: absolute;
 
-    left: 74vw;
+    left: 73vw;
 
 
   }
@@ -2637,7 +995,7 @@
   .footer :nth-child(3) {
     position: absolute;
 
-    left: 85vw;
+    left: 84vw;
 
   }
 
@@ -2680,6 +1038,20 @@
     right:21%;
 
   }
+  .copyright__right {
+    position: absolute;
+
+    left: 74vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 84vw;
+
+  }
 
 
 }
@@ -2715,113 +1087,3 @@
 
 
 
-/*@media (min-width:1370px) and (max-width:1440px){
-
-
-  .leftContainer__main {
-
-    position: absolute;
-  
-    top: 74%;
-  
-  }
-  .ellipses {
-
-    position: absolute;
-    top: 86%;
-
-  }
-  .footer {
-    position: absolute;
-
-    top: 90%;
-
-  }
-  .fieldset {
-    position: absolute;
-    top: 413px;
- 
-  }
-  .copyright__right {
-    position: absolute;
-
-    left: 75vw;
-
-
-  }
-  
-  .footer :nth-child(3) {
-    position: absolute;
-
-    left: 84vw;
-
-  }
-
-  .button__text{
-    position: absolute;
-    right:22%;
-  }
-  .signup__container {
-    position:absolute;
-    left:19%;
-
-  }
-}
-
-@media (min-width: 1500px){
-
-  .main__paragraph {
- 
-    line-height: 18px;
-    font-size: 18px;
-  }
-  .main__head{
-
-    font-size: 20px;
-  }
-
-
-  .copyright__right {
-    position: absolute;
-
-    left: 75vw;
-
-
-  }
-  
-  .footer :nth-child(3) {
-    position: absolute;
-
-    left: 84vw;
-
-  }
-  
-  
-}
-
-
-@media (min-width: 1600px){
-
-   
-
-  .copyright__right {
-    position: absolute;
-
-    left: 76vw;
-
-
-  }
-  
-  .footer :nth-child(3) {
-    position: absolute;
-
-    left: 85vw;
-
-  }
-
-  .signup__container {
-    position:absolute;
-    left:23%;
-
-  }
-}*/
