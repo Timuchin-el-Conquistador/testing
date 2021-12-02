@@ -1,28 +1,35 @@
+
+
+
+
 .main__container {
-  position: absolute;
+  position:absolute;
   background-color: #ffffff !important;
-  width: 100vw;
-  height: 100vh;
+  width:100vw;
+  height:100vh;
 }
 
+
+
 .leftSideContainer {
-  width: 50%;
-  height: 100%;
+  width:50%;
+  height:100%;
   position: absolute;
-  left: -12px;
-  top: -16px;
+
 }
 .logo__container {
   color: white;
+ 
+  font-family: "Montserrat";
+
   font-size: 41px;
   font-weight: bold;
-  font-family: "Montserrat";
   line-height: 50px;
   width: 25%;
   height: 6%;
   position: absolute;
-  left: 10%;
-  top: 3%;
+  left:10%;
+  top:4%;
 }
 
 .logo {
@@ -40,42 +47,36 @@
   font-family: "Montserrat";
 }
 
+
 .leftContainer__main {
   color: white;
-  height: 11%;
+  height: 90px;
   position: absolute;
   left: 10%;
-  top: 78%;
-  bottom: 10%;
-  width: 488px;
+  right:138px;
+  top: 596px;
+  bottom: 82px;
+  width: 389px;
   margin: 0;
   padding: 0;
 }
 
 .main__head {
-  color: #ffffff;
-  height: 22%;
-  width: 488px;
-  font-weight: 500;
-  font-size: 14px;
+  height: 20px;
+  width: 100%;
   position: absolute;
   top: 0;
-  bottom: 77%;
-  font-family: "Montserrat";
+  bottom: 64px;
+  color: #FFFFFF;
+
 }
 
 .main__paragraph {
-  height: 71%;
-  width: 488px;
-  font-size: 12px;
-  font-family: "Montserrat";
-  line-height: 16px;
-  letter-spacing: 0.0015em;
-  font-weight: 100;
-  opacity: 0.8;
-  color: #ffffff;
+  height: 64px;
+  width: 100%;
   position: absolute;
-  top: 29%;
+  top: 20px;
+  opacity:0.8;
 }
 
 .ellipses {
@@ -151,6 +152,7 @@
   font-weight: normal;
   font-style: normal;
   font-family: "Montserrat";
+  opacity:0.8;
 }
 .copyright__right {
   position: absolute;
@@ -167,7 +169,6 @@
   font-size: 12px;
   width: 82px;
 }
-
 .formContainer {
   width: 25%;
   position: absolute;
@@ -179,20 +180,19 @@
 }
 
 .form__header {
-  font-family: "Montserrat";
-  font-weight: bold;
-  color: #2a1b6e;
   width: 109px;
-  height: 32px;
+  height: 6%;
   position: absolute;
+  bottom: 94%;
+  font-family: 'Arimo';
 }
 
 .head {
   position: absolute;
-  left: 25%;
-  font-family: "Montserrat";
+  font-family: 'Arimo';
+  font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
   color: #2a1b6e;
 }
 
@@ -204,65 +204,7 @@
   bottom: 31%;
 }
 
-.emailContainer {
-  width: 100%;
-  height: 48px;
-  position: absolute;
-}
-.email {
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  right: 307px;
-  left: 17px;
-  top: 14px;
-  bottom: 14px;
-}
-.email__placeholder {
-  height: 20px;
-  width: 45px;
-  position: absolute;
-  top: 14px;
-  bottom: 14px;
-  right: 168px;
-  left: 52px;
-}
-.email__inside {
-  width: 100%;
-  background-color: #f7f9fc;
-  border: 1px solid #edf1f7;
-}
-.passwordContainer {
-  width: 100%;
-  height: 48px;
-  position: absolute;
 
-  top: 84px;
-  bottom: 128px;
-}
-.password {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 307px;
-  left: 17px;
-  top: 14px;
-  bottom: 14px;
-}
-.password__placeholder {
-  height: 20px;
-  width: 45px;
-  position: absolute;
-  top: 14px;
-  bottom: 14px;
-  right: 168px;
-  left: 52px;
-}
-.password__inside {
-  width: 100%;
-  background-color: #f7f9fc;
-  border: 1px solid #edf1f7;
-}
 
 .passwordToggle {
   width: 20px;
@@ -309,16 +251,18 @@
   justify-content: center;
   align-items: center;
   padding: 14px 24px;
-  border-radius: 4px;
+  border-radius: 6px;
   width: 100%;
   height: 48px;
+  font-weight: 500;
+  font-family: 'Arimo';
   position: absolute;
-  top: 82%;
+  top: 80%;
   bottom: 0;
   font-size: 16px;
-  font-weight: 500;
   color: #ffffff;
-  background-color: #3f2b89;
+  background-color: #3F2B89;
+  border:transparent
 }
 
 .fieldset {
@@ -329,22 +273,25 @@
   height: 1px;
   background-color: #edf1f7;
 }
+.legend__container{
 
+  position: absolute;
+  left:45%;
+  width: 32px;
+  height: 9px;
+  background-color: #ffffff;
+  z-index: 3;
+}
 .legend {
   position: absolute;
-  top: -11px;
+  top:-12px;
+  left:25%;
   width: 15px;
   height: 20px;
   font-size: 14px;
   color: #8f9bb3;
 }
-.legend__container {
-  width: 32px;
-  height: 9px;
-  position: absolute;
-  left: 49%;
-  right: 51%;
-}
+
 
 .google__button {
   width: 100%;
@@ -367,7 +314,7 @@
 }
 
 .button__text {
-  font-family: "Montserrat";
+  font-family: 'Arimo';
   width: 155px;
   height: 24px;
   font-weight: 500;
@@ -386,185 +333,176 @@
   height: 20px;
   top: 100%;
   bottom: 0;
-  left: 76px;
+
 }
 
-@media (max-height: 784px) {
-  .main__container {
-    position: relative;
-    background-color: #ffffff !important;
-    width: 100vw;
-    height: 784px;
-  }
+@media (min-height:600px) and (max-height:784px){
 
+  .main__container {
+    position:absolute;
+    background-color: #ffffff !important;
+    width:100vw;
+    height:784px;
+  }
+  
+  
+  
   .leftSideContainer {
-    width: 50%;
-    height: 100%;
+    width:50%;
+    height:784px;
     position: absolute;
-    left: -12px;
-    top: -16px;
+    top:0;
+  
   }
   .logo__container {
-    color: white;
-    font-size: 41px;
-    font-weight: bold;
-    font-family: "Montserrat";
-    line-height: 50px;
-    width: 177px;
-    height: 50px;
-    position: absolute;
-    left: 75px;
-    top: 24px;
-  }
+ 
+  line-height: 50px;
+  width: 177px;
+  height: 50px;
+  position: absolute;
+  left: 75px;
+  top: 24px;
+}
 
-  .logo {
-    position: absolute;
-    width: 42.4px;
-    height: 39px;
-    top: 25px;
-  }
+.logo {
+  position: absolute;
+  width: 42.4px;
+  height: 39px;
+  top: 25px;
+}
 
-  .logo__span {
-    position: absolute;
-    top: 24px;
-    left: 42px;
-    font-weight: 700;
-    font-family: "Montserrat";
-  }
+.logo__span {
+  position: absolute;
+  top: 24px;
+  left: 42px;
+  font-weight: 700;
+  font-family: "Montserrat";
+}
 
-  /*main content*/
-  .leftContainer__main {
-    color: white;
-    height: 90px;
-    position: absolute;
-    left: 75px;
-    top: 612px;
-    bottom: 82px;
-    width: 488px;
-    margin: 0;
-    padding: 0;
-  }
+/*main content*/
+.leftContainer__main {
+  color: white;
+  height: 90px;
+  position: absolute;
+  left: 75px;
+  right:138px;
+  top: 596px;
+  bottom: 82px;
+  width: 478px;
+  margin: 0;
+  padding: 0;
+}
 
-  .main__head {
-    color: #ffffff;
-    height: 20px;
-    width: 488px;
-    font-weight: 500;
-    position: absolute;
-    top: 0;
-    bottom: 64px;
-  }
+.main__head {
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 64px;
+}
 
-  .main__paragraph {
-    height: 64px;
-    width: 488px;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.0015em;
-    font-weight: 10;
-    color: #ffffff;
-    position: absolute;
-    top: 20px;
-  }
+.main__paragraph {
+  height: 64px;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+}
 
-  .ellipses {
-    width: 32px;
-    height: 8px;
-    position: absolute;
-    top: 697px;
-    left: 75px;
-    bottom: 65px;
-  }
-  .ellipse1 {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-  }
-  .ellipse2 {
-    position: absolute;
-    left: 12px;
-    width: 8px;
-    height: 8px;
-  }
-  .ellipse3 {
-    position: absolute;
-    left: 26px;
-    width: 8px;
-    height: 8px;
-  }
+.ellipses {
+  width: 32px;
+  height: 8px;
+  position: absolute;
+  top: 700px;
+  left: 75px;
+}
+.ellipse1 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+}
+.ellipse2 {
+  position: absolute;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+}
+.ellipse3 {
+  position: absolute;
+  left: 26px;
+  width: 8px;
+  height: 8px;
+}
 
-  /*footer*/
-  .footer {
-    position: absolute;
-    width: 144px;
-    height: 20px;
-    left: 75px;
-    top: 730px;
-    bottom: 22px;
-    color: #ffffff;
-  }
+/*footer*/
+.footer {
+  position: absolute;
+  width: 144px;
+  height: 20px;
+  left: 75px;
+  top: 740px;
+}
 
-  .footer__copyright__icon {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    background-image: url("./circle.svg");
-  }
-  .footer__icon {
-    position: absolute;
-    width: 6px;
-    height: 7px;
-    left: 34.33%;
-    right: 38%;
-    top: 33.33%;
-    bottom: 33.33%;
-  }
-  .footer__copyright {
-    position: absolute;
-    left: 36px;
-    right: 0;
-    width: 108px;
-    height: 20px;
-  }
-  .footer__copyright p {
-    height: 16px;
-    line-height: 16px;
-    font-size: 12px;
-    position: absolute;
-    top: 2px;
-    bottom: 2px;
-  }
-  .companyName {
-    letter-spacing: 0.0015em;
-    font-size: 12px;
-    font-weight: 10;
-    font-weight: normal;
-    font-style: normal;
-    font-family: "Montserrat";
-  }
-  .copyright__right {
-    position: absolute;
-    color: #200b47;
-    left: 1013px;
-    font-size: 12px;
-    width: 189px;
-  }
+.footer__copyright__icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url("./circle.svg");
+}
+.footer__icon {
+  position: absolute;
+  width: 6px;
+  height: 7px;
+  left: 34.33%;
+  right: 38%;
+  top: 33.33%;
+  bottom: 33.33%;
+}
+.footer__copyright {
+  position: absolute;
+  left: 36px;
+  right: 0;
+  width: 108px;
+  height: 20px;
+}
+.footer__copyright p {
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+}
+.companyName {
+  letter-spacing: 0.0015em;
+  font-size: 12px;
+  font-weight: 10;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Montserrat";
+}
+.copyright__right {
+  position: absolute;
 
-  .footer :nth-child(3) {
-    position: absolute;
-    color: #200b47;
-    left: 1134px;
-    font-size: 12px;
-    width: 82px;
-  }
+  left: 900px;
+  font-size: 12px;
+  width: 189px;
+}
+
+.footer :nth-child(3) {
+  position: absolute;
+
+  left: 1134px;
+  font-size: 12px;
+  width: 82px;
+}
 
   /*right half of the page*/
 
   .formContainer {
     position: absolute;
-    top: 10%;
+    width:25%;
+    top: 13%;
     right: 183px;
-    left: 839px;
     background-image: #fafbfd;
   }
 
@@ -600,10 +538,10 @@
     align-items: center;
     padding: 14px 24px;
     border-radius: 4px;
-    width: 343px;
+    width: 100%;
     height: 48px;
     position: absolute;
-    top: 96%;
+    top: 98%;
     font-size: 16px;
     font-weight: 500;
     color: #ffffff;
@@ -612,7 +550,7 @@
 
   .fieldset {
     position: absolute;
-    top: 75%;
+    top: 78%;
     bottom: 127px;
     width: 100%;
     height: 1px;
@@ -634,14 +572,14 @@
   }
 
   .google__button {
-    width: 343px;
+    width: 100%;
     height: 54px;
     border: 2px solid #e4e9f2;
     box-sizing: border-box;
     border-radius: 10px;
     background-color: #ffffff;
     position: absolute;
-    top: 80%;
+    top: 83%;
   }
 
   .google__logo {
@@ -652,7 +590,6 @@
   }
 
   .button__text {
-    font-family: "Montserrat";
     width: 155px;
     height: 24px;
     font-weight: 500;
@@ -669,243 +606,562 @@
     position: absolute;
     width: 194px;
     height: 20px;
-    top: 94%;
+    top: 96%;
     bottom: 0;
-    left: 76px;
+    left:25%;
+  }
+}
+@media (min-height:700px){
+  body{
+    overflow: hidden;
+  }
+  .footer {
+    position: absolute;
+ 
+    top: 93%;
+
   }
 }
 
-@media (min-height: 800px) {
-  body {
-    overflow: hidden;
-  }
+@media (min-height:790px){
+
   .logo__container {
+
     position: absolute;
 
     top: 4%;
   }
 
   .leftContainer__main {
-    position: absolute;
 
-    top: 75%;
-  }
-  .main__head {
-    position: absolute;
-    top: 0;
-    bottom: 90px;
-  }
-
-  .main__paragraph {
-    position: absolute;
-    top: 20px;
-  }
-  .ellipses {
-    position: absolute;
-    top: 85%;
-  }
-  .footer {
-    position: absolute;
-
-    top: 90%;
-  }
-  .formContainer {
-    position: absolute;
-    top: 9%;
-  }
-  .form {
-    position: absolute;
-    top: 10%;
-  }
-  .form__button {
-    position: absolute;
-    top: 99%;
-  }
-  .fieldset {
-    position: absolute;
-    top: 79%;
-  }
-
-  .google__button {
-    position: absolute;
-    top: 85%;
-  }
-  .toLogIn {
-    position: absolute;
-    top: 97%;
-  }
-}
-
-@media (min-height: 850px) {
-  body {
-    overflow: hidden;
-  }
-  .leftContainer__main {
     position: absolute;
 
     top: 74%;
+ 
   }
   .main__head {
-    font-size: 18px;
+
     position: absolute;
     top: 0;
     bottom: 90px;
   }
 
   .main__paragraph {
-    font-size: 16px;
-    line-height: 18px;
+
     position: absolute;
+    top: 24px;
+    width:478px;
+  }
+  .ellipses {
+
+    position: absolute;
+    top: 89%;
+
+  }
+  .footer {
+    position: absolute;
+ 
+    top: 93%;
+
+  }
+  .formContainer {
+
+    position: absolute;
+    top: 13%;
+
+  }
+  .form{
+    position: absolute;
+    top: 10%;
+  }
+  .form__button{
+    position: absolute;
+    top: 93%;
+  }
+  .checkbox__container {
+    position: absolute;
+    top: 145px;
+  }
+  .fieldset {
+    position: absolute;
+    top: 76%;
+ 
+  }
+
+  .google__button {
+
+    position: absolute;
+    top: 82%;
+
+  }
+  .toLogIn {
+    position:absolute;
+    top:95%;
+
+  }
+}
+
+
+
+
+
+@media (min-height:850px){
+
+  .leftContainer__main {
+
+    position: absolute;
+  
+    top: 74%;
+  
+  }
+  .main__head {
+
+    position: absolute;
+    top: 0;
+    bottom: 90px;
+  }
+
+  .main__paragraph {
+
+    position: absolute; 
     top: 24px;
   }
   .ellipses {
+
     position: absolute;
-    top: 87%;
+    top: 84%;
+
   }
   .footer {
     position: absolute;
 
     top: 91%;
+
   }
+
+  .checkbox__container {
+    position: absolute;
+    top: 145px;
+  }
+  .form__button {
+
+    position: absolute;
+    top: 198px;
+    bottom: 0;
+  
+  }
+  .fieldset {
+    position: absolute;
+    top: 74%;
+ 
+  }
+
+  .google__button {
+
+    position: absolute;
+    top: 82%;
+
+  }
+  .toLogIn {
+    position:absolute;
+    top:99%;
+
+  }
+
+
+ 
 }
 
-@media (min-height: 900px) {
-  body {
-    overflow: hidden;
-  }
+@media (min-height:900px){
 
   .leftContainer__main {
-    position: absolute;
 
+    position: absolute;
+  
     top: 70%;
+  
   }
   .main__paragraph {
-    position: absolute;
+
+    position: absolute; 
     top: 20px;
   }
 
-  .ellipses {
+  .ellipses{
     position: absolute;
+  
+    top: 82%;
 
-    top: 81%;
   }
 
-  .footer {
+  .footer{
     position: absolute;
+  
+    top: 86%;
 
-    top: 84%;
-  }
-
-  .formContainer {
-    position: absolute;
-    top: 10%;
   }
   .checkbox__container {
     position: absolute;
     width: 100%;
     top: 53%;
   }
-
-  .form__button {
+ 
+  .form__button{
     position: absolute;
-    top: 85%;
+    top:71%;
   }
   .fieldset {
     position: absolute;
     top: 70%;
+ 
   }
   .google__button {
+
+    position: absolute;
+    top: 77%;
+
+  }
+    
+  .button__text {
+ 
+    position: absolute;
+
+    right:16%;
+
+  }
+  .toLogIn {
+    position:absolute;
+    top:91%;
+
+  }
+
+
+}
+@media (min-height:950px){
+
+  .leftContainer__main {
+
+    position: absolute;
+  
+    top: 70%;
+  
+  }
+ 
+
+
+  .ellipses{
+    position: absolute;
+  
+    top: 81%;
+
+  }
+
+  .footer{
+    position: absolute;
+  
+    top: 86%;
+
+  }
+
+
+  .checkbox__container {
+    position: absolute;
+    width: 100%;
+    top: 51%;
+  }
+  .fieldset{
+    position: absolute;
+    top:69%
+  }
+  .form__button{
+    position: absolute;
+    top:69%
+  }
+  .google__button{
+    position: absolute;
+    top:76%
+  }
+  .toLogIn{
+    position: absolute;
+    top:91%
+  }
+}
+
+@media (min-height:1000px) {
+
+  
+  .checkbox__container {
+    position: absolute;
+    top: 49%;
+  }
+  .form__button{
+    position: absolute;
+    top:67%;
+  }
+  .fieldset {
+    position: absolute;
+    top: 68%;
+ 
+  }
+  .google__button {
+
     position: absolute;
     top: 75%;
-  }
 
-  .button__text {
-    position: absolute;
-
-    right: 16%;
   }
   .toLogIn {
-    position: absolute;
-    top: 85%;
+    position:absolute;
+    top:89%;
+
   }
 }
-@media (min-height: 950px) {
-  .leftContainer__main {
+@media (min-height:1050px){
+  .leftContainer__main{
     position: absolute;
-
-    top: 66%;
-  }
-
-  .main__head {
-    font-size: 20px;
-  }
-  .main__paragraph {
-    font-size: 18px;
-    line-height: 20px;
-    position: absolute;
-    top: 27px;
-  }
-  .ellipses {
-    position: absolute;
-
-    top: 81%;
-  }
-
-  .footer {
-    position: absolute;
-
-    top: 85%;
-  }
-  .formContainer {
-    position: absolute;
-    top: 10%;
-  }
-  .form__button {
-    position: absolute;
-    top: 80%;
-  }
-  .fieldset {
-    position: absolute;
-    top: 66%;
-  }
-  .google__button {
-    position: absolute;
-    top: 70%;
-  }
-  .toLogIn {
-    position: absolute;
-    top: 83%;
-  }
-}
-@media (min-height: 1000px) {
-  .formContainer {
-    position: absolute;
-    top: 11%;
-  }
-  .form__button {
-    position: absolute;
-    top: 76%;
-  }
-  .fieldset {
-    position: absolute;
+  
     top: 64%;
   }
-  .google__button {
+  .ellipses{
     position: absolute;
-    top: 69%;
+  
+    top: 74%;
+
   }
-  .toLogIn {
+
+  .footer{
     position: absolute;
-    top: 81%;
+  
+    top: 78%;
+
   }
-}
-@media (min-height: 1050px) {
+  .formContainer {
+
+    position: absolute;
+    top: 17%;
+
+  }
+  .checkbox__container {
+    position: absolute;
+    top: 45%;
+  }
+  .form__button{
+    position: absolute;
+    top:61%;
+  }
   .fieldset {
     position: absolute;
-    top: 66%;
+    top: 63%;
+ 
+  }
+  .google__button {
+
+    position: absolute;
+    top: 69%
+
+  }
+  .toLogIn {
+    position:absolute;
+    top:83%;
+
   }
 }
-@media (min-width: 1000px) {
+
+
+@media (min-width:1000px){
+  .copyright__right {
+    position: absolute;
+
+    left: 73vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 84vw;
+
+  }
+  .formContainer{
+    position: absolute;
+    left:60%
+  }
+
+
+  .button__text {
+ 
+    position: absolute;
+
+    right:10%;
+    font-size:14px;
+
+  }
+  .google__logo{
+    position: absolute;
+
+    left:17%;
+  }
+
+  .toLogIn{
+    position: absolute;
+    left: 7%;
+  }
+
+}
+
+@media (min-width:1100px){
+
+  .copyright__right {
+    position: absolute;
+
+    left: 75vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 85vw;
+
+  }
+
+  .form__header{
+    position: absolute;
+    left:28%
+  }
+  .button__text {
+ 
+    position: absolute;
+
+    right:19%;
+    font-size:14px;
+
+  }
+  .google__logo{
+    position: absolute;
+
+    left:22%;
+  }
+  .toLogIn{
+    position: absolute;
+    left: 20%;
+  }
+
+
+}
+@media (min-width:1300px) {
+  .copyright__right {
+    position: absolute;
+
+    left: 73vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 83vw;
+
+  }
+  .form__header{
+    position: absolute;
+    left:30%
+  }
+  
+
+  .button__text {
+ 
+    position: absolute;
+
+    right:19%;
+
+  }
+  .google__logo{
+    position: absolute;
+
+    left:28%;
+  }
+  .toLogIn{
+    position: absolute;
+    left: 20%;
+  }
+}
+
+@media (min-width:1350px) {
+
+  .button__text {
+ 
+    position: absolute;
+
+    right:21%;
+
+  }
+  .copyright__right {
+    position: absolute;
+
+    left: 73vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 83vw;
+
+  }
+
+  .formContainer{
+    position: absolute;
+    left:61%;
+  }
+
+
+}
+
+@media (min-width:1400px){
+  .head{
+    position: absolute;
+    left:13%
+  }
+  
+}
+
+@media (min-width:1500px){
+  .copyright__right {
+    position: absolute;
+
+    left: 74vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 84vw;
+
+  }
+  .button__text {
+ 
+    position: absolute;
+
+    right:25%;
+
+  }
+  .toLogIn{
+    position: absolute;
+    left: 19%;
+  }
+
+}
+
+
+
+
+/*@media (min-width: 1000px) {
   .copyright__right {
     position: absolute;
 
@@ -989,3 +1245,4 @@
     left: 50%;
   }
 }
+*/

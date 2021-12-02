@@ -19,6 +19,9 @@
 }
 .logo__container {
   color: white;
+ 
+  font-family: "Montserrat";
+
   font-size: 41px;
   font-weight: bold;
   line-height: 50px;
@@ -274,9 +277,6 @@
   border:transparent
 }
 
-.form__button:hover {
-  outline: #7356C0 solid 2px;
-}
 
 .fieldset {
   position: absolute;
@@ -375,10 +375,7 @@
   
   }
   .logo__container {
-  color: white;
-  font-size: 41px;
-  font-weight: bold;
-  font-family: "Montserrat";
+ 
   line-height: 50px;
   width: 177px;
   height: 50px;
@@ -537,12 +534,13 @@
   position: absolute;
   top: 0;
   bottom: 491px;
-  left: 72px;
-  right: 86px;
 
 }
 
-
+.head{
+  position: absolute;
+  left:13%
+}
 
 .form {
   height: 260px;
@@ -834,17 +832,17 @@
  
   .form__button{
     position: absolute;
-    top:70%;
+    top:71%;
   }
   .fieldset {
     position: absolute;
-    top: 385px;
+    top: 70%;
  
   }
   .google__button {
 
     position: absolute;
-    top: 423px;
+    top: 77%;
 
   }
     
@@ -864,15 +862,12 @@
 
 }
 @media (min-height:950px){
-  body{
-    overflow: hidden;
-  }
 
   .leftContainer__main {
 
     position: absolute;
   
-    top: 68%;
+    top: 70%;
   
   }
  
@@ -881,14 +876,14 @@
   .ellipses{
     position: absolute;
   
-    top: 80%;
+    top: 81%;
 
   }
 
   .footer{
     position: absolute;
   
-    top: 84%;
+    top: 86%;
 
   }
 
@@ -902,41 +897,30 @@
     position: absolute;
     top:69%
   }
+  .form__button{
+    position: absolute;
+    top:69%
+  }
   .google__button{
     position: absolute;
     top:76%
   }
   .signup__container{
     position: absolute;
-    top:89%
+    top:91%
   }
 }
 
 @media (min-height:1000px) {
-  body{
-    overflow: hidden;
-  }
 
-  .ellipses{
-    position: absolute;
   
-    top: 79%;
-
-  }
-
-  .footer{
-    position: absolute;
-  
-    top: 84%;
-
-  }
   .checkbox__container {
     position: absolute;
-    top: 50%;
+    top: 49%;
   }
   .form__button{
     position: absolute;
-    top:68%;
+    top:67%;
   }
   .fieldset {
     position: absolute;
@@ -946,22 +930,68 @@
   .google__button {
 
     position: absolute;
-    top: 455px;
+    top: 75%;
 
   }
   .signup__container {
     position:absolute;
-    top:86%;
+    top:89%;
 
   }
 }
 @media (min-height:1050px){
-  .fieldset{
+  .leftContainer__main{
     position: absolute;
-    top:66%
+  
+    top: 64%;
+  }
+  .ellipses{
+    position: absolute;
+  
+    top: 74%;
+
   }
 
+  .footer{
+    position: absolute;
+  
+    top: 78%;
+
+  }
+  .formContainer {
+
+    position: absolute;
+    top: 17%;
+
+  }
+  .checkbox__container {
+    position: absolute;
+    top: 45%;
+  }
+  .form__button{
+    position: absolute;
+    top:61%;
+  }
+  .fieldset {
+    position: absolute;
+    top: 63%;
+ 
+  }
+  .google__button {
+
+    position: absolute;
+    top: 69%
+
+  }
+  .signup__container {
+    position:absolute;
+    top:83%;
+
+  }
 }
+
+
+
 @media (min-width:1000px){
   .copyright__right {
     position: absolute;
@@ -1062,10 +1092,12 @@
     left: 83vw;
 
   }
-  .signup__container{
+  .head{
     position: absolute;
-    left: 15%;
+    left:10%
   }
+  
+
   .button__text {
  
     position: absolute;
@@ -1077,6 +1109,10 @@
     position: absolute;
 
     left:26%;
+  }
+  .signup__container{
+    position: absolute;
+    left: 15%;
   }
 }
 
@@ -1092,6 +1128,38 @@
   .copyright__right {
     position: absolute;
 
+    left: 73vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 83vw;
+
+  }
+  .head{
+    position: absolute;
+    left:11%
+  }
+  
+
+
+}
+
+@media (min-width:1400px){
+  .head{
+    position: absolute;
+    left:13%
+  }
+  
+}
+
+@media (min-width:1500px){
+  .copyright__right {
+    position: absolute;
+
     left: 74vw;
 
 
@@ -1101,25 +1169,6 @@
     position: absolute;
 
     left: 84vw;
-
-  }
-
-
-}
-
-@media (min-width:1500px){
-  .copyright__right {
-    position: absolute;
-
-    left: 75vw;
-
-
-  }
-  
-  .footer :nth-child(3) {
-    position: absolute;
-
-    left: 85vw;
 
   }
   .button__text {

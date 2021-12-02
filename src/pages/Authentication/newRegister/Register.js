@@ -139,20 +139,25 @@ class Register extends React.Component {
               <Alert color="danger">{this.props.registrationError}</Alert>
             ) : null}
             <div
-              className="input-group input-group-lg"
+              className="input-group"
               style={{ marginBottom: "20px" }}
             >
       
                 <div className="input-group-prepend border border-0">
                   <img
                     className="input-group-text border border-0"
-                    id="inputGroup-sizing-lg"
                     src={Company}
                   />
                 </div>
         
               <input
                 className="form-control bg-light border border-0"
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "normal",
+                  fontSize: "14px",
+                  color:'#8F9BB3'
+                }}
                 name="name"
                 //value="admin@themesbrand.com"
                 value={this.state.email}
@@ -164,20 +169,25 @@ class Register extends React.Component {
             </div>
 
             <div
-              className="input-group input-group-lg"
+              className="input-group"
               style={{ marginBottom: "20px" }}
             >
  
                 <div className="input-group-prepend border border-0">
                   <img
                     className="input-group-text border border-0"
-                    id="inputGroup-sizing-lg"
                     src={Name}
                   />
                 </div>
 
               <input
                 className="form-control bg-light border border-0"
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "normal",
+                  fontSize: "14px",
+                  color:'#8F9BB3'
+                }}
                 name="company-name"
                 //value="admin@themesbrand.com"
                 value={this.state.email}
@@ -188,20 +198,25 @@ class Register extends React.Component {
               />
             </div>
             <div
-              className="input-group input-group-lg"
+              className="input-group"
               style={{ marginBottom: "20px" }}
             >
    
                 <div className="input-group-prepend border border-0">
                   <img
                     className="input-group-text border border-0"
-                    id="inputGroup-sizing-lg"
                     src={Phone}
                   />
                 </div>
      
               <input
                 className="form-control bg-light border border-0"
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "normal",
+                  fontSize: "14px",
+                  color:'#8F9BB3'
+                }}
                 name="phone"
                 value={this.state.email}
                 placeholder="Phone number"
@@ -211,20 +226,25 @@ class Register extends React.Component {
               />
             </div>
             <div
-              className="input-group input-group-lg"
+              className="input-group"
               style={{ marginBottom: "20px" }}
             >
 
                 <div className="input-group-prepend border border-0">
                   <img
                     className="input-group-text border border-0"
-                    id="inputGroup-sizing-lg"
                     src={SMS}
                   />
                 </div>
        
               <input
                 className="form-control bg-light border border-0"
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "normal",
+                  fontSize: "14px",
+                  color:'#8F9BB3'
+                }}
                 name="email"
                 placeholder="E-mail"
                 value={this.state.email}
@@ -234,19 +254,24 @@ class Register extends React.Component {
               />
        
             </div>
-            <div className="input-group input-group-lg mb-4">
-              {!this.state.passwordFocused && this.state.password.length === 0 && (
+            <div className="input-group  mb-4">
+          
                 <div className="input-group-prepend ">
                   <img
                     className="input-group-text border border-0"
-                    id="inputGroup-sizing-lg"
                     src={Lock}
                   />
                 </div>
-              )}
+
 
               <input
                 className={`form-control bg-light border border-0 `}
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "normal",
+                  fontSize: "14px",
+                  color:'#8F9BB3'
+                }}
                 name="password"
                 placeholder="Password"
                 type={this.state.toggle ? "text" : "password"}
@@ -262,7 +287,7 @@ class Register extends React.Component {
               </div>
             </div>
 
-            <button className={classes.form__button}>Signup</button>
+            <button className={classes.form__button}>Continue</button>
           </form>
 
           <fieldset className={classes.fieldset}>
