@@ -611,7 +611,7 @@
     left:25%;
   }
 }
-@media (min-height:700px){
+@media (min-height:790px){
   body{
     overflow: hidden;
   }
@@ -729,24 +729,21 @@
   .ellipses {
 
     position: absolute;
-    top: 84%;
+    top: 88%;
 
   }
   .footer {
     position: absolute;
 
-    top: 91%;
+    top: 93%;
 
   }
 
-  .checkbox__container {
-    position: absolute;
-    top: 145px;
-  }
+
   .form__button {
 
     position: absolute;
-    top: 198px;
+    top: 89%;
     bottom: 0;
   
   }
@@ -759,12 +756,12 @@
   .google__button {
 
     position: absolute;
-    top: 82%;
+    top: 80%;
 
   }
   .toLogIn {
     position:absolute;
-    top:99%;
+    top:93%;
 
   }
 
@@ -772,137 +769,34 @@
  
 }
 
-@media (min-height:900px){
-
-  .leftContainer__main {
+@media (min-height:880px){
+  .ellipses {
 
     position: absolute;
+    top: 87%;
+
+  }
+  .footer {
+    position: absolute;
+
+    top: 92%;
+
+  }
+
+
+  .form__button {
+
+    position: absolute;
+    top: 84%;
+    bottom: 0;
   
-    top: 70%;
-  
-  }
-  .main__paragraph {
-
-    position: absolute; 
-    top: 20px;
-  }
-
-  .ellipses{
-    position: absolute;
-  
-    top: 82%;
-
-  }
-
-  .footer{
-    position: absolute;
-  
-    top: 86%;
-
-  }
-  .checkbox__container {
-    position: absolute;
-    width: 100%;
-    top: 53%;
-  }
- 
-  .form__button{
-    position: absolute;
-    top:71%;
   }
   .fieldset {
     position: absolute;
     top: 70%;
  
   }
-  .google__button {
 
-    position: absolute;
-    top: 77%;
-
-  }
-    
-  .button__text {
- 
-    position: absolute;
-
-    right:16%;
-
-  }
-  .toLogIn {
-    position:absolute;
-    top:91%;
-
-  }
-
-
-}
-@media (min-height:950px){
-
-  .leftContainer__main {
-
-    position: absolute;
-  
-    top: 70%;
-  
-  }
- 
-
-
-  .ellipses{
-    position: absolute;
-  
-    top: 81%;
-
-  }
-
-  .footer{
-    position: absolute;
-  
-    top: 86%;
-
-  }
-
-
-  .checkbox__container {
-    position: absolute;
-    width: 100%;
-    top: 51%;
-  }
-  .fieldset{
-    position: absolute;
-    top:69%
-  }
-  .form__button{
-    position: absolute;
-    top:69%
-  }
-  .google__button{
-    position: absolute;
-    top:76%
-  }
-  .toLogIn{
-    position: absolute;
-    top:91%
-  }
-}
-
-@media (min-height:1000px) {
-
-  
-  .checkbox__container {
-    position: absolute;
-    top: 49%;
-  }
-  .form__button{
-    position: absolute;
-    top:67%;
-  }
-  .fieldset {
-    position: absolute;
-    top: 68%;
- 
-  }
   .google__button {
 
     position: absolute;
@@ -911,33 +805,143 @@
   }
   .toLogIn {
     position:absolute;
-    top:89%;
+    top:90%;
 
   }
+
+
+
+}
+@media (min-height:950px){
+  .leftContainer__main {
+
+    position: absolute;
+  
+    top: 70%;
+  
+  }
+  .main__head {
+
+    position: absolute;
+    top: 0;
+    bottom: 90px;
+  }
+
+  .main__paragraph {
+
+    position: absolute; 
+    top: 24px;
+  }
+  .ellipses {
+
+    position: absolute;
+    top: 83%;
+
+  }
+  .footer {
+    position: absolute;
+
+    top: 89%;
+
+  }
+  .form__button {
+
+    position: absolute;
+    top: 80%;
+    bottom: 0;
+  
+  }
+  .fieldset {
+    position: absolute;
+    top: 67%;
+ 
+  }
+
+  .google__button {
+
+    position: absolute;
+    top: 72%;
+
+  }
+  .toLogIn {
+    position:absolute;
+    top:86%;
+
+  }
+
+
+}
+
+@media (min-height:980px) {
+  .leftContainer__main {
+
+    position: absolute;
+  
+    top: 68%;
+  
+  }
+  .ellipses {
+
+    position: absolute;
+    top: 80%;
+
+  }
+  .footer {
+    position: absolute;
+
+    top: 86%;
+
+  }
+  .form__button {
+
+    position: absolute;
+    top: 76%;
+    bottom: 0;
+  
+  }
+  .fieldset {
+    position: absolute;
+    top: 64%;
+ 
+  }
+
+  .google__button {
+
+    position: absolute;
+    top: 69%;
+
+  }
+  .toLogIn {
+    position:absolute;
+    top:83%;
+
+  }
+  
+
 }
 @media (min-height:1050px){
   .leftContainer__main{
     position: absolute;
   
-    top: 64%;
+    top: 68%;
   }
   .ellipses{
     position: absolute;
   
-    top: 74%;
+    top: 79%;
 
   }
 
   .footer{
     position: absolute;
   
-    top: 78%;
+    top: 84%;
 
   }
   .formContainer {
 
     position: absolute;
-    top: 17%;
+    top: 14%;
 
   }
   .checkbox__container {
@@ -946,17 +950,17 @@
   }
   .form__button{
     position: absolute;
-    top:61%;
+    top:77%;
   }
   .fieldset {
     position: absolute;
-    top: 63%;
+    top: 65%;
  
   }
   .google__button {
 
     position: absolute;
-    top: 69%
+    top: 70%
 
   }
   .toLogIn {

@@ -307,7 +307,7 @@ class Register extends React.Component {
           <div className={classes.toLogIn}>
             <p>
               Have an account ?{" "}
-              <Link to="/login" className="font-weight-medium text-primary">
+              <Link to="/login">
                 {" "}
                 Login here
               </Link>{" "}

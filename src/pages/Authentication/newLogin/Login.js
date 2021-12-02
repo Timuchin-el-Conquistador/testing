@@ -203,7 +203,7 @@ class Login extends React.Component {
 
           <fieldset className={classes.fieldset}>
             <span className={classes.legend__container}>
-              <legend className={classes.legend} align="center">
+              <legend className={classes.legend}>
                 or
               </legend>
             </span>
@@ -215,14 +215,14 @@ class Login extends React.Component {
           <div className={classes.signup__container}>
             <p>
               Don't have an account ?{" "}
-              <Link to="register" className="font-weight-medium text-primary">
+              <Link to="register">
                 {" "}
                 Signup here{" "}
               </Link>{" "}
             </p>
-          </div>
         </div>
       </div>
+     </div>
     );
   }
 }
