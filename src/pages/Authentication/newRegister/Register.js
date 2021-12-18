@@ -1,32 +1,26 @@
 import React from "react";
 
-//reactstrap
-import {Alert} from 'reactstrap'
 
 
+//router
 import { withRouter, Link } from "react-router-dom";
 
-//import axios from "axios";
-
-
-
-
 //import assets
-import Google from "./google.svg";
-import Logo from "./logo.svg";
-import Car from "./car.png";
-import Ellipses from "./ellipse.svg";
-import Ellipse from "./ellipse2.svg";
-import SMS from "./sms.svg";
-import Lock from "./lock.svg";
-import Password from "./icon.svg";
-import Vector2 from "./vector2.svg";
-import Phone from './mobile.svg'
-import Company from './bank.svg'
-import Name from './user.svg'
+
+import Google from "../../../assets/css/common/icons/google.svg";
+import Logo from "../../../assets/css/common/icons/logo.svg";
+import Car from "../../../assets/css/common/icons/car.png";
+import SMS from "../../../assets/css/common/icons/sms.svg";
+import Lock from "../../../assets/css/common/icons/lock.svg";
+import Password from "../../../assets/css/common/icons/icon.svg";
+import Copyright from "../../../assets/css/common/icons/copyright.svg";
+import Phone from "../../../assets/css/Authentication/Register/mobile.svg";
+import Company from "../../../assets/css/Authentication/Register/bank.svg";
+import User from "../../../assets/css/Authentication/Register/user.svg";
 
 //import classes
-import classes from "./Signup.module.css";
+import classes from "../../../assets/css/Authentication/Register/Signup.module.css";
+
 
 class Register extends React.Component {
   constructor(props) {
@@ -34,290 +28,425 @@ class Register extends React.Component {
     this.state = {
       email: "",
       password: "",
-      phoneNumber: "",
+      phone_number: "",
       fullName: "",
-      toggle: false,
-
+      company: "",
+      text: false,
+      error: [],
+      modalStatus: true,
     };
 
     // handleValidSubmit
+    this.toggleEye = this.toggleEye.bind(this);
     this.handleValidSubmit = this.handleValidSubmit.bind(this);
-    this.toggle = this.toggle.bind(this);
-
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
+ handleValidSubmit(e){
+   e.preventDefault()
+   this.props.history.push('/business')
+ }
 
-
-  handleValidSubmit(event){
-    
-  }
-
-  handleInputChange = (event) => {
+  handleInputChange(event) {
     const name = event.target.name;
     this.setState({ [name]: event.target.value });
-  };
-  toggle() {
-    this.setState({ ...this.state, toggle: !this.state.toggle });
   }
 
-
+  toggleEye() {
+    this.setState({ ...this.state, text: !this.state.text });
+  }
   componentDidMount() {
-  
+    
+    document.body.classList.add("bg-transparent");
   }
+  componentWillUnmount(){
+    document.body.classList.remove("bg-transparent");
+  }
+
   render() {
+    console.log(this.props.email);
     return (
-      <div className={classes.main__container}>
-        <div
-          className={classes.leftSideContainer}
-          style={{
-            backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #3F2B89 100%),url(${Car})`,
-            opacity: "0.8",
-            backgroundPosition: "80% 25%",
-          }}
-        >
-          <header className={classes.logo__header}>
-            <div className={classes.logo__container}>
-              <img src={Logo} className={classes.logo} />
-              <span className={classes.logo__span}>urmur</span>
-            </div>
-          </header>
-          <section className={classes.leftContainer__main}>
-            <div>
-              <h6 className={classes.main__head}>
-                Grow Business By Getting In Front of Your Ideal Customers{" "}
-              </h6>
-              <p className={classes.main__paragraph}>
-                Explore audience on streets via real-time street-level data and
-                connect with them via smart digital car-top billboards, engage
-                with viewers in real-time, collect data in exchange of rewards
-                and discounts and retarget them via retargeting online Ads
-                dynamically.
+      <React.Fragment>
+        {/* <Modal isOpen={this.props.signupModalStatus}>
+          <div className={classes.signup_section}>
+            <h1 className={classes.signup_h1}>Is this information correct?</h1>
+            <form onSubmit={this.handleSignupModal}>
+              <div className={classes.signup_form}>
+                <div className={`${classes.signup_relative} ${classes.mb_24}`}>
+                  <input
+                    type="text"
+                    className={classes.signup_form_item}
+                    name="fullName"
+                    id="fullname"
+                    placeholder="Full Name"
+                    value={this.state.fullName}
+                    onChange={this.handleInputChange}
+                  />
+                  <img
+                    src={User}
+                    alt="user-form icon"
+                    className={classes.signup_email_icon}
+                  />
+                </div>
+                <div className={`${classes.signup_relative} ${classes.mb_24}`}>
+                  <input
+                    type="email"
+                    className={classes.signup_form_item}
+                    name="email"
+                    id="login-email"
+                    placeholder="Enter your E-mail"
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                  />
+                  <img
+                    src={SMS}
+                    alt="email icon"
+                    className={classes.signup_email_icon}
+                  />
+                </div>
+                <button type="submit" className={classes.signup_form_btn}>
+                  Confirm
+                </button>
+              </div>
+            </form>
+          </div>
+        </Modal> */}
+        <div className={classes.login_register}>
+          <div className={classes.log_reg_left}>
+            <img src={Car} alt="" className={classes.log_reg_img} />
+            <div className={classes.login_layer}>
+              <img src={Logo} alt="" className={classes.white_logo} />
+              <div className={classes.log_reg_slider}>
+                <div className={classes.left_slide_item}>
+                  <h4 className={classes.slide_h4}>
+                    Grow Business By Getting In Front of Your Ideal Customers
+                  </h4>
+                  <div className={classes.slide_txt}>
+                    Explore audience on streets via real-time street-level data
+                    and connect with them via smart digital car-top billboards,
+                    engage with viewers in real-time, collect data in exchange
+                    of rewards and discounts and retarget them via retargeting
+                    online Ads dynamically.
+                  </div>
+                </div>
+              </div>
+              <p
+                className={`${classes.footer_copyright} ${classes.mur_flex} ${classes.log_reg_footer}`}
+              >
+                <img src={Copyright} alt="" />
+                <span>{new Date().getFullYear()}, MurmurCars</span>
               </p>
             </div>
-          </section>
-          <section className={classes.ellipses}>
-            <img src={Ellipses} className={classes.ellipse1} />
-            <img src={Ellipse} className={classes.ellipse2} />
-            <img src={Ellipses} className={classes.ellipse3} />
-          </section>
-          <footer className={classes.footer}>
-            <div className={classes.copyright}>
-              <span className={classes.footer__copyright__icon}>
-                {" "}
-                <img className={classes.footer__icon} src={Vector2} />
-              </span>
-
-              <div className={classes.footer__copyright}>
-                <p>
-                  {new Date().getFullYear()}{" "}
-                  <span className={classes.companyName}>MurmurCars</span>
-                </p>
-              </div>
-            </div>
-            <span className={classes.copyright__right}>
-              All rights reserved
-            </span>
-            <span>Privacy Policy</span>
-          </footer>
-        </div>
-
-        <div className={classes.formContainer}>
-          <div className={classes.form__header}>
-
-                <span className={classes.head}>SIGNUP</span>
           </div>
-
-          <form
-            className={classes.form}
-            onSubmit={this.handleValidSubmit}
-            //onValidSubmit={this.handleLogin}
-          >
-            {this.props.user && this.props.user ? (
-              <Alert color="success">Register User Successfully</Alert>
-            ) : null}
-            {this.props.registrationError && this.props.registrationError ? (
-              <Alert color="danger">{this.props.registrationError}</Alert>
-            ) : null}
-            <div
-              className="input-group"
-              style={{ marginBottom: "20px" }}
-            >
-      
-                <div className="input-group-prepend border border-0">
-                  <img
-                    className="input-group-text border border-0"
-                    src={Company}
-                  />
-                </div>
+          <div className={classes.log_reg_right}>
+            <div className={classes.signup_section}>
         
-              <input
-                className="form-control bg-light border border-0"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "normal",
-                  fontSize: "14px",
-                  color:'#8F9BB3'
-                }}
-                name="name"
-                //value="admin@themesbrand.com"
-                value={this.state.email}
-                placeholder="Full Name"
-                type="text"
-                required
-                onChange={(event) => this.handleInputChange(event)}
-              />
-            </div>
-
-            <div
-              className="input-group"
-              style={{ marginBottom: "20px" }}
-            >
- 
-                <div className="input-group-prepend border border-0">
-                  <img
-                    className="input-group-text border border-0"
-                    src={Name}
-                  />
+              <h1 className={classes.signup_h1}>Signup</h1>
+              <form onSubmit={this.handleValidSubmit}>
+                <div className={classes.signup_form}>
+                  <div
+                    className={`${classes.signup_relative} ${classes.mb_24}`}
+                  >
+                    <input
+                      type="text"
+                      className={classes.signup_form_item}
+                      name="fullName"
+                      id="fullname"
+                      placeholder="Full Name"
+                      value={this.state.fullName}
+                      onChange={this.handleInputChange}
+                    />
+                    <img
+                      src={User}
+                      alt="user-form icon"
+                      className={classes.signup_email_icon}
+                    />
+                  </div>
+                  <div
+                    className={`${classes.signup_relative} ${classes.mb_24}`}
+                  >
+                    <input
+                      type="text"
+                      className={classes.signup_form_item}
+                      name="company"
+                      id="company-name"
+                      placeholder="Company Name"
+                      value={this.state.company}
+                      onChange={this.handleInputChange}
+                    />
+                    <img
+                      src={Company}
+                      alt="bank icon"
+                      className={classes.signup_email_icon}
+                    />
+                  </div>
+                  <div
+                    className={`${classes.signup_relative} ${classes.mb_24}`}
+                  >
+                    <input
+                      type="number"
+                      className={classes.signup_form_item}
+                      name="phone_number"
+                      id="phone-number"
+                      placeholder="Phone number"
+                      value={this.state.phone_number}
+                      onChange={this.handleInputChange}
+                    />
+                    <img
+                      src={Phone}
+                      alt="phone icon"
+                      className={classes.signup_email_icon}
+                    />
+                  </div>
+                  <div
+                    className={`${classes.signup_relative} ${classes.mb_24}`}
+                  >
+                    <input
+                      type="email"
+                      className={classes.signup_form_item}
+                      name="email"
+                      id="login-email"
+                      placeholder="Enter your E-mail"
+                      value={this.state.email}
+                      onChange={this.handleInputChange}
+                    />
+                    <img
+                      src={SMS}
+                      alt="email icon"
+                      className={classes.signup_email_icon}
+                    />
+                  </div>
+                  <div className={classes.signup_relative}>
+                    <input
+                      type={`${this.state.text ? "text" : "password"}`}
+                      className={classes.signup_form_item}
+                      name="password"
+                      id="login-password"
+                      placeholder="Enter your Password"
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
+                    />
+                    <img
+                      src={Lock}
+                      alt="password icon"
+                      className={classes.signup_email_icon}
+                    />
+                    <button
+                      type="button"
+                      className={classes.pass_eye}
+                      onClick={this.toggleEye}
+                    >
+                      <img src={Password} alt="password eye icon" />
+                    </button>
+                    {/* <span class="pass-error">Must be at least 8 characters.</span>*/}
+                  </div>
+                  <button type="submit" className={classes.signup_form_btn}>
+                    Continue
+                  </button>
+                  <div className={classes.or_block}>
+                    <span>or</span>
+                  </div>
+                  <button
+                    type="button"
+                    className={classes.signup_google}
+                  
+                  >
+                    <img src={Google} alt="" />
+                    <span>Signup with Google</span>
+                  </button>
+                  <p className={classes.have_account}>
+                    Have an account?{" "}
+                    <Link className={classes.have_acc_link} to="/login">
+                      {" "}
+                      Login here
+                    </Link>
+                  </p>
                 </div>
-
-              <input
-                className="form-control bg-light border border-0"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "normal",
-                  fontSize: "14px",
-                  color:'#8F9BB3'
-                }}
-                name="company-name"
-                //value="admin@themesbrand.com"
-                value={this.state.email}
-                placeholder="Company Name"
-                type="text"
-                required
-                onChange={(event) => this.handleInputChange(event)}
-              />
+              </form>
             </div>
-            <div
-              className="input-group"
-              style={{ marginBottom: "20px" }}
-            >
-   
-                <div className="input-group-prepend border border-0">
-                  <img
-                    className="input-group-text border border-0"
-                    src={Phone}
-                  />
-                </div>
-     
-              <input
-                className="form-control bg-light border border-0"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "normal",
-                  fontSize: "14px",
-                  color:'#8F9BB3'
-                }}
-                name="phone"
-                value={this.state.email}
-                placeholder="Phone number"
-                type="phone"
-                required
-                onChange={(event) => this.handleInputChange(event)}
-              />
-            </div>
-            <div
-              className="input-group"
-              style={{ marginBottom: "20px" }}
-            >
+            <ul className={`${classes.footer_links} ${classes.login_footer}`}>
+              <li>
+                <a href="#" className={classes.footer_link}>
+                  All rights reserved
+                </a>
+              </li>
+              <li>
+                <a href="#" className={classes.footer_link}>
+                  Privacy Policy
+                </a>
+              </li>
+            </ul>
 
-                <div className="input-group-prepend border border-0">
-                  <img
-                    className="input-group-text border border-0"
-                    src={SMS}
-                  />
-                </div>
-       
-              <input
-                className="form-control bg-light border border-0"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "normal",
-                  fontSize: "14px",
-                  color:'#8F9BB3'
-                }}
-                name="email"
-                placeholder="E-mail"
-                value={this.state.email}
-                type="email"
-                required
-                onChange={(event) => this.handleInputChange(event)}
-              />
-       
-            </div>
-            <div className="input-group  mb-4">
-          
-                <div className="input-group-prepend ">
-                  <img
-                    className="input-group-text border border-0"
-                    src={Lock}
-                  />
-                </div>
-
-
-              <input
-                className={`form-control bg-light border border-0 `}
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "normal",
-                  fontSize: "14px",
-                  color:'#8F9BB3'
-                }}
-                name="password"
-                placeholder="Password"
-                type={this.state.toggle ? "text" : "password"}
-                required
-                onChange={(event) => this.handleInputChange(event)}
-              />
-              <div className="input-group-append ">
-                <img
-                  className="input-group-text border border-0 "
-                  src={Password}
-                  onClick={this.toggle}
-                />
-              </div>
-            </div>
-
-            <button className={classes.form__button}>Continue</button>
-          </form>
-
-          <fieldset className={classes.fieldset}>
-            <div className={classes.legend__container}>
-              <legend className={classes.legend} align="center">
-                or
-              </legend>
-            </div>
-          </fieldset>
-          <button
-            id="GoogleLogin"
-            className={classes.google__button}
-          >
-            <img src={Google} className={classes.google__logo} />
-            <span className={classes.button__text}>Signup with Google</span>
-          </button>
-          <div className={classes.toLogIn}>
-            <p>
-              Have an account ?{" "}
-              <Link to="/login">
-                {" "}
-                Login here
-              </Link>{" "}
-            </p>
+            {/*  <p
+                className={`${classes.footer_copyright} ${classes.mur_flex} ${classes.log_reg_footer}`}
+              >
+                <img src={Vector2} alt="copyright icon" />
+                <span>2021, MurmurCars</span>
+            </p>*/}
           </div>
         </div>
-      </div>
+        {/*  <div className={classes.log_reg_right}>
+            <div className={classes.signup_section}>
+              {this.state.error.length !== 0 &&
+                this.state.error.map((state, i) => (
+                  <Alert color="danger" key={i}>
+                    {state + " is wrong"}
+                  </Alert>
+                ))}
+              {this.props.error && (
+                <Alert color="danger">{this.props.error}</Alert>
+              )}
+              <h1 className={classes.signup_h1}>Signup</h1>
+              <form onSubmit={this.handleValidSubmit}>
+                <div className={classes.signup_form}>
+                  <div
+                    className={`${classes.signup_relative} ${classes.mb_24}`}
+                  >
+                    <input
+                      type="text"
+                      className={classes.signup_form_item}
+                      name="fullName"
+                      id="fullname"
+                      placeholder="Full Name"
+                      value={this.state.fullName}
+                      onChange={this.handleInputChange}
+                    />
+                    <img
+                      src={User}
+                      alt="user-form icon"
+                      className={classes.signup_email_icon}
+                    />
+                  </div>
+                  <div
+                    className={`${classes.signup_relative} ${classes.mb_24}`}
+                  >
+                    <input
+                      type="text"
+                      className={classes.signup_form_item}
+                      name="company"
+                      id="company-name"
+                      placeholder="Company Name"
+                      value={this.state.company}
+                      onChange={this.handleInputChange}
+                    />
+                    <img
+                      src={Company}
+                      alt="bank icon"
+                      className={classes.signup_email_icon}
+                    />
+                  </div>
+                  <div
+                    className={`${classes.signup_relative} ${classes.mb_24}`}
+                  >
+                    <input
+                      type="number"
+                      className={classes.signup_form_item}
+                      name="phone_number"
+                      id="phone-number"
+                      placeholder="Phone number"
+                      value={this.state.phone_number}
+                      onChange={this.handleInputChange}
+                    />
+                    <img
+                      src={Phone}
+                      alt="phone icon"
+                      className={classes.signup_email_icon}
+                    />
+                  </div>
+                  <div
+                    className={`${classes.signup_relative} ${classes.mb_24}`}
+                  >
+                    <input
+                      type="email"
+                      className={classes.signup_form_item}
+                      name="email"
+                      id="login-email"
+                      placeholder="Enter your E-mail"
+                      value={this.state.email}
+                      onChange={this.handleInputChange}
+                    />
+                    <img
+                      src={SMS}
+                      alt="email icon"
+                      className={classes.signup_email_icon}
+                    />
+                  </div>
+                  <div className={classes.signup_relative}>
+                    <input
+                      type={`${this.state.text ? "text" : "password"}`}
+                      className={classes.signup_form_item}
+                      name="password"
+                      id="login-password"
+                      placeholder="Enter your Password"
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
+                    />
+                    <img
+                      src={Lock}
+                      alt="password icon"
+                      className={classes.signup_email_icon}
+                    />
+                    <button
+                      type="button"
+                      className={classes.pass_eye}
+                      onClick={this.toggleEye}
+                    >
+                      <img src={Password} alt="password eye icon" />
+                    </button>
+                     <span class="pass-error">Must be at least 8 characters.</span>
+                  </div>
+                  <button type="submit" className={classes.signup_form_btn}>
+                    Continue
+                  </button>
+
+                  {this.props.googleSignupAction ? null : (
+                    <React.Fragment>
+                      <div className={classes.or_block}>
+                        <span>or</span>
+                      </div>
+                      <button
+                        type="submit"
+                        name="GoogleLoginRegister"
+                        id="GoogleLoginRegister"
+                        className={classes.signup_google}
+                        onClick={(e) => FirebaseAuth(e.target.id, this.props)}
+                      >
+                        <img src={Google} alt="" />
+                        <span name="GoogleLogin" id="GoogleLoginRegister">
+                          Signup with Google
+                        </span>
+                      </button>
+                    </React.Fragment>
+                  )}
+                  <p className={classes.have_account}>
+                    Have an account?{" "}
+                    <Link className={classes.have_acc_link} to="/login">
+                      {" "}
+                      Login here
+                    </Link>
+                  </p>
+                </div>
+              </form>
+            </div>
+            <ul className={`${classes.footer_links} ${classes.login_footer}`}>
+              <li>
+                <a href="#" className={classes.footer_link}>
+                  All rights reserved
+                </a>
+              </li>
+              <li>
+                <a href="#" className={classes.footer_link}>
+                  Privacy Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+                  </div>*/}
+      </React.Fragment>
     );
   }
 }
 
 
-export default Register
+
+export default withRouter(Register);
