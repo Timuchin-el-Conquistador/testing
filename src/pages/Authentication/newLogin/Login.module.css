@@ -1,0 +1,1189 @@
+
+
+
+
+.main__container {
+  position:absolute;
+  background-color: #ffffff !important;
+  width:100vw;
+  height:100vh;
+}
+
+
+
+.leftSideContainer {
+  width:50%;
+  height:100%;
+  position: absolute;
+
+}
+.logo__container {
+  color: white;
+ 
+  font-family: "Montserrat";
+
+  font-size: 41px;
+  font-weight: bold;
+  line-height: 50px;
+  width: 25%;
+  height: 6%;
+  position: absolute;
+  left:10%;
+  top:4%;
+}
+
+.logo {
+  position: absolute;
+  width: 42.4px;
+  height: 39px;
+  top: 25px;
+}
+
+.logo__span {
+  position: absolute;
+  top: 24px;
+  left: 42px;
+  font-weight: 700;
+  font-family: "Montserrat";
+}
+
+
+.leftContainer__main {
+  color: white;
+  height: 90px;
+  position: absolute;
+  left: 10%;
+  right:138px;
+  top: 596px;
+  bottom: 82px;
+  width: 389px;
+  margin: 0;
+  padding: 0;
+}
+
+.main__head {
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 64px;
+  color: #FFFFFF;
+
+}
+
+.main__paragraph {
+  height: 64px;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  opacity:0.8;
+}
+
+.ellipses {
+  width: 32px;
+  height: 8px;
+  position: absolute;
+  top: 91%;
+  left: 10%;
+  bottom: 8%;
+}
+.ellipse1 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+}
+.ellipse2 {
+  position: absolute;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+}
+.ellipse3 {
+  position: absolute;
+  left: 26px;
+  width: 8px;
+  height: 8px;
+}
+
+.footer {
+  position: absolute;
+  width: 144px;
+  height: 20px;
+  left: 10%;
+  top: 95%;
+  bottom: 20px;
+  color: #ffffff;
+}
+
+.footer__copyright__icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url("./circle.svg");
+}
+.footer__icon {
+  position: absolute;
+  width: 6px;
+  height: 7px;
+  left: 34.33%;
+  right: 38%;
+  top: 33.33%;
+  bottom: 33.33%;
+}
+.footer__copyright {
+  position: absolute;
+  left: 36px;
+  right: 0;
+  width: 108px;
+  height: 20px;
+}
+.footer__copyright p {
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+}
+.companyName {
+  letter-spacing: 0.0015em;
+  font-size: 12px;
+  font-weight: 10;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Montserrat";
+  opacity:0.8;
+}
+.copyright__right {
+  position: absolute;
+  color: #200b47;
+  left: 72.5vw;
+  font-size: 12px;
+  width: 189px;
+}
+
+.footer :nth-child(3) {
+  position: absolute;
+  color: #200b47;
+  left: 81vw;
+  font-size: 12px;
+  width: 82px;
+}
+
+
+
+.formContainer {
+  width: 25%;
+  height: 61%;
+  position: absolute;
+  top: 15%;
+  bottom: 16%;
+  right: 28%;
+  left: 61%;
+  background-image: #fafbfd;
+}
+
+.form__header {
+  width: 56%;
+  height: 6%;
+  position: absolute;
+  bottom: 94%;
+  left: 25%;
+  right: 25%;
+  font-family: 'Arimo';
+}
+
+.head {
+  position: absolute;
+  width: 191px;
+  height: 32px;
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #2a1b6e;
+}
+
+.form {
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  top: 19%;
+  bottom: 31%;
+}
+
+
+
+
+.passwordToggle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 307px;
+  right: 17px;
+}
+.checkbox__container {
+  position: absolute;
+  width: 100%;
+  top: 61%;
+  bottom: 31%;
+  color: #2E3A59;
+}
+
+.checkbox__input {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+
+}
+.checkbox__input label {
+  font-size: 14px;
+  color:#2E3A59
+}
+.forgetpassword__container {
+  position: absolute;
+  width: 123px;
+  height: 20px;
+  right: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Arimo';
+  color: #2f80ed;
+}
+
+.form__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 48px;
+  font-weight: 500;
+  font-family: 'Arimo';
+  position: absolute;
+  top: 80%;
+  bottom: 0;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #3F2B89;
+  border:transparent
+}
+
+
+.fieldset {
+  position: absolute;
+  top: 76%;
+  bottom: 24%;
+  width: 100%;
+  height: 1px;
+  background-color: #edf1f7;
+}
+.legend__container{
+
+  position: absolute;
+  left:45%;
+  width: 32px;
+  height: 9px;
+  background-color: #ffffff;
+  z-index: 3;
+}
+.legend {
+  position: absolute;
+  top:-12px;
+  left:25%;
+  width: 15px;
+  height: 20px;
+  font-size: 14px;
+  color: #8f9bb3;
+}
+
+
+
+
+.google__button {
+  width: 100%;
+  height: 54px;
+  border: 2px solid #e4e9f2;
+  box-sizing: border-box;
+  font-family: 'Arimo';
+  border-radius: 10px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 428px;
+  bottom: 41px;
+}
+
+.google__logo {
+  position: absolute;
+  right: 244.5px;
+  left: 25%;
+  top: 15px;
+  bottom: 15px;
+}
+
+.button__text {
+  width: 155px;
+  height: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  position: absolute;
+  font-family: 'Arimo';
+  letter-spacing: 0.0015em;
+  right: 25%;
+  top: 15px;
+  bottom: 15px;
+  color:#2E3A59
+}
+.signup__container {
+
+  width: 243px;
+  height: 20.25px;
+  position: absolute;
+  top: 96%;
+  left: 19%;
+  right:25%;
+}
+
+
+
+
+@media (min-height:600px) and (max-height:784px){
+
+  .main__container {
+    position:absolute;
+    background-color: #ffffff !important;
+    width:100vw;
+    height:784px;
+  }
+  
+  
+  
+  .leftSideContainer {
+    width:50%;
+    height:784px;
+    position: absolute;
+    top:0;
+  
+  }
+  .logo__container {
+ 
+  line-height: 50px;
+  width: 177px;
+  height: 50px;
+  position: absolute;
+  left: 75px;
+  top: 24px;
+}
+
+.logo {
+  position: absolute;
+  width: 42.4px;
+  height: 39px;
+  top: 25px;
+}
+
+.logo__span {
+  position: absolute;
+  top: 24px;
+  left: 42px;
+  font-weight: 700;
+  font-family: "Montserrat";
+}
+
+/*main content*/
+.leftContainer__main {
+  color: white;
+  height: 90px;
+  position: absolute;
+  left: 75px;
+  right:138px;
+  top: 596px;
+  bottom: 82px;
+  width: 478px;
+  margin: 0;
+  padding: 0;
+}
+
+.main__head {
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 64px;
+}
+
+.main__paragraph {
+  height: 64px;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+}
+
+.ellipses {
+  width: 32px;
+  height: 8px;
+  position: absolute;
+  top: 700px;
+  left: 75px;
+}
+.ellipse1 {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+}
+.ellipse2 {
+  position: absolute;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+}
+.ellipse3 {
+  position: absolute;
+  left: 26px;
+  width: 8px;
+  height: 8px;
+}
+
+/*footer*/
+.footer {
+  position: absolute;
+  width: 144px;
+  height: 20px;
+  left: 75px;
+  top: 740px;
+}
+
+.footer__copyright__icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url("./circle.svg");
+}
+.footer__icon {
+  position: absolute;
+  width: 6px;
+  height: 7px;
+  left: 34.33%;
+  right: 38%;
+  top: 33.33%;
+  bottom: 33.33%;
+}
+.footer__copyright {
+  position: absolute;
+  left: 36px;
+  right: 0;
+  width: 108px;
+  height: 20px;
+}
+.footer__copyright p {
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+}
+.companyName {
+  letter-spacing: 0.0015em;
+  font-size: 12px;
+  font-weight: 10;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Montserrat";
+}
+.copyright__right {
+  position: absolute;
+
+  left: 900px;
+  font-size: 12px;
+  width: 189px;
+}
+
+.footer :nth-child(3) {
+  position: absolute;
+
+  left: 1134px;
+  font-size: 12px;
+  width: 82px;
+}
+
+/*right half of the page*/
+
+.formContainer {
+  width: 344px;
+  height: 523px;
+  position: absolute;
+  top: 134px;
+  right: 183px;
+  left: 839px;
+  background-image: #fafbfd;
+}
+
+.form__header {
+  width: 186px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  bottom: 491px;
+
+}
+
+.head{
+  position: absolute;
+  left:13%
+}
+
+.form {
+  height: 260px;
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  bottom: 163px;
+}
+
+
+
+
+.passwordToggle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 307px;
+  right: 17px;
+}
+
+.checkbox__container {
+  position: absolute;
+  width: 100%;
+  top: 145px;
+  bottom: 80px;
+}
+
+.checkbox__input {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.forgetpassword__container {
+  position: absolute;
+  left: 219px;
+  right: 8px;
+
+}
+
+.form__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 24px;
+  border-radius: 4px;
+  width: 343px;
+  height: 48px;
+  position: absolute;
+  top: 192px;
+  bottom: 0;
+
+}
+
+.fieldset{
+  position: absolute;
+  top:72%;
+}
+
+.google__button {
+  width: 343px;
+  height: 54px;
+  position: absolute;
+  top: 410px;
+
+}
+
+.google__logo {
+  position: absolute;
+
+  top: 15px;
+  bottom: 15px;
+}
+
+.button__text {
+  width: 155px;
+  height: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  position: absolute;
+  top: 15px;
+  right:20%;
+  bottom: 15px;
+  color: #2e3a59;
+}
+
+.signup__container {
+  width: 243px;
+  height: 20.25px;
+  position: absolute;
+  top: 493px;
+  left: 51px;
+  right: 50px;
+}
+
+  
+  
+}
+@media (min-height:784px){
+  body{
+    overflow: hidden;
+  }
+  .footer {
+    position: absolute;
+ 
+    top: 93%;
+
+  }
+}
+
+@media (min-height:790px){
+
+  .logo__container {
+
+    position: absolute;
+
+    top: 4%;
+  }
+
+  .leftContainer__main {
+
+    position: absolute;
+
+    top: 74%;
+ 
+  }
+  .main__head {
+
+    position: absolute;
+    top: 0;
+    bottom: 90px;
+  }
+
+  .main__paragraph {
+
+    position: absolute;
+    top: 24px;
+    width:478px;
+  }
+  .ellipses {
+
+    position: absolute;
+    top: 89%;
+
+  }
+  .footer {
+    position: absolute;
+ 
+    top: 93%;
+
+  }
+  .formContainer {
+
+    position: absolute;
+    top: 18%;
+
+  }
+  .checkbox__container {
+    position: absolute;
+    top: 145px;
+  }
+  .fieldset {
+    position: absolute;
+    top: 77%;
+ 
+  }
+
+  .google__button {
+
+    position: absolute;
+    top: 84%;
+
+  }
+  .signup__container {
+    position:absolute;
+    top:99%;
+
+  }
+}
+
+
+
+
+
+@media (min-height:850px){
+
+  .leftContainer__main {
+
+    position: absolute;
+  
+    top: 74%;
+  
+  }
+  .main__head {
+
+    position: absolute;
+    top: 0;
+    bottom: 90px;
+  }
+
+  .main__paragraph {
+
+    position: absolute; 
+    top: 24px;
+  }
+  .ellipses {
+
+    position: absolute;
+    top: 84%;
+
+  }
+  .footer {
+    position: absolute;
+
+    top: 91%;
+
+  }
+
+  .checkbox__container {
+    position: absolute;
+    top: 145px;
+  }
+  .form__button {
+
+    position: absolute;
+    top: 198px;
+    bottom: 0;
+  
+  }
+  .fieldset {
+    position: absolute;
+    top: 74%;
+ 
+  }
+
+  .google__button {
+
+    position: absolute;
+    top: 82%;
+
+  }
+  .signup__container {
+    position:absolute;
+    top:99%;
+
+  }
+
+
+ 
+}
+
+@media (min-height:900px){
+
+  .leftContainer__main {
+
+    position: absolute;
+  
+    top: 70%;
+  
+  }
+  .main__paragraph {
+
+    position: absolute; 
+    top: 20px;
+  }
+
+  .ellipses{
+    position: absolute;
+  
+    top: 82%;
+
+  }
+
+  .footer{
+    position: absolute;
+  
+    top: 86%;
+
+  }
+  .checkbox__container {
+    position: absolute;
+    width: 100%;
+    top: 53%;
+  }
+ 
+  .form__button{
+    position: absolute;
+    top:71%;
+  }
+  .fieldset {
+    position: absolute;
+    top: 70%;
+ 
+  }
+  .google__button {
+
+    position: absolute;
+    top: 77%;
+
+  }
+    
+  .button__text {
+ 
+    position: absolute;
+
+    right:16%;
+
+  }
+  .signup__container {
+    position:absolute;
+    top:91%;
+
+  }
+
+
+}
+@media (min-height:950px){
+
+  .leftContainer__main {
+
+    position: absolute;
+  
+    top: 70%;
+  
+  }
+ 
+
+
+  .ellipses{
+    position: absolute;
+  
+    top: 81%;
+
+  }
+
+  .footer{
+    position: absolute;
+  
+    top: 86%;
+
+  }
+
+
+  .checkbox__container {
+    position: absolute;
+    width: 100%;
+    top: 51%;
+  }
+  .fieldset{
+    position: absolute;
+    top:69%
+  }
+  .form__button{
+    position: absolute;
+    top:69%
+  }
+  .google__button{
+    position: absolute;
+    top:76%
+  }
+  .signup__container{
+    position: absolute;
+    top:91%
+  }
+}
+
+@media (min-height:1000px) {
+
+  
+  .checkbox__container {
+    position: absolute;
+    top: 49%;
+  }
+  .form__button{
+    position: absolute;
+    top:67%;
+  }
+  .fieldset {
+    position: absolute;
+    top: 68%;
+ 
+  }
+  .google__button {
+
+    position: absolute;
+    top: 75%;
+
+  }
+  .signup__container {
+    position:absolute;
+    top:89%;
+
+  }
+}
+@media (min-height:1050px){
+  .leftContainer__main{
+    position: absolute;
+  
+    top: 64%;
+  }
+  .ellipses{
+    position: absolute;
+  
+    top: 74%;
+
+  }
+
+  .footer{
+    position: absolute;
+  
+    top: 78%;
+
+  }
+  .formContainer {
+
+    position: absolute;
+    top: 17%;
+
+  }
+  .checkbox__container {
+    position: absolute;
+    top: 45%;
+  }
+  .form__button{
+    position: absolute;
+    top:61%;
+  }
+  .fieldset {
+    position: absolute;
+    top: 63%;
+ 
+  }
+  .google__button {
+
+    position: absolute;
+    top: 69%
+
+  }
+  .signup__container {
+    position:absolute;
+    top:83%;
+
+  }
+}
+
+
+
+@media (min-width:1000px){
+  .copyright__right {
+    position: absolute;
+
+    left: 73vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 84vw;
+
+  }
+  .formContainer{
+    position: absolute;
+    left:60%
+  }
+  .form__header {
+    
+    position: absolute;
+
+
+    left: 50px;
+    right: 94px;
+  
+  }
+  .head{
+    font-size:20px;
+  }
+  .button__text {
+ 
+    position: absolute;
+
+    right:10%;
+    font-size:14px;
+
+  }
+  .google__logo{
+    position: absolute;
+
+    left:17%;
+  }
+
+  .signup__container{
+    position: absolute;
+    left: 7%;
+  }
+
+}
+
+@media (min-width:1100px){
+
+  .copyright__right {
+    position: absolute;
+
+    left: 75vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 85vw;
+
+  }
+
+  .form__header {
+
+    position: absolute;
+
+
+    left: 21%;
+  
+  }
+
+  .signup__container{
+    position: absolute;
+    left: 10%;
+  }
+
+
+}
+@media (min-width:1300px) {
+  .copyright__right {
+    position: absolute;
+
+    left: 73vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 83vw;
+
+  }
+  .head{
+    position: absolute;
+    left:10%
+  }
+  
+
+  .button__text {
+ 
+    position: absolute;
+
+    right:18%;
+
+  }
+  .google__logo{
+    position: absolute;
+
+    left:26%;
+  }
+  .signup__container{
+    position: absolute;
+    left: 15%;
+  }
+}
+
+@media (min-width:1350px) {
+
+  .button__text {
+ 
+    position: absolute;
+
+    right:21%;
+
+  }
+  .copyright__right {
+    position: absolute;
+
+    left: 73vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 83vw;
+
+  }
+  .head{
+    position: absolute;
+    left:11%
+  }
+  
+
+
+}
+
+@media (min-width:1400px){
+  .head{
+    position: absolute;
+    left:13%
+  }
+  
+}
+
+@media (min-width:1500px){
+  .copyright__right {
+    position: absolute;
+
+    left: 74vw;
+
+
+  }
+  
+  .footer :nth-child(3) {
+    position: absolute;
+
+    left: 84vw;
+
+  }
+  .button__text {
+ 
+    position: absolute;
+
+    right:25%;
+
+  }
+  .signup__container{
+    position: absolute;
+    left: 19%;
+  }
+
+}
+
+
+

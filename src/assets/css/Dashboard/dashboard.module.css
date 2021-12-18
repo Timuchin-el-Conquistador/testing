@@ -1,0 +1,270 @@
+/*.head_search_dashboard{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: flex-end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.choosen_place{
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding:16px 24px;
+  width:calc(100% - 72px);
+  position:relative;
+  margin-top:24px;
+  margin-left:24px;
+  margin-right:24px;
+}
+.dashboard_right{
+  position: fixed;
+  bottom: 40px;
+  max-width: 852px;
+  width: 100%;
+}
+.choosen_close{
+  position: absolute;
+  top:16px;
+  right:24px;
+  width: 20px;
+  height: 20px;
+  border:0;
+  padding:0;
+  background:transparent;
+  cursor:pointer;
+}
+.choosen_close{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.choosen_h6{
+  color:#3F2B89;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin:0;
+}
+.choosen_flex,.gender_rates{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.choosen_item{
+  width:calc(100% / 3);
+  padding-right:24px;
+}
+.choosen_item_p{
+  color:#8F9BB3;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top:12px;
+}
+.choosen_h5{
+  color:#3F2B89;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 72px;
+  margin:0;
+  text-align:center;
+}
+.gender_rates .auds{
+  list-style-type:none;
+  padding-left:0;
+  margin:0;
+  width:50%;
+}
+.graph_rate{
+  width:50%;
+}
+.gender_rates .auds li{
+  margin-bottom:4px;
+}
+.gender_rates .auds_dot{
+  display:inline-block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  margin-right:8px;
+}
+.auds_dot_1{
+  background: #3F2B89;
+}
+.auds_dot_2{
+  background: #573EA4;
+}
+.auds_dot_3{
+  background: #7356C0;
+}
+.auds_dot_4{
+  background: #997FD8;
+}
+.auds_dot_5{
+  background: #B69EEA;
+}
+.mr_24px{
+  margin-right:24px;
+}
+.mr_16px{
+  margin-right:16px;
+}
+.auds_percent{
+  color:#8F9BB3;
+  font-size: 9px;
+  line-height: 12px;
+  margin-left:8px;
+}
+ .dashboard-right{
+  min-height:calc(100vh - 130px);
+} 
+#map{
+  position: fixed;
+  width:100%;
+  height:100vh;
+  left:0;
+  top:0;
+}
+#map img,#map iframe{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.dashboard_page .dash_menu{
+  position: relative;
+  z-index:1;
+  min-height:calc(100vh - 132px);
+}
+
+
+*/
+
+
+
+.page {
+  position: absolute;
+  top: 0;
+  right:0rem;
+  width: 100vw;
+  height: 100vw;
+}
+
+.searchcard {
+  position: absolute;
+  left: 70vw;
+  top: 14.5vh;
+}
+
+.card {
+  width: 852px;
+  height: 176px;
+  background: #ffffff;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+
+  position: absolute;
+  top: calc(100vh / 1.82);
+  left: calc((100vw - 852px) / 1.4);
+}
+
+.header {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+}
+
+.head {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  letter-spacing: 0.0015em;
+  margin-bottom: 20px;
+  /* Brand Color/Purple/Purple 700 */
+
+  color: #3f2b89;
+}
+
+.paragraph {
+  /* Other/C1 */
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 0.0015em;
+
+  /* Basic colors/Neutral 600 */
+
+  color: #8f9bb3;
+}
+
+.closecard {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
+
+@media (max-height: 930px) {
+  .card {
+    position: absolute;
+    top: calc(100vh / 1.88);
+  }
+  .searchcard {
+    position: absolute;
+    top: 8vh;
+  }
+}
+
+@media (min-height: 900px) {
+  .card {
+    position: absolute;
+    top: calc(100vh / 1.84);
+  }
+
+}
+@media (min-height: 1000px) {
+  .card {
+    position: absolute;
+    top: calc(100vh / 1.85);
+  }
+
+}
+
+@media (min-height: 1100px) {
+  .card {
+    position: absolute;
+    top: calc(100vh / 1.86);
+  }
+
+}
+
+@media (min-height: 1200px) {
+  .card {
+    position: absolute;
+    top: calc(100vh / 1.88);
+  }
+
+}
