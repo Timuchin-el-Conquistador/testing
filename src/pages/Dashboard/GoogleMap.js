@@ -201,7 +201,7 @@ class GoogleMaps extends Component {
           hint: "",
           coordinates: LatLngSource[locationFromSource[0]][1],
           postCenter:LatLngSource[locationFromSource[0]][0],
-          zoom:13,
+          zoom:14,
         });
       }
     }
