@@ -31,19 +31,20 @@ import {
   Circle,
 } from "google-maps-react";
 
-
-
 import { LatLngSource } from "./ZipCoords";
-
 
 import Geocode from "react-geocode";
 
-import Closecard from "../../assets/css/common/icons/close.svg";
-import Search from "../../assets/css/common/icons/search.svg";
 
+import SearchNormal from "../../assets/css/Settings/search-normal.svg";
+import SearchMaximize from "../../assets/css/Settings/search-maximize.svg";
+import ProfileMenu from "../../components/CommonForBoth/TopbarDropdown/ProfileMenu";
 import classes from "../../assets/css/Dashboard/dashboard.module.css";
+import Graph1 from "../../assets/css/Dashboard/graph1.png";
+import Close from "../../assets/css/Dashboard/close.svg";
 
 Geocode.setApiKey("AIzaSyBIz-CXJ0CDRPjUrNpXKi67fbl-0Fbedio");
+
 
 const CarImage = "../../assets/images/car.png";
 
@@ -97,7 +98,7 @@ class GoogleMaps extends Component {
     this.onChangeLocationToZoomIn = this.onChangeLocationToZoomIn.bind(this);
   }
 
- /* handleConnectionToFirebaseRealTimeDatabase = () => {
+  /* handleConnectionToFirebaseRealTimeDatabase = () => {
     let ref = firebase.database().ref("users/");
     ref.on("value", (snapshot) => {
       const newValue = snapshot.val();
@@ -192,7 +193,7 @@ class GoogleMaps extends Component {
           hint: location,
         });
       } else {
-        console.log(LatLngSource[locationFromSource[0]][0])
+        console.log(LatLngSource[locationFromSource[0]][0]);
         this.setState({
           ...this.state,
           location: "",
@@ -200,8 +201,8 @@ class GoogleMaps extends Component {
           errorMessage: "",
           hint: "",
           coordinates: LatLngSource[locationFromSource[0]][1],
-          postCenter:LatLngSource[locationFromSource[0]][0],
-          zoom:13,
+          postCenter: LatLngSource[locationFromSource[0]][0],
+          zoom: 13,
         });
       }
     }
@@ -249,7 +250,7 @@ class GoogleMaps extends Component {
     //   }
     // );
 
-   /*  this.setState({
+    /*  this.setState({
           ...this.state,
           postCenter: { lat, lng },
           coordinates: LatLng,
@@ -268,7 +269,7 @@ class GoogleMaps extends Component {
       toggle: !this.state.toggle,
     });
   }
-   /* componentDidMount() {
+  /* componentDidMount() {
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
     } else {
@@ -290,205 +291,161 @@ class GoogleMaps extends Component {
   render() {
     const state = this.state;
     return (
-      <div className={classes.page}>
-        <Map
-          google={this.props.google}
-          zoom={this.state.zoom}
-          style={mapStyles}
-          initialCenter={this.state.center}
-          fullscreenControl={false}
-          draggable={true}
-          center={this.state.postCenter}
-          scrollwheel={false}
-          mapTypeControl={false}
-          disableDoubleClickZoom={false}
-          keyboardShortcuts={false}
-          onDragend={(coord) => this.centerMoved(coord)}
-        >
-          <Polygon
-            paths={this.state.coordinates}
-            fillColor="#7356bd"
-            fillOpacity={0.35}
-            //fillOpacity="0.5"
-            strokeOpacity={0.8}
-            strokeWeight={1}
-            strokeColor="#200b47"
-          />
-          {/*{this.handleRenderDriversCoordinates()}*/}
-          <div style={{ height: 20 }}></div>
-          <div style={{ marginTop: 100 }}>
-            {this.state.drivers ? (
-              <div
-                style={{
-                  width: "30%",
-                  height: "20%",
-                  margin: 10,
-                  borderRadius: 20,
-                }}
-              >
-                {this.state.toggle && (
-                  <Card className={classes.card}>
-                    <header className={classes.header}>
-                      <h1 className={classes.head}>
-                        Statistic of the choosen Place
-                      </h1>
-                      <p className={classes.paragraph}>Number of cars:</p>
-                    </header>
-                    <span
-                      onClick={this.toggleCard}
-                      className={classes.closecard}
-                    >
-                      <img src={Closecard} alt="close button" />
-                    </span>
-                  </Card>
-                )}
-                {/* <Card>
-                  <CardBody>
-                    <CardTitle tag="h5">
-                      <div style={{ height: 10 }}>
-                        Your logged in from {this.state.address}{" "}
-                      </div>
-                    </CardTitle>
+      <div className={classes.dash_right}>
+        <div className={classes.map}>
 
-                    <div style={{ height: 15 }}></div>
-                    <CardSubtitle tag="h6" className="mb-2 text-muted">
-                      Our car-top billboards show Ads to{" "}
-                      {Math.round(Math.random() * 2000)} people in real-time on
-                      streets and roads. Advertise on{" "}
-                      {this.state.NumberOfDrivers} car-top billboards today.
-                    </CardSubtitle>
-                    <CardText>
-                      Target audience at relevant locations with dynamic content
-                      based on data such as location, time of day, demographics.
-                      Using our smart car-top billboard technology, advanced AI
-                      and big data, we can collect Ad engagement data in
-                      real-time and use it to create segmented retargeting
-                      Facebook, Google Ads dynamically.
-                    </CardText>
-                    <a href="/create-ad">
-                      <Button color="primary">Create Ad </Button>
-                    </a>
-                  </CardBody>
-                </Card> */}
-                <div className={classes.searchcard}>
-                  <Form onSubmit={this.submitLocationToZoomIn.bind(this)}>
-                    <div className="input-group  mb-4">
-                      <input
-                        className="form-control  border border-0"
-                        style={{
-                          fontFamily: "Montserrat",
-                          fontWeight: "normal",
-                          fontSize: "14px",
-                          color: "#8F9BB3",
-                          letterSpacing: "0.0015em",
-                        }}
-                        name="search"
-                        placeholder="Search"
-                        type="text"
-                        value={
-                          this.state.location
-                            ? this.state.location
-                            : this.state.postalCode
-                        }
-                        onChange={(event) =>
-                          this.onChangeLocationToZoomIn(event)
-                        }
-                      />
-                      <div className="input-group-append ">
-                        <button
-                          className="input-group-text border border-0 "
-                          style={{
-                            background: "white",
-                            width: "40px",
-                            height: "38px",
-                          }}
-                        >
-                          <img
-                            className="input-group-text border border-0 "
-                            style={{
-                              background: "white",
-                              width: "40px",
-                              height: "38px",
-                            }}
-                            src={Search}
-                           // onClick={this.toggleCard}
-                          />
-                        </button>
-                      </div>
-                    </div>
-                  </Form>
-                  {this.state.errorZipCode ? (
-                    <Alert color="danger">
-                      {this.state.errorMessage}
-                      <div className="d-flex flex-column">
-                        {this.state.hint &&
-                          this.state.hint.map((el, i) => (
-                            <a
-                              onClick={() => {
-                                const input = this.state.postalCode
-                                  ? "postalCode"
-                                  : "location";
-                                this.setState({ ...this.state, [input]: el });
-                              }}
-                              href="#"
-                              key={i}
-                            >
-                              {el}
-                            </a>
-                          ))}
-                      </div>
-                      <Button
-                        color="link"
-                        onClick={() =>
-                          this.setState({
-                            ...this.state,
-                            errorZipCode: false,
-                          })
-                        }
-                      >
-                        Close
-                      </Button>
-                    </Alert>
-                  ) : null}
+          <Map
+            google={this.props.google}
+            zoom={this.state.zoom}
+            style={mapStyles}
+            initialCenter={this.state.center}
+            fullscreenControl={false}
+            draggable={true}
+            center={this.state.postCenter}
+            scrollwheel={false}
+            mapTypeControl={false}
+            disableDoubleClickZoom={false}
+            keyboardShortcuts={false}
+            onDragend={(coord) => this.centerMoved(coord)}
+          >
+            <Polygon
+              paths={this.state.coordinates}
+              fillColor="#7356bd"
+              fillOpacity={0.35}
+              //fillOpacity="0.5"
+              strokeOpacity={0.8}
+              strokeWeight={1}
+              strokeColor="#200b47"
+            />
+            {/*{this.handleRenderDriversCoordinates()}*/}
+          </Map>
+
+        </div>
+        {/* <!-- header search block -->*/} {/*with   <div className={classes.head_search_dashboard}></div> does not sit on the right edge*/}
+      
+          <div className={classes.head_search}>
+            <form action="">
+              <div className={`${classes.dash_relative} ${classes.search_box}`}>
+                <input type="text" placeholder="Search" />
+                <div className={classes.search_box_flex}>
+                  <button type="submit" className={classes.search_icon}>
+                    <img
+                      src={SearchNormal}
+                      alt=""
+                      className={classes.search_img}
+                    />
+                  </button>
+                  <button type="button" className={classes.search_maximize}>
+                    <img
+                      src={SearchMaximize}
+                      alt=""
+                      className={classes.maximize_img}
+                    />
+                  </button>
+
+                  <ProfileMenu scope={"global"} />
                 </div>
-                {/*<div  className={classes.searchcard}>
-                  <Card>
-                    <CardBody>
-                      <Form onSubmit={this.submitLocationToZoomIn.bind(this)}>
-                        <FormGroup>
-                          <CardSubtitle tag="h6" className="mb-2 text-muted">
-                            <Label>
-                              Understand demographics, behavior of a given
-                              location
-                            </Label>
-                          </CardSubtitle>
-                          <CardText>
-                            <Input
-                              maxlength="5"
-                              type="number"
-                              placeholder="Zip Code"
-                              onChange={this.onChangeLocationToZoomIn.bind(
-                                this
-                              )}
-                            />
-                          </CardText>
-
-                          <Button color="primary">Research Area</Button>
-                        </FormGroup>
-                      </Form>
-                    </CardBody>
-                  </Card>
-               </div>*/}
               </div>
-            ) : null}
-            <Container className="d-flex justify-content-center align-items-end">
-              <Row>
-                <Col></Col>
-              </Row>
-            </Container>
+            </form>
           </div>
-        </Map>
-        )
+    
+
+        <div className={classes.dashboard_right}>
+          <div className={classes.choosen_place}>
+            <h6 className={classes.choosen_h6}>
+              Statistics of the choosen Place:
+            </h6>
+            <div className={classes.choosen_flex}>
+              <div className={classes.choosen_item}>
+                <p className={classes.choosen_item_p}>Number of cars:</p>
+                <h5 className={classes.choosen_h5}>3</h5>
+              </div>
+              <div className={classes.choosen_item}>
+                <p className={classes.choosen_item_p}>Gender rates:</p>
+                <div className={classes.gender_rates}>
+                  <div className={classes.graph_rate}>
+                    <img src={Graph1} alt="" />
+                  </div>
+                  <ul className={classes.auds}>
+                    <li>
+                      <span
+                        className={`${classes.auds_dot} ${classes.auds_dot_1}`}
+                      ></span>
+                      <small>Male</small>
+                      <span className={classes.auds_percent}>(55%)</span>
+                    </li>
+                    <li>
+                      <span
+                        className={`${classes.auds_dot} ${classes.auds_dot_2}`}
+                      ></span>
+                      <small>Female</small>
+                      <span className={classes.auds_percent}>(30%)</span>
+                    </li>
+                    <li>
+                      <span
+                        className={`${classes.auds_dot} ${classes.auds_dot_3}`}
+                      ></span>
+                      <small>Other</small>
+                      <span className={classes.auds_percent}>(15%)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className={classes.choosen_item}>
+                <p className={classes.choosen_item_p}>Age rates:</p>
+                <div className={classes.gender_rates}>
+                  <div className={classes.graph_rate}>
+                    <img src={Graph1} alt="" />
+                  </div>
+                  <ul className={classes.auds}>
+                    <li>
+                      <span
+                        className={`${classes.auds_dot} ${classes.auds_dot_1}`}
+                      ></span>
+                      <small>0-18</small>
+                      <span className={classes.auds_percent}>(55%)</span>
+                    </li>
+                    <li>
+                      <span
+                        className={`${classes.auds_dot} ${classes.auds_dot_2}`}
+                      ></span>
+                      <small>18-25</small>
+                      <span className={classes.auds_percent}>(30%)</span>
+                    </li>
+                    <li>
+                      <span
+                        className={`${classes.auds_dot} ${classes.auds_dot_3}`}
+                      ></span>
+                      <small>25-35</small>
+                      <span className={classes.auds_percent}>(15%)</span>
+                    </li>
+                    <li>
+                      <span
+                        className={`${classes.auds_dot} ${classes.auds_dot_3}`}
+                      ></span>
+                      <small>35-45</small>
+                      <span className={classes.auds_percent}>(15%)</span>
+                    </li>
+                    <li>
+                      <span
+                        className={`${classes.auds_dot} ${classes.auds_dot_3}`}
+                      ></span>
+                      <small>45-65</small>
+                      <span className={classes.auds_percent}>(15%)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button type="button" className={classes.choosen_close}>
+              <img
+                src={Close}
+                alt=""
+                className={classes.choosen_close_img}
+              />
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

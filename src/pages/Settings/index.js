@@ -29,7 +29,7 @@ class Settings extends Component {
 
         <div className={classes.dash_right}>
           {/*<!-- header search block -->*/}
-          <form className={classes.head_search}>
+          <div className={classes.head_search}>
             <h1 className={classes.dash_h1}>Settings</h1>
             <form action="">
               <div className={`${classes.dash_relative} ${classes.search_box}`}>
@@ -54,7 +54,7 @@ class Settings extends Component {
                 </div>
               </div>
             </form>
-          </form>
+          </div>
           {/*<!-- settings block -->*/}
           <div className={classes.setting_block}>
             <div className={classes.setting_left}>

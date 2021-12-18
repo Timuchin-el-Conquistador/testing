@@ -27,6 +27,7 @@ import BillingActive  from "../../assets/css/layout/billing-active.svg";
 import Copyright from '../../assets/css/common/icons/copyright-dashboard.svg'
 
 import classes from "../../assets/css/layout/sidebar-content.module.css";
+import classes2 from '../../assets/css/Dashboard/dashboard.module.css'
 
 class SidebarContent extends Component {
   constructor(props) {
@@ -93,7 +94,7 @@ class SidebarContent extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className={classes.dash_menu}>
+        <div className={`${ classes.dash_menu} ${this.props.theme==='dashboard'?  classes2.dash_menu : ''}`}>
         
             <a href="#" className={classes.dash_logo}>
               <img src={Logo} alt="" />

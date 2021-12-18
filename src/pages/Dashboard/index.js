@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-
-import classes from "../../assets/css/common/css/common.module.css";
+import classes from "../../assets/css/Dashboard/dashboard.module.css";
 
 import SidebarContent from "../../components/VerticalLayout/testSidebarContent";
 
@@ -59,14 +58,16 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div className={classes.dash_cover}>
-          <SidebarContent/>
-          <GoogleMaps />
+  
+        <div className={classes.dashboard_page}>
+          <div className={classes.dash_cover}>
+            <SidebarContent theme={'dashboard'} />
+            <GoogleMaps />
+          </div>
         </div>
-      </React.Fragment>
+
     );
   }
 }
 
-export default Dashboard
+export default Dashboard;
