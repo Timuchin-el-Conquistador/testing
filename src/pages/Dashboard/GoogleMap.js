@@ -290,7 +290,7 @@ class GoogleMaps extends Component {
   render() {
     const state = this.state;
     return (
-      <React.Fragment>
+      <div className={classes.page}>
         <Map
           google={this.props.google}
           zoom={this.state.zoom}
@@ -489,7 +489,7 @@ class GoogleMaps extends Component {
           </div>
         </Map>
         )
-      </React.Fragment>
+      </div>
     );
   }
 }
