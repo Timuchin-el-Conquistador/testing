@@ -7,12 +7,12 @@ import SMS from "../../assets/css/common/icons/sms.svg";
 import Location from "../../assets/css/layout/location.svg";
 import Lock from "../../assets/css/common/icons/lock.svg";
 import Eye from "../../assets/css/common/icons/icon.svg";
+import EyeSlash from "../../assets/css/common/icons/eye-slash.svg";
 import Phone from "../../assets/css/Authentication/Register/mobile.svg";
 import Building from "../../assets/css/Settings/building.svg";
 import Car from "../../assets/css/Settings/car.svg";
 
 import classes from "../../assets/css/Settings/settings.module.css";
-
 
 import SidebarContent from "../../components/VerticalLayout/testSidebarContent";
 
@@ -21,12 +21,15 @@ import ProfileMenu from "../../components/CommonForBoth/TopbarDropdown/ProfileMe
 class Settings extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {text:false};
+    this.toggleEye = this.toggleEye.bind(this)
+  }
+  toggleEye(){
+    this.setState({...this.state, text:!this.state.text})
   }
   render() {
     return (
       <React.Fragment>
-
         <div className={classes.dash_right}>
           {/*<!-- header search block -->*/}
           <div className={classes.head_search}>
@@ -113,7 +116,7 @@ class Settings extends Component {
                     <div className={classes.stng_form_flex}>
                       <div className={classes.stng_relative}>
                         <input
-                          type="password"
+                          type={`${this.state.text?'text':'password'}`}
                           className={classes.stng_element}
                           name="stng-password"
                           id="stng-password"
@@ -124,8 +127,15 @@ class Settings extends Component {
                           alt=""
                           className={classes.stng_email_icon}
                         />
-                        <button type="button" className={classes.pass_eye}>
-                          <img src={Eye} alt="" />
+                        <button
+                          type="button"
+                          className={classes.pass_eye}
+                          onClick={this.toggleEye}
+                        >
+                          <img
+                            src={`${this.state.text ? EyeSlash : Eye}`}
+                            alt=""
+                          />
                         </button>
                       </div>
                       <button type="button" className={classes.form_edit_btn}>
