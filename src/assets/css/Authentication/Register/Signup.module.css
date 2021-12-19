@@ -113,9 +113,11 @@
   margin-bottom: 24px;
 }
 .pass_error {
-  color: #8f9bb3;
+  color: #F13239;
+  margin-left: 10px;
   font-size: 12px;
   margin-top: 8px;
+  margin-bottom: 0;
 }
 .signup_form_item {
   background: #f7f9fc;
@@ -133,6 +135,11 @@
   margin-left: auto;
   margin-right: auto;
   font-family: "Montserrat", sans-serif;
+}
+
+.signup_form_item_error{
+
+  border-color:#F13239;
 }
 .signup_email_icon {
   position: absolute;

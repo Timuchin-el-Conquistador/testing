@@ -45,12 +45,43 @@ class Register extends React.Component {
 
  handleValidSubmit(e){
    e.preventDefault()
-   this.props.history.push('/business')
+
+   let error = [];
+   for (let state in this.state) {
+     if (this.state[state].length === 0 && state !== "error") {
+       error.push(state);
+     }else if(state==='phone_number' && !/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(this.state[state])){
+       error.push(state);
+     }else if(state==='password' && !/^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/.test(this.state[state])){
+       error.push(state);
+     }
+   }
+   if (!error.length) {
+    this.props.history.push('/business')
+   } else {
+     this.setState({ ...this.state, error:error });
+   }
  }
 
   handleInputChange(event) {
     const name = event.target.name;
-    this.setState({ [name]: event.target.value });
+    this.setState({...this.state, [name]: event.target.value });
+    if(this.state.error.includes(name) && (name!=='email'&& name!=='password' && name!=='phone_number') && event.target.value.length>0){
+      const error = this.state.error.filter(el => el!==name)
+      this.setState({ ...this.state, [name]: event.target.value, error: error});
+    }
+    else if(this.state.error.includes(name) && name==='phone_number' && /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(event.target.value)){
+      const error = this.state.error.filter(el => el!==name)
+      this.setState({ ...this.state, [name]: event.target.value, error: error});
+    }
+    else if(this.state.error.includes(name) && name==='email' && /@/i.test(event.target.value)){
+      const error = this.state.error.filter(el => el!==name)
+      this.setState({...this.state, [name]: event.target.value, error: error});
+    }
+    else if(this.state.error.includes(name) && name==='password' && /^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/.test(event.target.value)){
+      const error = this.state.error.filter(el => el!==name)
+      this.setState({...this.state, [name]: event.target.value, error: error});
+    }
   }
 
   toggleEye() {
@@ -105,9 +136,12 @@ class Register extends React.Component {
                   <div
                     className={`${classes.signup_relative} ${classes.mb_24}`}
                   >
-                    <input
+                 <input
                       type="text"
-                      className={classes.signup_form_item}
+                      className={`${classes.signup_form_item} ${
+                        this.state.error.includes("fullName") &&
+                        classes.signup_form_item_error
+                      }`}
                       name="fullName"
                       id="fullname"
                       placeholder="Full Name"
@@ -119,13 +153,21 @@ class Register extends React.Component {
                       alt="user-form icon"
                       className={classes.signup_email_icon}
                     />
+                    {this.state.error.includes("fullName") && (
+                      <span className={classes.pass_error}>
+                        Please type your name
+                      </span>
+                    )}
                   </div>
                   <div
                     className={`${classes.signup_relative} ${classes.mb_24}`}
                   >
                     <input
                       type="text"
-                      className={classes.signup_form_item}
+                      className={`${classes.signup_form_item} ${
+                        this.state.error.includes("company") &&
+                        classes.signup_form_item_error
+                      }`}
                       name="company"
                       id="company-name"
                       placeholder="Company Name"
@@ -137,13 +179,21 @@ class Register extends React.Component {
                       alt="bank icon"
                       className={classes.signup_email_icon}
                     />
+                    {this.state.error.includes("company") && (
+                      <span className={classes.pass_error}>
+                        Please type your company name
+                      </span>
+                    )}
                   </div>
                   <div
                     className={`${classes.signup_relative} ${classes.mb_24}`}
                   >
                     <input
-                      type="number"
-                      className={classes.signup_form_item}
+                      type="text"
+                      className={`${classes.signup_form_item} ${
+                        this.state.error.includes("phone_number") &&
+                        classes.signup_form_item_error
+                      }`}
                       name="phone_number"
                       id="phone-number"
                       placeholder="Phone number"
@@ -155,13 +205,21 @@ class Register extends React.Component {
                       alt="phone icon"
                       className={classes.signup_email_icon}
                     />
+                    {this.state.error.includes("phone_number") && (
+                      <span className={classes.pass_error}>
+                        Please type your current working phone number
+                      </span>
+                    )}
                   </div>
                   <div
                     className={`${classes.signup_relative} ${classes.mb_24}`}
                   >
                     <input
-                      type="email"
-                      className={classes.signup_form_item}
+                      type="text"
+                      className={`${classes.signup_form_item} ${
+                        this.state.error.includes("email") &&
+                        classes.signup_form_item_error
+                      }`}
                       name="email"
                       id="login-email"
                       placeholder="Enter your E-mail"
@@ -173,11 +231,19 @@ class Register extends React.Component {
                       alt="email icon"
                       className={classes.signup_email_icon}
                     />
+                    {this.state.error.includes("email") && (
+                      <span className={classes.pass_error}>
+                        Please type a valid email address
+                      </span>
+                    )}
                   </div>
                   <div className={classes.signup_relative}>
                     <input
                       type={`${this.state.text ? "text" : "password"}`}
-                      className={classes.signup_form_item}
+                      className={`${classes.signup_form_item} ${
+                        this.state.error.includes("password") &&
+                        classes.signup_form_item_error
+                      }`}
                       name="password"
                       id="login-password"
                       placeholder="Enter your Password"
@@ -189,12 +255,17 @@ class Register extends React.Component {
                       alt="password icon"
                       className={classes.signup_email_icon}
                     />
+                    {this.state.error.includes("password") && (
+                      <span className={classes.pass_error}>
+                        1 lovercase, uppercase English letter, digit and a special character, at least 8 long
+                      </span>
+                    )}
                     <button
                       type="button"
                       className={classes.pass_eye}
                       onClick={this.toggleEye}
                     >
-                      <img src={`${this.state.text?EyeSlash:Eye}`} alt="password eye icon" />
+                      <img src={`${this.state.text ? EyeSlash : Eye}`} alt="" />
                     </button>
                     {/* <span class="pass-error">Must be at least 8 characters.</span>*/}
                   </div>

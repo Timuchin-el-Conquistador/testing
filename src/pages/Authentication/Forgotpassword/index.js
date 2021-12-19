@@ -22,7 +22,7 @@ class ForgetPasswordPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      password:''
+      email:''
     };
 
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
