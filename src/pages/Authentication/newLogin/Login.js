@@ -14,6 +14,7 @@ import Google from "../../../assets/css/common/icons/google.svg";
 import Logo from "../../../assets/css/common/icons/logo.svg";
 import Car from "../../../assets/css/common/icons/car.png";
 import Eye from "../../../assets/css/common/icons/icon.svg";
+import EyeSlash from "../../../assets/css/common/icons/eye-slash.svg";
 import Vector2 from "../../../assets/css/common/icons/vector2.svg";
 import SMS from "../../../assets/css/common/icons/sms.svg";
 import Lock from "../../../assets/css/common/icons/lock.svg";
@@ -156,7 +157,7 @@ class Login extends React.Component {
                       type="button"
                       className={classes.pass_eye}
                     >
-                      <img src={Eye} alt="" />
+                      <img src={`${this.state.text?EyeSlash:Eye}`} alt="" />
                     </button>
                   </div>
                   <div className={classes.remember_forgot}>
