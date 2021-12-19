@@ -49,6 +49,15 @@ class Business extends React.Component {
     }
   }
 
+  componentDidMount() {
+    
+    document.body.classList.add("bg-transparent");
+  }
+  componentWillUnmount(){
+    document.body.classList.remove("bg-transparent");
+  }
+
+
   render() {
     console.log(this.state.package);
     return (

@@ -47,6 +47,15 @@ class ForgetPasswordPage extends React.Component {
     //   .catch((err) => console.log({ err }));
   }
 
+  componentDidMount() {
+    
+    document.body.classList.add("bg-transparent");
+  }
+  componentWillUnmount(){
+    document.body.classList.remove("bg-transparent");
+  }
+
+
   render() {
     return (
       <React.Fragment>

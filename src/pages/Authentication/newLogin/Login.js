@@ -60,6 +60,7 @@ class Login extends React.Component {
   componentWillUnmount(){
     document.body.classList.remove("bg-transparent");
   }
+
   render() {
     return (
  
