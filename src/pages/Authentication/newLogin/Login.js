@@ -40,13 +40,13 @@ class Login extends React.Component {
 
   handleInputChange = (event) => {
     const name = event.target.name;
-  
-    if(name==='email' && /@/i.test(event.target.value)){
-         this.setState({...this.state, errorEmail:false})
-    }else if(name==='password' & event.target.value.length>=8){
-      this.setState({...this.state, errorPassword:false})
-    }
     this.setState({...this.state, [name]: event.target.value})
+    if(name==='email' && /@/i.test(event.target.value)){
+         this.setState({...this.state,...this.state, [name]: event.target.value, errorEmail:false})
+    }else if(name==='password' &&  event.target.value.length>=8){
+      this.setState({...this.state,...this.state, [name]: event.target.value, errorPassword:false})
+    }
+   
   };
 
   // handleValidSubmit
@@ -54,11 +54,15 @@ class Login extends React.Component {
     event.preventDefault();
     if(/@/i.test(this.state.email) && this.state.password.length>=8){
        this.props.history.push('/dashboard')
-    }else if(!/@/i.test(this.state.email)) {
+    }else{
+     if(!/@/i.test(this.state.email) && (this.state.password.length<8)){
+      this.setState({...this.state, errorEmail:true, errorPassword:true})
+     } else if(!/@/i.test(this.state.email)){
       this.setState({...this.state, errorEmail:true})
-    }else if(this.state.password.length<8){
+     }else if((this.state.password.length<8)){
       this.setState({...this.state, errorPassword:true})
-    }
+     }
+  }
   }
 
   toggleEye() {
