@@ -25,13 +25,13 @@ class ForgetPasswordPage extends React.Component {
       email:''
     };
 
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
 
     this.handleValidSubmit = this.handleValidSubmit.bind(this);
   }
  
 
-  handlePasswordChange(event){
+  handleEmailChange(event){
       const name = event.target.name
       this.setState({[name]: event.target.value})
   }
@@ -40,7 +40,7 @@ class ForgetPasswordPage extends React.Component {
   // handleValidSubmit
   handleValidSubmit(event) {
     event.preventDefault();
-    
+    this.props.history.push('/email-sent')
     // axios
     //   .post("http://localhost:4000/api/v1/users/signup", this.state)
     //   .then((res) => console.log({ res }))
@@ -77,14 +77,14 @@ class ForgetPasswordPage extends React.Component {
             <h4 className={classes.reset_h2}>
               No worries, we’ll send you reset Instructions
             </h4>
-            <form action="">
+            <form onSubmit={this.handleValidSubmit}>
               <div className={classes.reset_form}>
                 <div className={classes.rst_email}>
                   <input
                     type="email"
                     className={classes.rst_form_item}
                     value ={this.state.password}
-                    onChange={this.handlePasswordChange}
+                    onChange={this.handleEmailChange}
                     name="email"
                     id="email"
                     placeholder="E-mail"
