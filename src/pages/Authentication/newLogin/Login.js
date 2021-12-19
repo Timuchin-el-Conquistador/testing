@@ -28,6 +28,8 @@ class Login extends React.Component {
       email: "",
       password: "",
       text: false,
+      errorEmail:false,
+      errorPassword:false
     };
 
     // handleValidSubmit
@@ -38,17 +40,29 @@ class Login extends React.Component {
 
   handleInputChange = (event) => {
     const name = event.target.name;
-    this.setState({ ...this.state, [name]: event.target.value });
+  
+    if(name==='email' && /@/i.test(event.target.value)){
+         this.setState({...this.state, errorEmail:false})
+    }else if(name==='password' & event.target.value.length>=8){
+      this.setState({...this.state, errorPassword:false})
+    }
+    this.setState({...this.state, [name]: event.target.value})
   };
 
   // handleValidSubmit
   handleValidSubmit(event) {
     event.preventDefault();
-    this.props.history.push('/dashboard')
+    if(/@/i.test(this.state.email) && this.state.password.length>=8){
+       this.props.history.push('/dashboard')
+    }else if(!/@/i.test(this.state.email)) {
+      this.setState({...this.state, errorEmail:true})
+    }else if(this.state.password.length<8){
+      this.setState({...this.state, errorPassword:true})
+    }
   }
 
   toggleEye() {
-    this.setState({ ...this.state, text: !this.state.toggle });
+    this.setState({ ...this.state, text: !this.state.text });
   }
 
 
@@ -98,8 +112,8 @@ class Login extends React.Component {
                 <div className={classes.login_form}>
                   <div className={`${classes.login_relative} ${classes.mb_24}`}>
                     <input
-                      type="email"
-                      className={classes.login_form_item}
+                      type="text"
+                      className={`${classes.login_form_item} ${this.state.errorEmail && classes.login_form_item_error}`}
                       name="email"
                       id="login-email"
                       value={this.state.email}
@@ -111,20 +125,23 @@ class Login extends React.Component {
                       alt=""
                       className={classes.login_email_icon}
                     />
-                   {/* <span className={classes.pass_error}>
-                      Must be at least 8 characters.
-                     </span>*/}
+                   {this.state.errorEmail && <span className={classes.pass_error}>
+                      Email is wrong 
+                     </span>}
                   </div>
                   <div className={classes.login_relative}>
                     <input
                       type={`${this.state.text?'text':'password'}`}
-                      className={classes.login_form_item}
+                      className={`${classes.login_form_item} ${this.state.errorPassword && classes.login_form_item_error}`}
                       name="password"
                       id="login-password"
                       value={this.state.password}
                       placeholder="Enter your Password"
                       onChange={this.handleInputChange}
                     />
+                       {this.state.errorPassword && <span className={classes.pass_error}>
+                      Must be at least 8 characters.
+                     </span>}
                     <img
                       src={Lock}
                       alt=""

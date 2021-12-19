@@ -116,7 +116,8 @@
   margin-bottom:24px;
 }
 .pass_error{
-  color:#8F9BB3;
+  color: #F13239;
+  margin-left: 10px;
   font-size:12px;
   margin-top:8px;
 }
@@ -136,6 +137,10 @@
   margin-left: auto;
   margin-right: auto;
   font-family: 'Montserrat', sans-serif;
+}
+.login_form_item_error{
+
+  border-color:#F13239;
 }
 .login_email_icon{
   position: absolute;
