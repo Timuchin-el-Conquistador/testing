@@ -41,7 +41,7 @@ class Login extends React.Component {
         [name]: event.target.value,
         errorEmail: false,
       });
-    } else if (name === "password" && event.target.value.length >= 8) {
+    } else if (name === "password" && /^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/.test(event.target.value)) {
       this.setState({
         ...this.state,
         ...this.state,
@@ -54,19 +54,22 @@ class Login extends React.Component {
   // handleValidSubmit
   handleValidSubmit(event) {
     event.preventDefault();
-    if (/@/i.test(this.state.email) && this.state.password.length >= 8) {
+
+     
+   
+    if (/@/i.test(this.state.email) && /^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/.test(this.state.password)) {
       this.props.history.push("/dashboard");
-    } else {
-      if (!/@/i.test(this.state.email) && this.state.password.length < 8) {
-        this.setState({ ...this.state, errorEmail: true, errorPassword: true });
-        return;
-      } else if (!/@/i.test(this.state.email)) {
-        this.setState({ ...this.state, errorEmail: true });
-        return;
-      } else if (this.state.password.length < 8) {
-        this.setState({ ...this.state, errorPassword: true });
-      }
-    }
+     } else {
+       if (!/@/i.test(this.state.email) && this.state.password.length < 8) {
+         this.setState({ ...this.state, errorEmail: true, errorPassword: true });
+         return;
+       } else if (!/@/i.test(this.state.email)) {
+         this.setState({ ...this.state, errorEmail: true });
+         return;
+       } else if (!/^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/.test(this.state.password)) {
+         this.setState({ ...this.state, errorPassword: true });
+       }
+     }
   }
 
   toggleEye() {
