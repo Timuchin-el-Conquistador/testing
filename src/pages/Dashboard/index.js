@@ -62,6 +62,7 @@ class Dashboard extends Component {
         <div className={classes.dashboard_page}>
           <div className={classes.dash_cover}>
             <SidebarContent theme={'dashboard'} />
+
             <GoogleMaps />
           </div>
         </div>

@@ -93,7 +93,7 @@ class SidebarContent extends Component {
   }
   render() {
     return (
-      <React.Fragment>
+
         <div className={`${ classes.dash_menu} ${this.props.theme==='dashboard'?  classes2.dash_menu : ''}`}>
         
             <a href="#" className={classes.dash_logo}>
@@ -326,7 +326,7 @@ class SidebarContent extends Component {
             </div>
      
         </div>
-      </React.Fragment>
+
     );
   }
 }

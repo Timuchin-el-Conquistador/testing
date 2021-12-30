@@ -1,40 +1,14 @@
 import React, { Component } from "react";
 
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-  Spinner,
-  Input,
-  Alert,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Badge,
-  Form,
-  FormGroup,
-  Label,
-} from "reactstrap";
 
-import {
-  Map,
-  GoogleApiWrapper,
-  Marker,
-  Polygon,
-  Circle,
-} from "google-maps-react";
+
+
 
 import { LatLngSource } from "./ZipCoords";
 
 import Geocode from "react-geocode";
 
+import Map from './google map';
 
 import SearchNormal from "../../assets/css/Settings/search-normal.svg";
 import SearchMaximize from "../../assets/css/Settings/search-maximize.svg";
@@ -65,7 +39,7 @@ const mapStyles = {
   //marginTop: "10%",
 };
 
-const LoadingContainer = (props) => <Spinner color="primary" />;
+//const LoadingContainer = (props) => <Spinner color="primary" />;
 
 class GoogleMaps extends Component {
   constructor(props) {
@@ -130,7 +104,7 @@ class GoogleMaps extends Component {
     );
   };
 
-  handleRenderDriversCoordinates = () => {
+ /* handleRenderDriversCoordinates = () => {
     let renderDrivers = [];
     const state = this.state;
 
@@ -158,7 +132,7 @@ class GoogleMaps extends Component {
     }
 
     return renderDrivers;
-  };
+  };*/
 
   centerMoved(coord) {
     //console.log(coord);
@@ -291,38 +265,13 @@ class GoogleMaps extends Component {
   render() {
     const state = this.state;
     return (
+
       <div className={classes.dash_right}>
-        <div className={classes.map}>
-
-          <Map
-            google={this.props.google}
-            zoom={this.state.zoom}
-            style={mapStyles}
-            initialCenter={this.state.center}
-            fullscreenControl={false}
-            draggable={true}
-            center={this.state.postCenter}
-            scrollwheel={false}
-            mapTypeControl={false}
-            disableDoubleClickZoom={false}
-            keyboardShortcuts={false}
-            onDragend={(coord) => this.centerMoved(coord)}
-          >
-            <Polygon
-              paths={this.state.coordinates}
-              fillColor="#7356bd"
-              fillOpacity={0.35}
-              //fillOpacity="0.5"
-              strokeOpacity={0.8}
-              strokeWeight={1}
-              strokeColor="#200b47"
-            />
-            {/*{this.handleRenderDriversCoordinates()}*/}
-          </Map>
-
+       <div className={classes.map}>
+          <Map/>
         </div>
         {/* <!-- header search block -->*/} {/*with   <div className={classes.head_search_dashboard}></div> does not sit on the right edge*/}
-      
+        <div className={classes.head_search_dashboard}>
           <div className={classes.head_search}>
             <form action="">
               <div className={`${classes.dash_relative} ${classes.search_box}`}>
@@ -348,7 +297,7 @@ class GoogleMaps extends Component {
               </div>
             </form>
           </div>
-    
+        </div>
 
         <div className={classes.dashboard_right}>
           <div className={classes.choosen_place}>
@@ -447,11 +396,13 @@ class GoogleMaps extends Component {
           </div>
         </div>
       </div>
+
     );
   }
 }
 
-export default GoogleApiWrapper({
+/*export default GoogleApiWrapper({
   apiKey: "AIzaSyBIz-CXJ0CDRPjUrNpXKi67fbl-0Fbedio",
-  LoadingContainer: LoadingContainer,
-})(GoogleMaps);
+//  LoadingContainer: LoadingContainer,
+})(GoogleMaps);*/
+export default GoogleMaps;

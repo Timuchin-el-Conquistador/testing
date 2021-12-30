@@ -18,6 +18,7 @@ import EmailSent from './pages/Authentication/email-sent/index'
 
 
 import classes from "./assets/css/Settings/settings.module.css";
+import ProfileMenu from "./components/CommonForBoth/TopbarDropdown/ProfileMenu";
 
 class  App extends React.Component {
   constructor(props){
@@ -37,6 +38,7 @@ class  App extends React.Component {
       <Route path='/email-sent'><EmailSent/></Route>
       <Route path='/settings'><div className={classes.dash_cover}><SidebarContent /><Settings/></div></Route>
       <Route path='/billing'><div className={classes.dash_cover}><SidebarContent /><Billing/></div></Route>
+      <Route path='/profile'><ProfileMenu/></Route>
     </Switch>
    </React.Fragment>
   );
