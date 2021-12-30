@@ -14,25 +14,26 @@ import Car from "../../assets/css/Settings/car.svg";
 
 import classes from "../../assets/css/Settings/settings.module.css";
 
-import SidebarContent from "../../components/VerticalLayout/testSidebarContent";
-
 import ProfileMenu from "../../components/CommonForBoth/TopbarDropdown/ProfileMenu";
+
 
 class Settings extends Component {
   constructor(props) {
     super(props);
-    this.state = {text:false};
-    this.toggleEye = this.toggleEye.bind(this)
+    this.state = { text: false, modal: true };
+    this.toggleEye = this.toggleEye.bind(this);
   }
-  toggleEye(){
-    this.setState({...this.state, text:!this.state.text})
+
+  toggleEye() {
+    this.setState({ ...this.state, text: !this.state.text });
   }
+
   render() {
     return (
       <React.Fragment>
         <div className={classes.dash_right}>
           {/*<!-- header search block -->*/}
-          <div className={classes.head_search}>
+          <form className={classes.head_search}>
             <h1 className={classes.dash_h1}>Settings</h1>
             <form action="">
               <div className={`${classes.dash_relative} ${classes.search_box}`}>
@@ -57,7 +58,7 @@ class Settings extends Component {
                 </div>
               </div>
             </form>
-          </div>
+          </form>
           {/*<!-- settings block -->*/}
           <div className={classes.setting_block}>
             <div className={classes.setting_left}>
@@ -116,7 +117,7 @@ class Settings extends Component {
                     <div className={classes.stng_form_flex}>
                       <div className={classes.stng_relative}>
                         <input
-                          type={`${this.state.text?'text':'password'}`}
+                          type={this.state.text ? "text" : "password"}
                           className={classes.stng_element}
                           name="stng-password"
                           id="stng-password"
@@ -132,10 +133,7 @@ class Settings extends Component {
                           className={classes.pass_eye}
                           onClick={this.toggleEye}
                         >
-                          <img
-                            src={`${this.state.text ? EyeSlash : Eye}`}
-                            alt=""
-                          />
+                          <img src={this.state.text ? EyeSlash : Eye} alt="" />
                         </button>
                       </div>
                       <button type="button" className={classes.form_edit_btn}>
@@ -317,6 +315,7 @@ class Settings extends Component {
               </div>
             </div>
           </div>
+
         </div>
       </React.Fragment>
     );

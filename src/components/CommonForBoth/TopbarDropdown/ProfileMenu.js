@@ -4,8 +4,35 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
+  Container,
+  Row,
+  Col,
+  Button,
+  Card,
+  CardBody,
+  CardTitle,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Media,
+  Table,
+  Badge,
+  CardText,
+  CardSubtitle,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Fade,
+  FormText,
+  Tooltip,
+  Alert,
+  InputGroupAddon,
+  InputGroup,
 } from "reactstrap";
 import { withRouter, Link } from "react-router-dom";
+
 
 
 
@@ -89,6 +116,83 @@ class ProfileMenu extends Component {
             </Link>
           </DropdownMenu>
         </Dropdown>
+        <Modal isOpen={true} toggle={this.toggle}>
+            <ModalHeader toggle={this.toggle}>
+              Choose a Campaign Objective
+            </ModalHeader>
+
+            <ModalBody>
+              <Container className="themed-container" fluid={true}>
+                <Row xs="1">
+                  <Col>
+                    <Form>
+                      <FormGroup
+                        check
+                        onChange={(event) => this.handleOnChange(event)}
+                      >
+                        <Fade in={true} tag="h5" className="mt-3">
+                          <Label check>
+                            <Input type="radio" name="Brand Awareness" /> Brand
+                            awareness{" "}
+                            <i
+                              className="bx bxs-error-circle"
+                              id="BrandAwareness"
+                            ></i>
+                            <Tooltip
+                              id="BrandAwareness"
+                              placement="right"
+                              isOpen={this.state.brandAwareness}
+                              target="BrandAwareness"
+                              toggle={() => this.toggleTooltip(1)}
+                            >
+                              Show your ads to people who most likely to
+                              remember them
+                            </Tooltip>
+                          </Label>
+                        </Fade>
+                        <Fade in={true} tag="h5" className="mt-3">
+                          <Label check>
+                            <Input type="radio" name="Reach" /> Reach
+                            <i className="bx bxs-error-circle" id="Reach"></i>
+                          </Label>
+                          <Tooltip
+                            id="Reach"
+                            placement="right"
+                            isOpen={this.state.reach}
+                            target="Reach"
+                            toggle={() => this.toggleTooltip(2)}
+                          >
+                            Show your ads to the maximum number of people
+                          </Tooltip>
+                        </Fade>{" "}
+                        <Fade in={true} tag="h5" className="mt-3">
+                          <Label check>
+                            <Input type="radio" name="Traffic" /> Traffic
+                            <i className="bx bxs-error-circle" id="Traffic"></i>
+                            <Tooltip
+                              id="Traffic"
+                              placement="right"
+                              isOpen={this.state.traffic}
+                              target="Traffic"
+                              toggle={() => this.toggleTooltip(3)}
+                            >
+                              Send people to a destination, like webpage, event,
+                              etc
+                            </Tooltip>
+                          </Label>
+                        </Fade>
+                      </FormGroup>
+                    </Form>
+                  </Col>
+                </Row>
+              </Container>
+            </ModalBody>
+            <ModalFooter>
+              <Button color="success" onClick={this.toggleCreateAd}>
+                Next
+              </Button>
+            </ModalFooter>
+          </Modal>
       </React.Fragment>
     );
   }
