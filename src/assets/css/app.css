@@ -3727,3 +3727,110 @@ background-color: transparent;
   color:#fff;
   background:#7356C0;
 }
+/* Setting cancelation modal */
+.setting_cancel_modal .modal-header .btn-close{
+  border:0;
+  padding:0;
+  background:transparent;
+  position: absolute;
+  top:22px;
+  right:24px;
+}
+.setting_cancel_modal.modal-dialog{
+  margin-top:4%;
+  max-width:656px;
+}
+.setting_cancel_modal .modal-content{
+  background:#fff;
+  box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+.setting_cancel_modal .modal-header{
+  position:relative;
+  padding:24px 24px 0 24px;
+  border:0;
+  justify-content: center;
+}
+.setting_cancel_modal .modal-title span{
+  color: #7356C0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+.setting_cancel_modal .modal-body{
+  padding:24px 64px 40px 64px;
+}
+.form_element_modal{
+  margin-bottom:24px;
+}
+.form_element_modal label{
+  color: #3F2B89;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom:6px;
+}
+.form_element_modal select{
+  max-width:343px;
+  height:48px;
+  background: #F7F9FC;
+  border: 1px solid #EDF1F7;
+  border-radius:8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color:#192038;
+  padding-left:16px;
+  padding-right:52px;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+.form_element_modal svg{
+  position:absolute;
+  right: 16px;
+  top: 14px;
+  pointer-events:none;
+}
+.max_343{
+  max-width:343px;
+}
+.form_element_modal textarea{
+  resize:none;
+  height:199px;
+  overflow:auto;
+  padding-top:14px;
+  padding-left:16px;
+  background: #F7F9FC;
+  border: 1px solid #EDF1F7;
+  border-radius: 8px;
+}
+.form_element_modal textarea::-webkit-scrollbar{
+  width: 6px;
+}
+.form_element_modal textarea::-webkit-scrollbar-thumb{
+  background-color: #eee;
+  border-radius:6px;
+}
+.reason_cancel_btn{
+  background: #7356C0;
+  border-radius: 4px;
+  min-width:174px;
+  text-align:center;
+  padding:13px 24px;
+  color:#fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  border:1px solid #7356C0;
+  transition:all .4s ease;
+}
+.reason_cancel_btn:hover{
+  background:#fff;
+  color:#7356C0;
+}
+@media screen and (min-width:1500px){
+  .setting_cancel_modal.modal-dialog{
+    margin-top:12%;
+  }
+}

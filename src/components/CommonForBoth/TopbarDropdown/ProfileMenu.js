@@ -72,9 +72,6 @@ class ProfileMenu extends Component {
         <div class="sources_item">
           <div class="source_item_right">
             <div class="dot_dropdown">
-              {/* <button type="button" class="source_item_drop">
-               
-              </button> */}
               <Dropdown className={classes.destin_dropdown}
               isOpen={this.state.menu}
               toggle={this.toggle}

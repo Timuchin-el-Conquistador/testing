@@ -19,6 +19,7 @@ import EmailSent from './pages/Authentication/email-sent/index'
 
 import classes from "./assets/css/Settings/settings.module.css";
 import ProfileMenu from "./components/CommonForBoth/TopbarDropdown/ProfileMenu";
+import SettingModal from "./components/CommonForBoth/TopbarDropdown/SettingModal";
 
 class  App extends React.Component {
   constructor(props){
@@ -39,6 +40,7 @@ class  App extends React.Component {
       <Route path='/settings'><div className={classes.dash_cover}><SidebarContent /><Settings/></div></Route>
       <Route path='/billing'><div className={classes.dash_cover}><SidebarContent /><Billing/></div></Route>
       <Route path='/profile'><ProfileMenu/></Route>
+      <Route path='/modal'><SettingModal/></Route>
     </Switch>
    </React.Fragment>
   );
