@@ -49,15 +49,25 @@ class ProfileMenu extends Component {
       username: sessionStorage.getItem("fullName")
         ? sessionStorage.getItem("fullName")
         : null,
+        toggle:false
     };
     this.toggle = this.toggle.bind(this);
+    this.toggleModal = this.toggleModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
   }
 
   toggle() {
     console.log('profile is running')
     this.setState((prevState) => ({
-      menu: !prevState.menu,
+      menu: !prevState.menu
     }));
+  }
+
+  toggleModal(){
+    this.setState({...this.state, toggle: true });
+  }
+  closeModal(){
+    this.setState({...this.state, toggle: false });
   }
 
   render() {
@@ -95,9 +105,9 @@ class ProfileMenu extends Component {
             {/* <i className="mdi mdi-chevron-down d-none d-xl-inline-block"></i> */}
           </DropdownToggle>
           <DropdownMenu right>
-            <DropdownItem tag="a" href="/settings">
+            <DropdownItem tag="a" onClick={this.toggleModal}>
               <i className="bx bx-user font-size-16 align-middle mr-1"></i>
-              Profile
+              Update
             </DropdownItem>
             {/*<DropdownItem tag="a" href="/billing">
               <i className="bx bx-wallet font-size-16 align-middle mr-1"></i>
@@ -108,16 +118,30 @@ class ProfileMenu extends Component {
               <i className="mdi mdi-settings font-size-17 align-middle mr-1"></i>
               {this.props.t("Settings")}
             </DropdownItem> */}
-
-            <div className="dropdown-divider"></div>
-            <Link to="/logout" className="dropdown-item">
+      
+     
+            <DropdownItem>
+            <Link  onClick={this.toggleModal}>
               <i className="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
-              <span>Logout</span>
+              <span>Deactivate</span>
             </Link>
+            </DropdownItem>
+            <DropdownItem>
+            <Link  onClick={this.toggleModal}>
+              <i className="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
+              <span>Cansel</span>
+            </Link>
+            </DropdownItem>
+            <DropdownItem>
+            <Link  onClick={this.toggleModal}>
+              <i className="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
+              <span>4th one</span>
+            </Link>
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Modal isOpen={true} toggle={this.toggle}>
-            <ModalHeader toggle={this.toggle}>
+        <Modal isOpen={this.state.toggle} toggle={this.closeModal}>
+            <ModalHeader  toggle={this.closeModal}>
               Choose a Campaign Objective
             </ModalHeader>
 
@@ -125,72 +149,13 @@ class ProfileMenu extends Component {
               <Container className="themed-container" fluid={true}>
                 <Row xs="1">
                   <Col>
-                    <Form>
-                      <FormGroup
-                        check
-                        onChange={(event) => this.handleOnChange(event)}
-                      >
-                        <Fade in={true} tag="h5" className="mt-3">
-                          <Label check>
-                            <Input type="radio" name="Brand Awareness" /> Brand
-                            awareness{" "}
-                            <i
-                              className="bx bxs-error-circle"
-                              id="BrandAwareness"
-                            ></i>
-                            <Tooltip
-                              id="BrandAwareness"
-                              placement="right"
-                              isOpen={this.state.brandAwareness}
-                              target="BrandAwareness"
-                              toggle={() => this.toggleTooltip(1)}
-                            >
-                              Show your ads to people who most likely to
-                              remember them
-                            </Tooltip>
-                          </Label>
-                        </Fade>
-                        <Fade in={true} tag="h5" className="mt-3">
-                          <Label check>
-                            <Input type="radio" name="Reach" /> Reach
-                            <i className="bx bxs-error-circle" id="Reach"></i>
-                          </Label>
-                          <Tooltip
-                            id="Reach"
-                            placement="right"
-                            isOpen={this.state.reach}
-                            target="Reach"
-                            toggle={() => this.toggleTooltip(2)}
-                          >
-                            Show your ads to the maximum number of people
-                          </Tooltip>
-                        </Fade>{" "}
-                        <Fade in={true} tag="h5" className="mt-3">
-                          <Label check>
-                            <Input type="radio" name="Traffic" /> Traffic
-                            <i className="bx bxs-error-circle" id="Traffic"></i>
-                            <Tooltip
-                              id="Traffic"
-                              placement="right"
-                              isOpen={this.state.traffic}
-                              target="Traffic"
-                              toggle={() => this.toggleTooltip(3)}
-                            >
-                              Send people to a destination, like webpage, event,
-                              etc
-                            </Tooltip>
-                          </Label>
-                        </Fade>
-                      </FormGroup>
-                    </Form>
+                 
                   </Col>
                 </Row>
               </Container>
             </ModalBody>
             <ModalFooter>
-              <Button color="success" onClick={this.toggleCreateAd}>
-                Next
-              </Button>
+    
             </ModalFooter>
           </Modal>
       </React.Fragment>
