@@ -502,7 +502,7 @@ margin: 0;
   padding:8px 0;
 }
 .dropdown_item{
-  display: flex;
+  display: flex !important;
   align-items:center;
   padding:8px 16px;
   transition:all .4s ease;
