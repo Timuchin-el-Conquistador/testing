@@ -15,6 +15,7 @@ import ForgotPassword from './pages/Authentication/Forgotpassword/index'
 import Business from './pages/Authentication/Business-goals/index'
 import Subscribe from './pages/Authentication/Subscribe/index'
 import EmailSent from './pages/Authentication/email-sent/index'
+import Analytics from './pages/Analytics/index'
 
 
 import classes from "./assets/css/Settings/settings.module.css";
@@ -41,6 +42,7 @@ class  App extends React.Component {
       <Route path='/billing'><div className={classes.dash_cover}><SidebarContent /><Billing/></div></Route>
       <Route path='/profile'><ProfileMenu/></Route>
       <Route path='/modal'><SettingModal/></Route>
+      <Route path='/analytics'><div className={classes.dash_cover}><Analytics/></div></Route>
     </Switch>
    </React.Fragment>
   );

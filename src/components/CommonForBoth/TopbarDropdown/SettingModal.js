@@ -1,35 +1,9 @@
 import React, { Component } from "react";
 import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Container,
-  Row,
-  Col,
-  Button,
-  Card,
-  CardBody,
-  CardTitle,
+
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter,
-  Media,
-  Table,
-  Badge,
-  CardText,
-  CardSubtitle,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Fade,
-  FormText,
-  Tooltip,
-  Alert,
-  InputGroupAddon,
-  InputGroup,
 } from "reactstrap";
 import { withRouter, Link } from "react-router-dom";
 
@@ -44,11 +18,7 @@ class ProfileMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menu: false,
-      username: sessionStorage.getItem("fullName")
-        ? sessionStorage.getItem("fullName")
-        : null,
-        toggle:false
+      menu: false
     };
     this.toggle = this.toggle.bind(this);
     this.toggleModal = this.toggleModal.bind(this)
