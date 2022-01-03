@@ -73,7 +73,7 @@ class ProfileMenu extends Component {
       <React.Fragment>
             <button type="button" onClick={this.toggleModal} >Click this!</button>
             {/* Setting cancelation modal */}
-            {/* <Modal isOpen={this.state.toggle} toggle={this.closeModal} className="setting_cancel_modal">
+            <Modal isOpen={this.state.toggle} toggle={this.closeModal} className="setting_cancel_modal">
                 <ModalHeader>
                     <span>Reason of the cencelation:</span>
                     <button type="button" class="btn-close" aria-label="Close" toggle={this.closeModal}>
@@ -107,9 +107,9 @@ class ProfileMenu extends Component {
                         </div>
                     </form>
                 </ModalBody>
-            </Modal> */}
+            </Modal>
             {/* Choose new Subscription Plan style */}
-              <Modal isOpen={this.state.toggle} toggle={this.closeModal} className="setting_plan_modal">
+              {/* <Modal isOpen={this.state.toggle} toggle={this.closeModal} className="setting_plan_modal">
                 <ModalHeader>
                     <span>Choose new Subscription Plan:</span>
                     <button type="button" class="btn-close" aria-label="Close" toggle={this.closeModal}>
@@ -248,7 +248,7 @@ class ProfileMenu extends Component {
                         </div>
                     </div>
                 </ModalBody>
-            </Modal>
+            </Modal> */}
       </React.Fragment>
     );
   }
