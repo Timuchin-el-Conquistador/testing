@@ -67,6 +67,10 @@ class ProfileMenu extends Component {
     this.setState({...this.state, toggle: false });
   }
 
+  activeRadio(){
+    alert('sdjsnd')
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -85,22 +89,25 @@ class ProfileMenu extends Component {
                     </DropdownToggle>
                     {/* <span className="stc_slcted">#more than 5</span> */}
                   </div>
-                <DropdownMenu right>
-                  <DropdownItem tag="label" className="slc_drop_label">
-                    <input type="radio" name="radio" checked /> <small>less than 10.000</small>
-                    <span class="checkmark"></span>
+                <DropdownMenu left>
+                  <DropdownItem tag="a" className="slc_drop_label active" onClick={this.activeRadio}>
+                      <span className="slc_tag_span">less than 10.000</span>
                   </DropdownItem>
-                  <DropdownItem tag="label" className="slc_drop_label"> <small>More than 10.000</small>
-                    <input type="radio" name="radio" /> 
-                    <span class="checkmark"></span>
+                  <DropdownItem tag="a" className="slc_drop_label" onClick={this.activeRadio}>
+                      <span className="slc_tag_span">More than 10.000</span>
                   </DropdownItem>
-                  <DropdownItem tag="label" className="slc_drop_label">
-                    <input type="radio" name="radio" /> <small>custom</small>
-                    <span class="checkmark"></span>
+                  <DropdownItem tag="a" className="slc_drop_label" onClick={this.activeRadio}>
+                      <span className="slc_tag_span">Custom</span>
                   </DropdownItem>
                 </DropdownMenu>
         </Dropdown>
-      
+
+                    {/* <label htmlFor="item1">
+                      <input type="radio" name="item" checked id="item1"/> 
+                      <span class="checkmark"></span>
+                      <small>less than 10.000</small>
+                    </label> */}
+                  
         {/* Destination Modal 1 */}
         {/* <Modal isOpen={this.state.toggle} toggle={this.closeModal} className="destionation_modal">
             <ModalHeader>
