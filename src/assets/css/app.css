@@ -4294,3 +4294,14 @@ background-color: transparent;
     margin-top:12%;
   }
 }
+
+/* analitcs style */
+#apexchartsapexchartxexample .apexcharts-toolbar,.apexcharts-element-hidden{
+  display:none !important;
+}
+.apexcharts-toolbar .apexcharts-zoom-icon,.apexcharts-toolbar .apexcharts-pan-icon,.apexcharts-toolbar .apexcharts-reset-icon,.apexcharts-toolbar .apexcharts-menu-icon{
+  display:none;
+}
+.apexcharts-toolbar{
+  top:-10px !important;
+}
