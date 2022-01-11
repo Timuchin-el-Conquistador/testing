@@ -21,6 +21,8 @@ import Analytics from './pages/Analytics/index'
 import classes from "./assets/css/Settings/settings.module.css";
 import ProfileMenu from "./components/CommonForBoth/TopbarDropdown/ProfileMenu";
 import SettingModal from "./components/CommonForBoth/TopbarDropdown/SettingModal";
+import TestingModal from "./components/CommonForBoth/TopbarDropdown/TestingModal";
+
 
 class  App extends React.Component {
   constructor(props){
@@ -43,6 +45,7 @@ class  App extends React.Component {
       <Route path='/profile'><ProfileMenu/></Route>
       <Route path='/modal'><SettingModal/></Route>
       <Route path='/analytics'><div className={classes.dash_cover}><Analytics/></div></Route>
+      <Route path='/testing-modal'><TestingModal/></Route>
     </Switch>
    </React.Fragment>
   );
