@@ -211,6 +211,8 @@
   border-radius: 8px;
   padding:16px 16px 0 16px;
   min-height:272px;
+  position:relative;
+  overflow:hidden;
 }
 .audience_p{
   color: #2E3A59;

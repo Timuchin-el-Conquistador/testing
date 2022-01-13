@@ -11,16 +11,18 @@ class AdEngagements extends Component {
     options: {
       chart: {
         type: "pie",
+        width: "400"
       },
       colors:['#3F2B89', '#7356C0'],
       labels: [this.props.campaign1, this.props.campaign2],
+      stroke: {
+        curve: 'smooth',
+        width:1,
+      },
       responsive: [
         {
           breakpoint: 480,
           options: {
-            chart: {
-              width: "100%",
-            },
             legend: {
               position: "bottom",
             },
@@ -31,13 +33,12 @@ class AdEngagements extends Component {
   };
   render() {
     return (
-      <div id="chart">
+      <div id="chart4" className="chart4">
         <ReactApexChart
           options={this.state.options}
           series={this.state.series}
           type="pie"
-          width='180%'
-          height={170}
+          height={160}
         />
       </div>
     );
