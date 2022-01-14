@@ -80,9 +80,6 @@
 .search_icon:hover,.search_maximize:hover,.profil_img:hover{
   transform:scale(1.1);
 }
-/*.search_profil_parent{
-  position: relative;
-}*/
 .search_profil{
   width:44px;
   height:44px;
@@ -196,9 +193,6 @@
   line-height: 20px;
   white-space: nowrap;
   letter-spacing: 0.0015em;
-  /* position: relative;
-  top: 10rem;
-  left:4rem; */
   color: #3F2B89;
 } 
 .audience_col{
@@ -209,8 +203,8 @@
   background: #fff;
   border: 1px solid #E4E9F2;
   border-radius: 8px;
-  padding:16px 16px 0 16px;
-  min-height:272px;
+  padding:0;
+  min-height:290px;
   position:relative;
   overflow:hidden;
 }
@@ -219,12 +213,12 @@
   font-size: 14px;
   line-height: 20px;
   max-width:86px;
-  margin-top:0;
-  margin-bottom:16px;
+  margin:16px 10px 16px 16px;
 }
 .audience_chart{
   text-align:center;
   fill: wheat;
+  position:relative;
 }
 .auds{
   list-style-type:none;
@@ -286,11 +280,7 @@
 @media (max-width:1400px) {
   .audience_row{
    display: flex;
-   flex-direction: column;
    align-items: center;
-  }
-  .audience_col{
-    width: 100%;
   }
   .audience_item{
     width: 100%;

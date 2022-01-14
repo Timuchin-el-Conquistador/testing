@@ -345,20 +345,6 @@ class CampaignAnalytics extends Component {
                 <div className={classes.audience_chart}>
                   <AudienceDemographicsPieChart Male={120} Female={220} />
                 </div>
-               {/* <ul className={classes.auds}>
-                  <li className={classes.mr_24px}>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_1}`}
-                    ></span>
-                    <small>Male</small>
-                  </li>
-                  <li>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_2}`}
-                    ></span>
-                    <small>Female</small>
-                  </li>
-    </ul>*/}
               </div>
             </div>
             <div className={classes.audience_col}>
@@ -367,20 +353,6 @@ class CampaignAnalytics extends Component {
                 <div className={classes.audience_chart}>
                   <PieChart Android={55} IOS={45} />
                 </div>
-                {/*<ul className={classes.auds}>
-                  <li className={classes.mr_24px}>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_1}`}
-                    ></span>
-                    <small>Android</small>
-                  </li>
-                  <li>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_2}`}
-                    ></span>
-                    <small>IOS</small>
-                  </li>
-  </ul>*/}
               </div>
             </div>
             <div className={classes.audience_col}>
@@ -395,38 +367,6 @@ class CampaignAnalytics extends Component {
                     e={24}
                   />
                 </div>
-               {/* <ul className={classes.auds}>
-                  <li className={classes.mr_16px}>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_1}`}
-                    ></span>
-                    <small>0-18</small>
-                  </li>
-                  <li className={classes.mr_16px}>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_2}`}
-                    ></span>
-                    <small>18-25</small>
-                  </li>
-                  <li className={classes.mr_16px}>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_3}`}
-                    ></span>
-                    <small>25-35</small>
-                  </li>
-                  <li className={classes.mr_16px}>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_4}`}
-                    ></span>
-                    <small>35-45</small>
-                  </li>
-                  <li>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_5}`}
-                    ></span>
-                    <small>45-65</small>
-                  </li>
-</ul>*/}
               </div>
             </div>
             <div className={classes.audience_col}>
@@ -440,20 +380,6 @@ class CampaignAnalytics extends Component {
                     campaign2={"Ad_B"}
                   />
                 </div>
-                {/*<ul className={classes.auds}>
-                  <li className={classes.mr_24px}>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_1}`}
-                    ></span>
-                    <small>Ad_A</small>
-                  </li>
-                  <li>
-                    <span
-                      className={`${classes.auds_dot} ${classes.auds_dot_2}`}
-                    ></span>
-                    <small>Ad_B</small>
-                  </li>
-</ul>*/}
               </div>
             </div>
           </div>

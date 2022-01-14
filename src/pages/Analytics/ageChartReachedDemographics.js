@@ -12,11 +12,14 @@ class AgeOfReachedDemographics extends Component {
     ],
     options: {
       chart: {
-     
         type: "pie",
       },
-      colors: ['#B69EEA', '#3F2B89','#997FD8','#573EA4','#7356C0'],
-      labels: ["18-25", "26-35", "36-45", "46-55", "56-65"],
+      colors: ['#3F2B89', '#3F2B89','#997FD8','#573EA4','#7356C0'],
+      labels: ["0-18", "18-25", "25-35", "35-45", "45-65"],
+      stroke: {
+        curve: 'smooth',
+        width:1,
+      },
       responsive: [
         {
           breakpoint: 480,
@@ -34,15 +37,13 @@ class AgeOfReachedDemographics extends Component {
   };
   render() {
     return (
-      <div id='chart'>
+      <div id='chart3' className="chart3 chart-general">
         <ReactApexChart
           options={this.state.options}
           series={this.state.series}
           type="pie"
-          width='180%'
-          height={170}
-       
-          
+          height={160}
+          width={500}
         />
      </div>
     );

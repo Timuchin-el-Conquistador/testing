@@ -10,6 +10,10 @@ class AudienceDemographicsPieChart extends Component {
       },
       labels: ["Male", "Female"],
       colors: ["#3F2B89", "#7356C0"],
+      stroke: {
+        curve: 'smooth',
+        width:1,
+      },
       responsive: [
         {
           breakpoint: 480,
@@ -27,13 +31,13 @@ class AudienceDemographicsPieChart extends Component {
   };
   render() {
     return (
-      <div id="chart">
+      <div id="chart1" className="chart1 chart-general">
         <ReactApexChart
           options={this.state.options}
           series={this.state.series}
           type="pie"
-          width="180%"
-          height={170}
+          height={160}
+          width={500}
         />
       </div>
     );
