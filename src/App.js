@@ -16,6 +16,7 @@ import Business from './pages/Authentication/Business-goals/index'
 import Subscribe from './pages/Authentication/Subscribe/index'
 import EmailSent from './pages/Authentication/email-sent/index'
 import Analytics from './pages/Analytics/index'
+import ReportingChart from "./pages/report-chart";
 
 
 import classes from "./assets/css/Settings/settings.module.css";
@@ -46,6 +47,7 @@ class  App extends React.Component {
       <Route path='/modal'><SettingModal/></Route>
       <Route path='/analytics'><div className={classes.dash_cover}><Analytics/></div></Route>
       <Route path='/testing-modal'><TestingModal/></Route>
+      <Route path='/testing'><ReportingChart/></Route>
     </Switch>
    </React.Fragment>
   );
