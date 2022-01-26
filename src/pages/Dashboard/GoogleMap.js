@@ -16,6 +16,8 @@ import ProfileMenu from "../../components/CommonForBoth/TopbarDropdown/ProfileMe
 import classes from "../../assets/css/Dashboard/dashboard.module.css";
 import Graph1 from "../../assets/css/Dashboard/graph1.png";
 import Close from "../../assets/css/Dashboard/close.svg";
+import PieChartDash from "./pieChartDash";
+import BarChartDash from "./barChartDash";
 
 Geocode.setApiKey("AIzaSyBIz-CXJ0CDRPjUrNpXKi67fbl-0Fbedio");
 
@@ -180,61 +182,6 @@ class GoogleMaps extends Component {
         });
       }
     }
-    // Geocode.fromAddress("" + this.state.postalCode).then(
-    //   (response) => {
-    //     const { lat, lng } = response.results[0].geometry.location;
-    //     const LatLng = [];
-
-    //     let coordinates = ZIP.filter((coordinate) => {
-    //       if (coordinate[10] === this.state.postalCode) {
-    //         return coordinate[8];
-    //       }
-    //     });
-
-    //     if (coordinates.length) {
-    //       coordinates = coordinates.map((coordinate) => {
-    //         return { coordinate: coordinate[8] };
-    //       });
-    //       coordinates = coordinates[0].coordinate.split("(((")[1].split(",");
-    //       coordinates = coordinates.map((coordinate) => coordinate.split(" "));
-
-    //       for (let i = 0; i < coordinates.length; i++) {
-    //         if (coordinates[i][0].length !== 0) {
-    //           LatLng.push({
-    //             lat: Number.parseFloat(coordinates[i][1]),
-    //             lng: Number.parseFloat(coordinates[i][0]),
-    //           });
-    //         } else {
-    //           LatLng.push({
-    //             lat: Number.parseFloat(coordinates[i][2]),
-    //             lng: Number.parseFloat(coordinates[i][1]),
-    //           });
-    //         }
-    //       }
-    //     }
-    //     this.setState({
-    //       ...this.state,
-    //       postCenter: { lat, lng },
-    //       coordinates: LatLng,
-    //       zoom: 15,
-    //     });
-    //   },
-    //   (error) => {
-    //     this.setState({ ...this.state, errorZipCode: true });
-    //   }
-    // );
-
-    /*  this.setState({
-          ...this.state,
-          postCenter: { lat, lng },
-          coordinates: LatLng,
-          zoom: 13,
-        });
-      },
-      (error) => {
-        this.setState({ ...this.state, errorZipCode: true });
-      }
-    );*/
   }
   toggleCard() {
     console.log("run");
@@ -243,24 +190,6 @@ class GoogleMaps extends Component {
       toggle: !this.state.toggle,
     });
   }
-  /* componentDidMount() {
-    if (!firebase.apps.length) {
-      firebase.initializeApp(firebaseConfig);
-    } else {
-      firebase.app(); // if already initialized, use that one
-    }
-
-   // this.handleConnectionToFirebaseRealTimeDatabase();
-  navigator.geolocation.getCurrentPosition((position) => {
-      this.setState({
-        postCenter: {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        },
-      });
-      this.handleReverseGeocode();
-    });
-  }*/
 
   render() {
     const state = this.state;
@@ -309,80 +238,20 @@ class GoogleMaps extends Component {
                 <p className={classes.choosen_item_p}>Number of cars:</p>
                 <h5 className={classes.choosen_h5}>3</h5>
               </div>
-              <div className={classes.choosen_item}>
+              <div className={`${classes.choosen_item} ${classes.choosen_item_2}`}>
                 <p className={classes.choosen_item_p}>Gender rates:</p>
                 <div className={classes.gender_rates}>
                   <div className={classes.graph_rate}>
-                    <img src={Graph1} alt="" />
+                    <PieChartDash Male={55} Female={30} Other={15}/>
                   </div>
-                  <ul className={classes.auds}>
-                    <li>
-                      <span
-                        className={`${classes.auds_dot} ${classes.auds_dot_1}`}
-                      ></span>
-                      <small>Male</small>
-                      <span className={classes.auds_percent}>(55%)</span>
-                    </li>
-                    <li>
-                      <span
-                        className={`${classes.auds_dot} ${classes.auds_dot_2}`}
-                      ></span>
-                      <small>Female</small>
-                      <span className={classes.auds_percent}>(30%)</span>
-                    </li>
-                    <li>
-                      <span
-                        className={`${classes.auds_dot} ${classes.auds_dot_3}`}
-                      ></span>
-                      <small>Other</small>
-                      <span className={classes.auds_percent}>(15%)</span>
-                    </li>
-                  </ul>
                 </div>
               </div>
               <div className={classes.choosen_item}>
                 <p className={classes.choosen_item_p}>Age rates:</p>
                 <div className={classes.gender_rates}>
                   <div className={classes.graph_rate}>
-                    <img src={Graph1} alt="" />
+                    <BarChartDash />
                   </div>
-                  <ul className={classes.auds}>
-                    <li>
-                      <span
-                        className={`${classes.auds_dot} ${classes.auds_dot_1}`}
-                      ></span>
-                      <small>0-18</small>
-                      <span className={classes.auds_percent}>(55%)</span>
-                    </li>
-                    <li>
-                      <span
-                        className={`${classes.auds_dot} ${classes.auds_dot_2}`}
-                      ></span>
-                      <small>18-25</small>
-                      <span className={classes.auds_percent}>(30%)</span>
-                    </li>
-                    <li>
-                      <span
-                        className={`${classes.auds_dot} ${classes.auds_dot_3}`}
-                      ></span>
-                      <small>25-35</small>
-                      <span className={classes.auds_percent}>(15%)</span>
-                    </li>
-                    <li>
-                      <span
-                        className={`${classes.auds_dot} ${classes.auds_dot_3}`}
-                      ></span>
-                      <small>35-45</small>
-                      <span className={classes.auds_percent}>(15%)</span>
-                    </li>
-                    <li>
-                      <span
-                        className={`${classes.auds_dot} ${classes.auds_dot_3}`}
-                      ></span>
-                      <small>45-65</small>
-                      <span className={classes.auds_percent}>(15%)</span>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>

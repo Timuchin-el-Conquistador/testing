@@ -278,9 +278,6 @@
   bottom:16px;
   left:24px;
 }
-
-
-
 .dash_cover{
   padding:40px 56px;
 }
@@ -298,8 +295,18 @@
   -ms-flex-align: flex-start;
   align-items: flex-start;
 }
-
 .dash_right{
   width:calc(100% - 290px);
   padding-left:32px;
+}
+/* 26 january */
+.choosen_item{
+  position: relative;
+  min-height:150px;
+}
+.choosen_place{
+  min-height:200px;
+}
+.choosen_place{
+  width:calc(100% - 32px);
 }

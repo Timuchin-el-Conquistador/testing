@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import ReactApexChart from "react-apexcharts";
 import "./apexchart.css";
+import "../assets/css/app.css"
 
 class ReportingChart extends Component {
   state = {
-
     series: [
- 
       {
         name: "Variant 1",
         data: [1000, 3000, 2500,5000, 8000, 10000, 9000],
@@ -52,14 +51,10 @@ class ReportingChart extends Component {
         text: "Integer ipsum amet in potenti.",
         style: {
           fontFamily: "Montserrat",
-
           fontSize: "14px",
           lineHeight: "20px",
-
           letterSpacing: "0.0015em",
-
           /* Basic colors/Neutral 600 */
-
           color: "#8F9BB3",
         },
       },
@@ -68,7 +63,7 @@ class ReportingChart extends Component {
 
   render() {
     return (
-      <div id="chart">
+      <div id="chart-report">
         <ReactApexChart
           options={this.state.options}
           series={this.state.series}

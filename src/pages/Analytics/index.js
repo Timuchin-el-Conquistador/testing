@@ -351,7 +351,7 @@ class CampaignAnalytics extends Component {
               <div className={classes.audience_item}>
                 <p className={classes.audience_p}>Audience by Platform</p>
                 <div className={classes.audience_chart}>
-                  <PieChart Android={55} IOS={45} />
+                  <PieChart An={55} IOS={45} />
                 </div>
               </div>
             </div>

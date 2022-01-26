@@ -6,7 +6,6 @@ Website: https://themesbrand.com/
 Contact: themesbrand@gmail.com
 File: Main Css File
 */
-
 #page-topbar {
   position: fixed;
   top: 0;
@@ -17,7 +16,6 @@ File: Main Css File
   -webkit-box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
 }
-
 .navbar-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,13 +33,11 @@ File: Main Css File
 .navbar-header .dropdown.show .header-item {
   background-color: #f8f9fa;
 }
-
 .navbar-brand-box {
   padding: 0 1.5rem;
   text-align: center;
   width: 250px;
 }
-
 .logo {
   line-height: 70px;
 }
@@ -52,7 +48,6 @@ File: Main Css File
 .logo-light {
   display: none;
 }
-
 /* Search */
 .app-search {
   padding: calc(32px / 2) 0;
@@ -4357,4 +4352,41 @@ background-color: transparent;
   #chart1 .apexcharts-legend, #chart2 .apexcharts-legend, #chart3 .apexcharts-legend, #chart4 .apexcharts-legend{
     margin-left:12%;
   }
+}
+/* report chart style */
+#chart-report{
+  padding-top:20px;
+  position:relative;
+}
+#chart-report .apexcharts-toolbar{
+  display:none;
+}
+#chart-report .apexcharts-svg .apexcharts-legend{
+  position: unset !important;
+  margin-top: .8rem;
+  padding: 0.1rem 0;
+}
+
+/* dashboard chart style */
+#chart-dash1 .apexcharts-legend{
+  top:-6px !important;
+}
+.chart-dash1{
+  left:-24px;
+}
+#chart-dash1 .apexcharts-legend-text{
+  color: #2E3A59 !important;
+}
+#chart-dash2 .apexcharts-toolbar{
+  display:none;
+}
+.chart-dash2{
+  margin-left:-36px;
+  margin-top:-32px;
+}
+#chart-dash2 .apexcharts-legend{
+  top:22px !important;
+}
+#chart-dash2 .apexcharts-legend-marker{
+  border-radius:50% !important;
 }
